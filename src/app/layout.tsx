@@ -1,3 +1,5 @@
+import { Inter } from 'next/font/google'
+
 import '@/styles/main.scss'
 
 export const metadata = {
@@ -5,9 +7,18 @@ export const metadata = {
   description: 'Portfolio website showcasing projects and experiments',
 }
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={inter.variable}
+    >
       <body>{children}</body>
     </html>
   )
