@@ -1,0 +1,20 @@
+@use './colors';
+@use './fonts';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: colors.$background;
+  color: colors.$text-primary;
+  font-family: fonts.$font-family-primary;
+  font-size: fonts.$font-size-md;
+  font-weight: fonts.$font-weight-regular;
+}
