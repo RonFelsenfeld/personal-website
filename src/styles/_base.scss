@@ -12,9 +12,33 @@ html {
 }
 
 body {
-  background-color: colors.$background;
-  color: colors.$text-primary;
-  font-family: fonts.$font-family-primary;
   font-size: fonts.$font-size-md;
+  font-family: fonts.$font-family-primary;
   font-weight: fonts.$font-weight-regular;
+  color: colors.$text-primary;
+
+  background-color: colors.$background;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  all: unset;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  all: unset;
+
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+
+  background-color: transparent;
 }
