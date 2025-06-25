@@ -1,6 +1,6 @@
 import { AboutMe } from '@/components/sections'
 
-const HomePage = () => {
+const IndexPage = () => {
   return (
     <main>
       <AboutMe />
@@ -8,4 +8,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default IndexPage
