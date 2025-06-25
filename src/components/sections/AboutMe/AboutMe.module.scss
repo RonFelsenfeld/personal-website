@@ -1,0 +1,32 @@
+@use '../../../styles/colors';
+@use '../../../styles/fonts';
+@use '../../../styles/spacing';
+@use '../../../styles/mixins';
+
+.aboutMe {
+  @include mixins.section;
+}
+
+.content {
+  text-align: center;
+
+  .header {
+    @include mixins.flex-column;
+    gap: spacing.$spacing-lg;
+    margin-block-end: spacing.$spacing-md;
+
+    .role {
+      color: colors.$primary;
+    }
+  }
+
+  .company {
+    margin-block-end: spacing.$spacing-xl;
+    font-weight: fonts.$font-weight-medium;
+    color: colors.$text-secondary;
+  }
+
+  .description {
+    max-width: 600px;
+  }
+}
