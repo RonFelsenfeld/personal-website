@@ -11,6 +11,7 @@ interface ProjectLinks {
 }
 
 export interface ProjectMetadata {
+  id: string
   technologies: string[]
   links: ProjectLinks
 }

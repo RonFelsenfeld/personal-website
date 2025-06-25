@@ -8,7 +8,7 @@ const { aboutMeSection: aboutMeSectionI18n } = i18n
 
 const AboutMe = () => {
   return (
-    <section className={styles.aboutMe}>
+    <section className={styles.aboutMeSection}>
       <div className={styles.content}>
         <header className={styles.header}>
           <Heading>{aboutMeSectionI18n.name}</Heading>

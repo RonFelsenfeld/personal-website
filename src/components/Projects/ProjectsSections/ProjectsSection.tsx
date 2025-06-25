@@ -4,6 +4,8 @@ import { mergeProjectsTextsAndMetadata } from '@/utils/projects.utils'
 
 import { i18n } from '@/constants/texts'
 
+import { ProjectList } from '../index'
+
 import styles from './ProjectsSection.module.scss'
 
 const { projectsSection: projectsSectionI18n } = i18n
@@ -17,7 +19,9 @@ const ProjectsSection = () => {
   )
 
   return (
-    <section className="ProjectsSection">Hello from ProjectsSection</section>
+    <section className={styles.projectsSection}>
+      <ProjectList projects={projects} />
+    </section>
   )
 }
 

@@ -3,7 +3,7 @@
 @use '../../../styles/spacing';
 @use '../../../styles/mixins';
 
-.aboutMe {
+.aboutMeSection {
   @include mixins.section;
 }
 
