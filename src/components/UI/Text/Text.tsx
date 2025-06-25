@@ -1,4 +1,5 @@
-import React from 'react'
+import classNames from 'classnames'
+
 import styles from './Text.module.scss'
 
 interface TextProps {
@@ -6,8 +7,8 @@ interface TextProps {
   className?: string
 }
 
-const Text = ({ children, className = '' }: TextProps) => {
-  return <p className={`${styles.text} ${className}`}>{children}</p>
+const Text = ({ children, className }: TextProps) => {
+  return <p className={classNames(styles.text, className)}>{children}</p>
 }
 
 export default Text

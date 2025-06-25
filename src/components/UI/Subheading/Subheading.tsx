@@ -1,4 +1,5 @@
-import React from 'react'
+import classNames from 'classnames'
+
 import styles from './Subheading.module.scss'
 
 interface SubheadingProps {
@@ -6,8 +7,10 @@ interface SubheadingProps {
   className?: string
 }
 
-const Subheading = ({ children, className = '' }: SubheadingProps) => {
-  return <h3 className={`${styles.subheading} ${className}`}>{children}</h3>
+const Subheading = ({ children, className }: SubheadingProps) => {
+  return (
+    <h3 className={classNames(styles.subheading, className)}>{children}</h3>
+  )
 }
 
 export default Subheading
