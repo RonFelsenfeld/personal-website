@@ -4,7 +4,7 @@ import { mergeProjectsTextsAndMetadata } from '@/utils/projects.utils'
 
 import { i18n } from '@/constants/texts'
 
-import { ProjectList } from '../index'
+import ProjectList from '../ProjectList/ProjectList'
 
 import styles from './ProjectsSection.module.scss'
 
