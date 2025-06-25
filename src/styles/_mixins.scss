@@ -1,0 +1,18 @@
+@use './spacing';
+@use './colors';
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin section {
+  height: 100dvh;
+  @include flex-center;
+}
