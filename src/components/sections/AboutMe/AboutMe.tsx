@@ -11,9 +11,8 @@ const AboutMe = () => {
     <section className={styles.aboutMe}>
       <div className={styles.content}>
         <header className={styles.header}>
-          <Heading className={styles.name}>{aboutMeI18n.name}</Heading>
-
-          <Subheading className={styles.role}>{aboutMeI18n.role}</Subheading>
+          <Heading>{aboutMeI18n.name}</Heading>
+          <Subheading>{aboutMeI18n.role}</Subheading>
         </header>
 
         <Text className={styles.company}>{aboutMeI18n.company}</Text>

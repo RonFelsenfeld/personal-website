@@ -14,10 +14,6 @@
     @include mixins.flex-column;
     gap: spacing.$spacing-lg;
     margin-block-end: spacing.$spacing-md;
-
-    .role {
-      color: colors.$primary;
-    }
   }
 
   .company {
