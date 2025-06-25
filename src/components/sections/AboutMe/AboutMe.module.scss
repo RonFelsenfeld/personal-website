@@ -1,0 +1,43 @@
+@use '../../../styles/colors';
+@use '../../../styles/fonts';
+@use '../../../styles/spacing';
+
+.aboutMe {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: spacing.$spacing-2xl;
+  background-color: colors.$background;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.content {
+  text-align: center;
+
+  .name {
+    margin-bottom: spacing.$spacing-lg;
+    color: colors.$text-primary;
+  }
+
+  .role {
+    margin-bottom: spacing.$spacing-md;
+    color: colors.$primary;
+  }
+
+  .company {
+    margin-bottom: spacing.$spacing-xl;
+    color: colors.$text-secondary;
+    font-weight: fonts.$font-weight-medium;
+  }
+
+  .description {
+    max-width: 600px;
+    margin: 0 auto;
+    color: colors.$text-primary;
+  }
+}
