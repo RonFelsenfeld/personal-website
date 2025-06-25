@@ -1,0 +1,9 @@
+@use '../../styles/colors';
+@use '../../styles/fonts';
+
+.text {
+  font-size: fonts.$font-size-md;
+  font-weight: fonts.$font-weight-regular;
+  line-height: fonts.$line-height-loose;
+  color: colors.$text-primary;
+}
