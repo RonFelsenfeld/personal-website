@@ -2,7 +2,7 @@ import { i18n } from '@/constants/texts'
 
 import { Heading, Subheading, Text } from '@/components/UI'
 
-import styles from './AboutMe.module.scss'
+import styles from './AboutMeSection.module.scss'
 
 const { aboutMeSection: aboutMeSectionI18n } = i18n
 

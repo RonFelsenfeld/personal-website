@@ -1,9 +1,10 @@
-import { AboutMe, ProjectsSection } from '@/components/sections'
+import { AboutMeSection } from '@/components/AboutMe'
+import { ProjectsSection } from '@/components/Projects'
 
 const IndexPage = () => {
   return (
     <main>
-      <AboutMe />
+      <AboutMeSection />
       <ProjectsSection />
     </main>
   )
