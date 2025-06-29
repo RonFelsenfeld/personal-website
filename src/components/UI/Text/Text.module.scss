@@ -1,5 +1,5 @@
-@use '@/styles/colors';
-@use '@/styles/fonts';
+@use '../../../styles/colors';
+@use '../../../styles/fonts';
 
 .text {
   font-size: fonts.$font-size-md;

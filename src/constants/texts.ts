@@ -9,6 +9,7 @@ const aboutMeSection = {
 }
 
 const projectsSection = {
+  title: 'Projects',
   projectsTexts: {
     [ProjectName.SketchMate]: {
       title: 'SketchMate',
