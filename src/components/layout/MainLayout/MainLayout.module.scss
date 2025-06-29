@@ -1,6 +1,8 @@
 .mainLayout {
+  $side-margins-width: 150px;
+
   display: grid;
-  grid-template-columns: 150px 1fr 150px;
+  grid-template-columns: $side-margins-width 1fr $side-margins-width;
 
   > *:not(.full-row) {
     grid-column: 2;
