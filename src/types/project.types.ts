@@ -5,9 +5,9 @@ export enum ProjectName {
 }
 
 interface ProjectLinks {
-  main?: string
-  frontend?: string
-  backend?: string
+  liveVersion: string
+  frontend: string
+  backend: string
 }
 
 export interface ProjectMetadata {

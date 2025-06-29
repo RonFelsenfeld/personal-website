@@ -1,3 +1,132 @@
-.projectItem {
+@use '../../../styles/colors';
+@use '../../../styles/spacing';
+@use '../../../styles/fonts';
+@use '../../../styles/mixins';
+
+.projectCard {
+  @include mixins.flex-column;
+  height: 100%;
+  background: colors.$surface;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: spacing.$spacing-xl;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, colors.$primary, colors.$primary-hover);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    border-color: rgba(47, 129, 247, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.header {
+  margin-block-end: spacing.$spacing-lg;
+}
+
+.title {
+  font-size: fonts.$font-size-xl;
+  font-weight: fonts.$font-weight-semibold;
+  line-height: fonts.$line-height-tight;
+  letter-spacing: fonts.$letter-spacing-tight;
+  color: colors.$text-primary;
+  margin-block-end: spacing.$spacing-sm;
+}
+
+.description {
+  font-size: fonts.$font-size-sm;
+  line-height: fonts.$line-height-normal;
+  color: colors.$text-secondary;
+  margin-block-end: spacing.$spacing-lg;
+}
+
+.technologies {
   display: flex;
+  flex-wrap: wrap;
+  gap: spacing.$spacing-sm;
+  margin-block-end: spacing.$spacing-xl;
+}
+
+.techTag {
+  display: inline-block;
+  padding: spacing.$spacing-xs spacing.$spacing-sm;
+  background: rgba(47, 129, 247, 0.1);
+  border: 1px solid rgba(47, 129, 247, 0.2);
+  border-radius: 6px;
+  font-size: fonts.$font-size-xs;
+  font-weight: fonts.$font-weight-medium;
+  color: colors.$primary;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(47, 129, 247, 0.15);
+    border-color: rgba(47, 129, 247, 0.3);
+  }
+}
+
+.links {
+  display: flex;
+  gap: spacing.$spacing-sm;
+  margin-block-start: auto;
+}
+
+.linkButton {
+  display: inline-flex;
+  align-items: center;
+  gap: spacing.$spacing-xs;
+  padding: spacing.$spacing-sm spacing.$spacing-md;
+  background: transparent;
+  border: 1px solid rgba(47, 129, 247, 0.3);
+  border-radius: 6px;
+  font-size: fonts.$font-size-sm;
+  font-weight: fonts.$font-weight-medium;
+  color: colors.$primary;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: colors.$primary;
+    color: white;
+    border-color: colors.$primary;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.linkButtonPrimary {
+  @extend .linkButton;
+  background: colors.$primary;
+  color: white;
+
+  &:hover {
+    background: colors.$primary-hover;
+    border-color: colors.$primary-hover;
+  }
+}
+
+.linkIcon {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
 }

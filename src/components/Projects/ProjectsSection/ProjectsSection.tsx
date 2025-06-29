@@ -1,20 +1,19 @@
-import { projectService } from '@/types/services/project.service'
-
 import { mergeProjectsTextsAndMetadata } from '@/utils/projects.utils'
 
+import { projectsMetadata } from '@/constants/projects'
 import { i18n } from '@/constants/texts'
 
 import ProjectList from '../ProjectList/ProjectList'
 
 import styles from './ProjectsSection.module.scss'
 
-const { projectsSection: projectsSectionI18n } = i18n
+const { projectsSection } = i18n
+
+const projectsTexts = projectsSection
 
 const ProjectsSection = () => {
-  const projectsMetadata = projectService.getProjectsMetadata()
-
   const projects = mergeProjectsTextsAndMetadata(
-    projectsSectionI18n,
+    projectsTexts,
     projectsMetadata
   )
 

@@ -1,3 +1,28 @@
+@use '../../../styles/colors';
+@use '../../../styles/spacing';
+@use '../../../styles/mixins';
+
 .projectList {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: spacing.$spacing-2xl;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: spacing.$spacing-xl;
+    padding: 0 spacing.$spacing-lg;
+  }
+}
+
+.projectItem {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
 }
