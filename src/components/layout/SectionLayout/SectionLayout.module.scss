@@ -1,0 +1,22 @@
+.sectionLayout {
+  $row-gap: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 1fr;
+  grid-template-areas:
+    'title'
+    'content';
+  row-gap: $row-gap;
+
+  padding-block: $row-gap;
+
+  & > .title {
+    grid-area: title;
+    justify-self: center;
+  }
+
+  & > *:not(.title) {
+    grid-area: content;
+  }
+}

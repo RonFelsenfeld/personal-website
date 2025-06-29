@@ -5,6 +5,7 @@
 
 .aboutMeSection {
   @include mixins.section;
+  @include mixins.flex-center;
 }
 
 .content {

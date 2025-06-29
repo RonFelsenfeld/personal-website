@@ -3,7 +3,8 @@ import { mergeProjectsTextsAndMetadata } from '@/utils/projects.utils'
 import { projectsMetadata } from '@/constants/projects'
 import { i18n } from '@/constants/texts'
 
-import { Subheading } from '@/components/UI'
+import { SectionLayout } from '@/components/layout'
+
 import ProjectList from '../ProjectList/ProjectList'
 
 import styles from './ProjectsSection.module.scss'
@@ -19,10 +20,12 @@ const ProjectsSection = () => {
   )
 
   return (
-    <section className={styles.projectsSection}>
-      <Subheading>{title}</Subheading>
+    <SectionLayout
+      title={title}
+      className={styles.projectsSection}
+    >
       <ProjectList projects={projects} />
-    </section>
+    </SectionLayout>
   )
 }
 
