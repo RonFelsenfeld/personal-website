@@ -9,7 +9,7 @@ import styles from './ProjectsSection.module.scss'
 
 const { projectsSection } = i18n
 
-const projectsTexts = projectsSection
+const { projectsTexts } = projectsSection
 
 const ProjectsSection = () => {
   const projects = mergeProjectsTextsAndMetadata(

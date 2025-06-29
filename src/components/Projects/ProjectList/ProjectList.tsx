@@ -12,10 +12,7 @@ const ProjectList = ({ projects }: ProjectListProps) => {
   return (
     <ul className={styles.projectList}>
       {projects.map(project => (
-        <li
-          key={project.metadata.id}
-          className={styles.projectItem}
-        >
+        <li key={project.metadata.id}>
           <ProjectItem project={project} />
         </li>
       ))}

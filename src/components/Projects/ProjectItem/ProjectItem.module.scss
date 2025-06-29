@@ -5,15 +5,17 @@
 
 .projectCard {
   @include mixins.flex-column;
+
   height: 100%;
-  background: colors.$surface;
+  position: relative;
+
+  padding: spacing.$spacing-xl;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  padding: spacing.$spacing-xl;
-  transition: all 0.3s ease;
+
+  background: colors.$surface;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
+  transition: all 0.3s ease;
 
   &::before {
     content: '';
@@ -22,6 +24,7 @@
     left: 0;
     right: 0;
     height: 3px;
+
     background: linear-gradient(90deg, colors.$primary, colors.$primary-hover);
     transform: scaleX(0);
     transition: transform 0.3s ease;
@@ -30,6 +33,7 @@
   &:hover {
     border-color: rgba(47, 129, 247, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
 
     &::before {
       transform: scaleX(1);
@@ -42,37 +46,41 @@
 }
 
 .title {
+  margin-block-end: spacing.$spacing-sm;
+
   font-size: fonts.$font-size-xl;
   font-weight: fonts.$font-weight-semibold;
   line-height: fonts.$line-height-tight;
   letter-spacing: fonts.$letter-spacing-tight;
   color: colors.$text-primary;
-  margin-block-end: spacing.$spacing-sm;
 }
 
 .description {
+  margin-block-end: spacing.$spacing-lg;
+
   font-size: fonts.$font-size-sm;
   line-height: fonts.$line-height-normal;
   color: colors.$text-secondary;
-  margin-block-end: spacing.$spacing-lg;
 }
 
 .technologies {
   display: flex;
   flex-wrap: wrap;
   gap: spacing.$spacing-sm;
+
   margin-block-end: spacing.$spacing-xl;
 }
 
 .techTag {
-  display: inline-block;
   padding: spacing.$spacing-xs spacing.$spacing-sm;
-  background: rgba(47, 129, 247, 0.1);
   border: 1px solid rgba(47, 129, 247, 0.2);
   border-radius: 6px;
+
   font-size: fonts.$font-size-xs;
   font-weight: fonts.$font-weight-medium;
   color: colors.$primary;
+
+  background: rgba(47, 129, 247, 0.1);
   transition: all 0.2s ease;
 
   &:hover {
