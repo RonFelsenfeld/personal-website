@@ -1,0 +1,12 @@
+.mainLayout {
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+
+  > *:not(.full-row) {
+    grid-column: 2;
+  }
+
+  > .full-row {
+    grid-column: 1 / -1;
+  }
+}
