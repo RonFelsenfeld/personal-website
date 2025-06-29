@@ -1,7 +1,7 @@
-@use '../../../styles/colors';
-@use '../../../styles/spacing';
-@use '../../../styles/fonts';
-@use '../../../styles/mixins';
+@use '@/styles/colors';
+@use '@/styles/spacing';
+@use '@/styles/fonts';
+@use '@/styles/mixins';
 
 .projectCard {
   @include mixins.flex-column;

@@ -1,5 +1,4 @@
-import AboutMeSection from '@/components/AboutMe/AboutMeSection/AboutMeSection'
-import ProjectsSection from '@/components/Projects/ProjectsSection/ProjectsSection'
+import { AboutMeSection, ProjectsSection } from '@/components/sections'
 
 const IndexPage = () => {
   return (
