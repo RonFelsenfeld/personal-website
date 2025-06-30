@@ -80,7 +80,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
 
   return (
     <article
-      className={styles.projectCard}
+      className={styles.projectItem}
       onClick={e => handleLinkClick(e, links.liveVersion)}
     >
       <ProjectHeader />
