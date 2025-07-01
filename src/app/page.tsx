@@ -1,4 +1,4 @@
-import { MainLayout } from '@/components/layout'
+import { MainLayout } from '@/components/layouts'
 import { AboutMeSection, ProjectsSection } from '@/components/sections'
 
 const IndexPage = () => {
