@@ -4,6 +4,15 @@ import { Project } from '@/types/project.types'
 
 import { i18n } from '@/constants/texts'
 
+import {
+  Heading,
+  HeadingTag,
+  Text,
+  TextTag,
+  Button,
+  ButtonType,
+} from '@/components/UI'
+
 import styles from './ProjectItem.module.scss'
 
 const { projectsSection: projectsSectionI18n } = i18n
@@ -30,8 +39,14 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
   const ProjectHeader = () => {
     return (
       <header className={styles.header}>
-        <h3 className={styles.title}>{title}</h3>
-        <p className={styles.description}>{description}</p>
+        <Heading
+          htmlTag={HeadingTag.H3}
+          className={styles.title}
+        >
+          {title}
+        </Heading>
+
+        <Text className={styles.description}>{description}</Text>
       </header>
     )
   }
@@ -40,11 +55,13 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
     return (
       <ul className={styles.technologies}>
         {technologies.map(tech => (
-          <li
-            key={tech}
-            className={styles.techTag}
-          >
-            <span>{tech}</span>
+          <li key={tech}>
+            <Text
+              htmlTag={TextTag.Span}
+              className={styles.techTag}
+            >
+              {tech}
+            </Text>
           </li>
         ))}
       </ul>
@@ -54,26 +71,26 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
   const ProjectLinks = () => {
     return (
       <div className={styles.links}>
-        <button
-          className={styles.linkButtonPrimary}
-          onClick={e => handleLinkClick(e, links.liveVersion)}
+        <Button
+          type={ButtonType.Primary}
+          handleClick={e => handleLinkClick(e, links.liveVersion)}
         >
           {buttonsI18n.viewProject}
-        </button>
+        </Button>
 
-        <button
-          className={styles.linkButton}
-          onClick={e => handleLinkClick(e, links.frontend)}
+        <Button
+          type={ButtonType.Secondary}
+          handleClick={e => handleLinkClick(e, links.frontend)}
         >
           {buttonsI18n.frontend}
-        </button>
+        </Button>
 
-        <button
-          className={styles.linkButton}
-          onClick={e => handleLinkClick(e, links.backend)}
+        <Button
+          type={ButtonType.Secondary}
+          handleClick={e => handleLinkClick(e, links.backend)}
         >
           {buttonsI18n.backend}
-        </button>
+        </Button>
       </div>
     )
   }

@@ -16,16 +16,16 @@ export enum HeadingType {
   Subheading = 'subheading',
 }
 
+const headingClasses: Record<HeadingType, string> = {
+  [HeadingType.Heading]: styles.heading,
+  [HeadingType.Subheading]: styles.subheading,
+}
+
 interface HeadingProps {
   children: React.ReactNode
   type?: HeadingType
   htmlTag?: HeadingTag
   className?: string
-}
-
-const HeadingClasses: Record<HeadingType, string> = {
-  [HeadingType.Heading]: styles.heading,
-  [HeadingType.Subheading]: styles.subheading,
 }
 
 const Heading = ({
@@ -37,7 +37,7 @@ const Heading = ({
   const HTMLTag = htmlTag
 
   return (
-    <HTMLTag className={classNames(HeadingClasses[type], className)}>
+    <HTMLTag className={classNames(headingClasses[type], className)}>
       {children}
     </HTMLTag>
   )

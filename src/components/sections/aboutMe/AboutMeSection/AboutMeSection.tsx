@@ -1,6 +1,12 @@
 import { i18n } from '@/constants/texts'
 
-import { Heading, HeadingTag, HeadingType, Text } from '@/components/UI'
+import {
+  Heading,
+  HeadingTag,
+  HeadingType,
+  Text,
+  TextTag,
+} from '@/components/UI'
 
 import styles from './AboutMeSection.module.scss'
 
@@ -17,7 +23,13 @@ const AboutMe = () => {
           </Heading>
         </header>
 
-        <Text className={styles.company}>{aboutMeSectionI18n.company}</Text>
+        <Text
+          htmlTag={TextTag.Span}
+          className={styles.company}
+        >
+          {aboutMeSectionI18n.company}
+        </Text>
+
         <Text className={styles.description}>
           {aboutMeSectionI18n.description}
         </Text>
