@@ -1,3 +1,6 @@
+@use '../../../styles/fonts';
+@use '../../../styles/colors';
+
 .sectionLayout {
   $row-gap: 30px;
 
@@ -14,6 +17,9 @@
   & > .title {
     grid-area: title;
     justify-self: center;
+
+    color: colors.$primary;
+    letter-spacing: fonts.$letter-spacing-loose;
   }
 
   & > *:not(.title) {

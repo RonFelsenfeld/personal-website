@@ -14,10 +14,10 @@ const SectionLayout = ({ children, title, className }: SectionLayoutProps) => {
   return (
     <section className={classNames(styles.sectionLayout, className)}>
       <Heading
-        type={HeadingType.Subheading}
+        type={HeadingType.Heading}
         className={styles.title}
       >
-        {title}
+        {title.toUpperCase()}
       </Heading>
 
       {children}
