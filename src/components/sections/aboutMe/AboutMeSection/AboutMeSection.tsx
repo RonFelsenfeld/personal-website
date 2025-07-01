@@ -1,9 +1,8 @@
 import { i18n } from '@/constants/texts'
 
-import { Heading, Text } from '@/components/UI'
+import { Heading, HeadingTag, HeadingType, Text } from '@/components/UI'
 
 import styles from './AboutMeSection.module.scss'
-import { HeadingTag, HeadingType } from '@/components/UI/Heading/Heading'
 
 const { aboutMeSection: aboutMeSectionI18n } = i18n
 

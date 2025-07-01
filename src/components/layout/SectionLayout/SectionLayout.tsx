@@ -1,9 +1,8 @@
 import classNames from 'classnames'
 
-import { Heading } from '@/components/UI'
+import { Heading, HeadingType } from '@/components/UI'
 
 import styles from './SectionLayout.module.scss'
-import { HeadingType } from '@/components/UI/Heading/Heading'
 
 interface SectionLayoutProps {
   children: React.ReactNode
