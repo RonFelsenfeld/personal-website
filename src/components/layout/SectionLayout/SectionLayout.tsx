@@ -1,8 +1,9 @@
 import classNames from 'classnames'
 
-import { Subheading } from '@/components/UI'
+import { Heading } from '@/components/UI'
 
 import styles from './SectionLayout.module.scss'
+import { HeadingType } from '@/components/UI/Heading/Heading'
 
 interface SectionLayoutProps {
   children: React.ReactNode
@@ -13,7 +14,12 @@ interface SectionLayoutProps {
 const SectionLayout = ({ children, title, className }: SectionLayoutProps) => {
   return (
     <section className={classNames(styles.sectionLayout, className)}>
-      <Subheading className={styles.title}>{title}</Subheading>
+      <Heading
+        type={HeadingType.Subheading}
+        className={styles.title}
+      >
+        {title}
+      </Heading>
 
       {children}
     </section>

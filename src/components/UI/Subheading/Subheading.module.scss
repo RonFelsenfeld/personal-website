@@ -1,9 +1,0 @@
-@use '../../../styles/fonts';
-@use '../../../styles/colors';
-
-.subheading {
-  font-size: fonts.$font-size-lg;
-  font-weight: fonts.$font-weight-semibold;
-  line-height: fonts.$line-height-normal;
-  color: colors.$primary;
-}
