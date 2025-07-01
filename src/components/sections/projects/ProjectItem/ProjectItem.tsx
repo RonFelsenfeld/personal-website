@@ -11,6 +11,7 @@ import {
   TextTag,
   Button,
   ButtonType,
+  HeadingType,
 } from '@/components/UI'
 
 import styles from './ProjectItem.module.scss'
@@ -41,6 +42,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
       <header className={styles.header}>
         <Heading
           htmlTag={HeadingTag.H3}
+          type={HeadingType.Subheading}
           className={styles.title}
         >
           {title}

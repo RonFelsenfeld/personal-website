@@ -39,58 +39,54 @@
       transform: scaleX(1);
     }
   }
-}
 
-.header {
-  margin-block-end: spacing.$spacing-lg;
-}
+  .header {
+    margin-block-end: spacing.$spacing-lg;
 
-.title {
-  margin-block-end: spacing.$spacing-sm;
+    .title {
+      margin-block-end: spacing.$spacing-sm;
+      font-size: fonts.$font-size-xl;
+      color: colors.$text-primary;
+    }
 
-  font-size: fonts.$font-size-xl;
-  font-weight: fonts.$font-weight-semibold;
-  line-height: fonts.$line-height-tight;
-  letter-spacing: fonts.$letter-spacing-tight;
-  color: colors.$text-primary;
-}
+    .description {
+      margin-block-end: spacing.$spacing-lg;
 
-.description {
-  margin-block-end: spacing.$spacing-lg;
-
-  font-size: fonts.$font-size-sm;
-  line-height: fonts.$line-height-normal;
-  color: colors.$text-secondary;
-}
-
-.technologies {
-  display: flex;
-  flex-wrap: wrap;
-  gap: spacing.$spacing-sm;
-
-  margin-block-end: spacing.$spacing-xl;
-}
-
-.techTag {
-  padding: spacing.$spacing-xs spacing.$spacing-sm;
-  border: 1px solid rgba(47, 129, 247, 0.2);
-  border-radius: 6px;
-
-  font-size: fonts.$font-size-xs;
-  font-weight: fonts.$font-weight-medium;
-  color: colors.$primary;
-
-  background: rgba(47, 129, 247, 0.1);
-  transition: all 0.2s ease;
-
-  &:hover {
-    background: rgba(47, 129, 247, 0.15);
-    border-color: rgba(47, 129, 247, 0.3);
+      font-size: fonts.$font-size-sm;
+      line-height: fonts.$line-height-normal;
+      color: colors.$text-secondary;
+    }
   }
-}
 
-.links {
-  display: flex;
-  gap: spacing.$spacing-sm;
-  margin-block-start: auto;
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacing.$spacing-sm;
+
+    margin-block-end: spacing.$spacing-xl;
+
+    .techTag {
+      padding: spacing.$spacing-xs spacing.$spacing-sm;
+      border: 1px solid rgba(47, 129, 247, 0.2);
+      border-radius: 6px;
+
+      font-size: fonts.$font-size-xs;
+      font-weight: fonts.$font-weight-medium;
+      color: colors.$primary;
+
+      background: rgba(47, 129, 247, 0.1);
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: rgba(47, 129, 247, 0.15);
+        border-color: rgba(47, 129, 247, 0.3);
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: spacing.$spacing-sm;
+    margin-block-start: auto;
+  }
 }

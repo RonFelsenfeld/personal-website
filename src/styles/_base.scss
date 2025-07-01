@@ -19,7 +19,7 @@ body {
   font-weight: fonts.$font-weight-regular;
   color: colors.$text-primary;
 
-  background-color: colors.$background;
+  background: colors.$background;
 }
 
 a {
@@ -30,6 +30,7 @@ a {
 button {
   all: unset;
   font-family: inherit;
+  background: transparent;
   cursor: pointer;
 }
 
@@ -42,7 +43,7 @@ select {
   font-family: inherit;
   color: inherit;
 
-  background-color: transparent;
+  background: transparent;
 }
 
 ul {

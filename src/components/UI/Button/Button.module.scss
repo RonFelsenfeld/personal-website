@@ -3,18 +3,13 @@
 @use '../../../styles/fonts';
 
 .button {
-  display: inline-flex;
-  align-items: center;
-  gap: spacing.$spacing-xs;
-
   padding: spacing.$spacing-sm spacing.$spacing-md;
   border-radius: 6px;
 
   font-size: fonts.$font-size-sm;
   font-weight: fonts.$font-weight-medium;
 
-  cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 
   &:hover {
     transform: translateY(-1px);
@@ -25,9 +20,9 @@
   }
 
   &.primary {
+    border: 1px solid colors.$primary;
     color: white;
     background: colors.$primary;
-    border: 1px solid colors.$primary;
 
     &:hover {
       background: colors.$primary-hover;
@@ -36,9 +31,9 @@
   }
 
   &.secondary {
+    border: 1px solid rgba(47, 129, 247, 0.3);
     color: colors.$primary;
     background: transparent;
-    border: 1px solid rgba(47, 129, 247, 0.3);
 
     &:hover {
       border-color: colors.$primary;
