@@ -1,10 +1,12 @@
-import { AboutMe } from '@/components/sections'
+import { MainLayout } from '@/components/layouts'
+import { AboutMeSection, ProjectsSection } from '@/components/sections'
 
 const IndexPage = () => {
   return (
-    <main>
-      <AboutMe />
-    </main>
+    <MainLayout>
+      <AboutMeSection />
+      <ProjectsSection />
+    </MainLayout>
   )
 }
 

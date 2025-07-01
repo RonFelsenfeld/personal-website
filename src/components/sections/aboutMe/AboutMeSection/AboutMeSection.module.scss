@@ -1,10 +1,11 @@
-@use '../../../styles/colors';
-@use '../../../styles/fonts';
-@use '../../../styles/spacing';
-@use '../../../styles/mixins';
+@use '../../../../styles/colors';
+@use '../../../../styles/fonts';
+@use '../../../../styles/spacing';
+@use '../../../../styles/mixins';
 
-.aboutMe {
+.aboutMeSection {
   @include mixins.section;
+  @include mixins.flex-center;
 }
 
 .content {
@@ -14,10 +15,6 @@
     @include mixins.flex-column;
     gap: spacing.$spacing-lg;
     margin-block-end: spacing.$spacing-md;
-
-    .role {
-      color: colors.$primary;
-    }
   }
 
   .company {
