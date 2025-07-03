@@ -16,10 +16,14 @@ export interface ProjectMetadata {
   links: ProjectLinks
 }
 
+export type ProjectsTexts = Record<
+  ProjectName,
+  Pick<Project, 'title' | 'description'>
+>
+
 export interface Project {
+  id: string
   title: string
   description: string
-  metadata: ProjectMetadata
+  metadata: Omit<ProjectMetadata, 'id'>
 }
-
-export type ProjectsTexts = Record<ProjectName, Omit<Project, 'metadata'>>

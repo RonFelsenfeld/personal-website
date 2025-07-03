@@ -13,9 +13,13 @@ export const mergeProjectsTextsAndMetadata = (
 
   const fullProjects = projectNames.map(projectName => {
     const projectTexts = projectsTexts[projectName]
-    const projectMetadata = projectsMetadata[projectName]
+    const { id, ...restProjectMetadata } = projectsMetadata[projectName]
 
-    return { ...projectTexts, metadata: projectMetadata }
+    return {
+      id,
+      ...projectTexts,
+      metadata: restProjectMetadata,
+    }
   })
 
   return fullProjects

@@ -1,11 +1,14 @@
+import { Project } from '@/types/project.types'
+
 import { mergeProjectsTextsAndMetadata } from '@/utils/projects.utils'
 
 import { projectsMetadata } from '@/constants/projects'
 import { i18n } from '@/constants/texts'
 
 import { SectionLayout } from '@/components/layouts'
+import { List } from '@/components/UI'
 
-import ProjectList from '../ProjectList/ProjectList'
+import ProjectItem from '../ProjectItem/ProjectItem'
 
 import styles from './ProjectsSection.module.scss'
 
@@ -19,13 +22,21 @@ const ProjectsSection = () => {
     projectsMetadata
   )
 
+  const renderProject = (project: Project) => {
+    return <ProjectItem project={project} />
+  }
+
   return (
     <SectionLayout
       title={title}
       description={description}
       className={styles.projectsSection}
     >
-      <ProjectList projects={projects} />
+      <List
+        items={projects}
+        renderItem={renderProject}
+        className={styles.projectsList}
+      />
     </SectionLayout>
   )
 }

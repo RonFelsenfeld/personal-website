@@ -1,0 +1,7 @@
+@use '../../../styles/mixins';
+@use '../../../styles/spacing';
+
+.list {
+  @include mixins.flex-column;
+  gap: spacing.$spacing-md;
+}

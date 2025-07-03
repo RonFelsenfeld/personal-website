@@ -2,4 +2,8 @@
 
 .projectsSection {
   @include mixins.section;
+
+  .projectsList {
+    @include mixins.cards-grid();
+  }
 }
