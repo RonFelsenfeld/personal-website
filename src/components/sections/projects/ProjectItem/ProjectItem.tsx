@@ -13,6 +13,7 @@ import {
   ButtonType,
   HeadingType,
   Card,
+  TextType,
 } from '@/components/UI'
 
 import styles from './ProjectItem.module.scss'
@@ -49,7 +50,12 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
           {title}
         </Heading>
 
-        <Text className={styles.description}>{description}</Text>
+        <Text
+          type={TextType.Secondary}
+          className={styles.description}
+        >
+          {description}
+        </Text>
       </header>
     )
   }
