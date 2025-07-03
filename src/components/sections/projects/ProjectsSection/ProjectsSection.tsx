@@ -11,7 +11,7 @@ import styles from './ProjectsSection.module.scss'
 
 const { projectsSection } = i18n
 
-const { title, projectsTexts } = projectsSection
+const { title, description, projectsTexts } = projectsSection
 
 const ProjectsSection = () => {
   const projects = mergeProjectsTextsAndMetadata(
@@ -22,6 +22,7 @@ const ProjectsSection = () => {
   return (
     <SectionLayout
       title={title}
+      description={description}
       className={styles.projectsSection}
     >
       <ProjectList projects={projects} />

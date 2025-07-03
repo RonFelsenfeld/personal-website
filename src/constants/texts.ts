@@ -10,6 +10,8 @@ const aboutMeSection = {
 
 const projectsSection = {
   title: 'Projects',
+  description:
+    'A collection of my most impactful projects that have shaped my development journey. Each one represents a unique challenge solved with modern technologies and thoughtful design. These works demonstrate my passion for creating meaningful software and commitment to delivering exceptional user experiences.',
   projectsTexts: {
     [ProjectName.SketchMate]: {
       title: 'SketchMate',
