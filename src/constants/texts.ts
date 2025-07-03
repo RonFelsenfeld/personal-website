@@ -36,7 +36,14 @@ const projectsSection = {
   },
 }
 
+const experimentsSection = {
+  title: 'Experiments',
+  description:
+    'Hands-on explorations of new technologies, frameworks, and programming languages. These smaller but meaningful experiments help me stay current with emerging tools and expand my technical toolkit through practical coding experience.',
+}
+
 export const i18n = {
   aboutMeSection,
   projectsSection,
+  experimentsSection,
 }

@@ -7,7 +7,7 @@ import styles from './SectionLayout.module.scss'
 interface SectionLayoutProps {
   children: React.ReactNode
   title: string
-  description: string
+  description?: string
   className?: string
 }
 
@@ -27,7 +27,9 @@ const SectionLayout = ({
           {title.toUpperCase()}
         </Heading>
 
-        <Text className={styles.description}>{description}</Text>
+        {description && (
+          <Text className={styles.description}>{description}</Text>
+        )}
       </header>
 
       {children}
