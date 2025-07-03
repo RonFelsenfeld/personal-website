@@ -12,6 +12,7 @@ import {
   Button,
   ButtonType,
   HeadingType,
+  Card,
 } from '@/components/UI'
 
 import styles from './ProjectItem.module.scss'
@@ -98,14 +99,14 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
   }
 
   return (
-    <article
+    <Card
       className={styles.projectItem}
-      onClick={e => handleLinkClick(e, links.liveVersion)}
+      handleClick={e => handleLinkClick(e, links.liveVersion)}
     >
       <ProjectHeader />
       <ProjectTechnologies />
       <ProjectLinks />
-    </article>
+    </Card>
   )
 }
 
