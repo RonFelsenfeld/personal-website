@@ -14,7 +14,7 @@ const buttonClasses: Record<ButtonType, string> = {
   [ButtonType.Secondary]: styles.secondary,
 }
 
-interface ButtonProps {
+export interface ButtonProps {
   children: React.ReactNode
   handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void
   type?: ButtonType

@@ -2,7 +2,7 @@
 
 import { Project } from '@/types/project.types'
 
-import { i18n } from '@/constants/texts'
+import { i18n } from '@/constants/texts.constants'
 
 import {
   Heading,

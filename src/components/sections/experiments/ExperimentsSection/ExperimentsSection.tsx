@@ -1,7 +1,7 @@
 import { Experiment } from '@/types/experiment.types'
 
 import { portfolio } from '@/constants/portfolio.constants'
-import { i18n } from '@/constants/texts'
+import { i18n } from '@/constants/texts.constants'
 
 import { SectionLayout } from '@/components/layouts'
 import { List } from '@/components/UI'

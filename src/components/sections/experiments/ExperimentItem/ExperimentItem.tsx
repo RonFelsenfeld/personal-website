@@ -2,7 +2,7 @@
 
 import { Experiment } from '@/types/experiment.types'
 
-import { i18n } from '@/constants/texts'
+import { i18n } from '@/constants/texts.constants'
 
 import {
   Heading,

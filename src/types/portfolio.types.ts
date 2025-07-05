@@ -1,13 +1,15 @@
-export interface PortfolioItemLinks {
-  liveVersion?: string
-  frontend?: string
-  backend?: string
+import { ButtonProps } from '@/components/UI'
+
+interface LinkConfiguration {
+  id: string
+  link: string
+  buttonProps: Omit<ButtonProps, 'handleClick'>
 }
 
-export interface PortfolioItemMetadata {
+interface PortfolioItemMetadata {
   id: string
   technologies: string[]
-  links: PortfolioItemLinks
+  linksConfigurations: LinkConfiguration[]
 }
 
 export interface PortfolioItemData {

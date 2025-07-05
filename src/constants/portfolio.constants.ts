@@ -1,7 +1,7 @@
 import { Project, ProjectName } from '@/types/project.types'
 import { Experiment, ExperimentName } from '@/types/experiment.types'
 
-import { i18n } from './texts'
+import { i18n } from './texts.constants'
 
 const {
   projectsSection: projectsSectionI18n,

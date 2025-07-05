@@ -3,6 +3,7 @@
 import { PortfolioItemData } from '@/types/portfolio.types'
 
 import {
+  Button,
   Heading,
   HeadingTag,
   HeadingType,
@@ -12,6 +13,11 @@ import {
 } from '@/components/UI'
 
 import styles from './PortfolioItem.module.scss'
+
+type LinkClickEvent = React.MouseEvent<
+  HTMLElement | HTMLButtonElement,
+  MouseEvent
+>
 
 interface PortfolioItemProps {
   item: PortfolioItemData
@@ -58,10 +64,34 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
     )
   }
 
+  const ItemLinks = () => {
+    const handleLinkClick = (event: LinkClickEvent, url: string) => {
+      event.stopPropagation()
+      window.open(url, '_blank', 'noopener,noreferrer')
+    }
+
+    const { linksConfigurations } = item.metadata
+
+    return (
+      <div className={styles.links}>
+        {linksConfigurations.map(linkConfiguration => (
+          <Button
+            key={linkConfiguration.id}
+            type={linkConfiguration.buttonProps.type}
+            handleClick={e => handleLinkClick(e, linkConfiguration.link)}
+          >
+            {linkConfiguration.buttonProps.children}
+          </Button>
+        ))}
+      </div>
+    )
+  }
+
   return (
     <article className={styles.portfolioItem}>
       <ItemHeader />
       <ItemTechnologies />
+      <ItemLinks />
     </article>
   )
 }
