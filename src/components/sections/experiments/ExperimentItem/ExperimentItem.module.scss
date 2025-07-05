@@ -1,9 +1,13 @@
 @use '../../../../styles/colors';
 @use '../../../../styles/spacing';
 @use '../../../../styles/fonts';
+@use '../../../../styles/mixins';
 
 .experimentItem {
   .header {
+    @include mixins.flex-column;
+
+    flex-grow: 1;
     margin-block-end: spacing.$spacing-lg;
 
     .title {
