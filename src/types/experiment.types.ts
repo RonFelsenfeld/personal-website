@@ -4,7 +4,7 @@ export enum ExperimentName {
   GoProxy = 'goProxy',
 }
 
-export interface ExperimentMetadata {
+interface ExperimentMetadata {
   id: string
   technologies: string[]
   repositoryLink: string

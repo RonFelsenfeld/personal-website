@@ -1,5 +1,4 @@
 import { Project } from '@/types/project.types'
-
 import { LinkConfiguration, PortfolioItemData } from '@/types/portfolio.types'
 
 import { i18n } from '@/constants/texts.constants'

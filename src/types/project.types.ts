@@ -10,7 +10,7 @@ interface ProjectLinks {
   backend: string
 }
 
-export interface ProjectMetadata {
+interface ProjectMetadata {
   id: string
   technologies: string[]
   links: ProjectLinks
