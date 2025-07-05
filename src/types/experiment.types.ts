@@ -1,4 +1,5 @@
 export enum ExperimentName {
+  MisterToy = 'mister-toy',
   MCPServer = 'mcp-server',
   GoProxy = 'go-proxy',
 }

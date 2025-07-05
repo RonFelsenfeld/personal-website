@@ -42,8 +42,13 @@ const experimentsSection = {
   description:
     'Hands-on explorations of new technologies, frameworks, and programming languages. These smaller but meaningful experiments help me stay current with emerging tools and expand my technical toolkit through practical coding experience.',
   experimentsTexts: {
+    [ExperimentName.MisterToy]: {
+      title: 'Mister Toy',
+      description:
+        'An online toy store web application built with TypeScript and React. Features toy browsing with filtering, user authentication, admin management, and bilingual support for English and Hebrew.',
+    },
     [ExperimentName.MCPServer]: {
-      title: 'Weather and News MCP Servers',
+      title: 'MCP Playground',
       description:
         'An experimental microservices project demonstrating Model Context Provider (MCP) with stdio transport, featuring News and Weather services. Serves as a practical implementation and testing ground for MCP-based service communication.',
     },
