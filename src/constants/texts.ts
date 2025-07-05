@@ -1,4 +1,5 @@
 import { ProjectName } from '@/types/project.types'
+import { ExperimentName } from '@/types/experiment.types'
 
 const aboutMeSection = {
   name: 'Ron Felsenfeld',
@@ -40,6 +41,18 @@ const experimentsSection = {
   title: 'Experiments',
   description:
     'Hands-on explorations of new technologies, frameworks, and programming languages. These smaller but meaningful experiments help me stay current with emerging tools and expand my technical toolkit through practical coding experience.',
+  experimentsTexts: {
+    [ExperimentName.MCPPlayground]: {
+      title: 'MCP Playground',
+      description:
+        'MCP Playground is a web application that allows you to play with the MCP (Model Context Protocol) library. It is a playground for the MCP library.',
+    },
+    [ExperimentName.GoProxy]: {
+      title: 'Go Proxy',
+      description:
+        'Go Proxy is a web application that allows you to proxy requests to the MCP library.',
+    },
+  },
 }
 
 export const i18n = {

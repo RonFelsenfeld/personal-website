@@ -13,7 +13,6 @@ import ProjectItem from '../ProjectItem/ProjectItem'
 import styles from './ProjectsSection.module.scss'
 
 const { projectsSection } = i18n
-
 const { title, description, projectsTexts } = projectsSection
 
 const ProjectsSection = () => {
@@ -32,7 +31,7 @@ const ProjectsSection = () => {
       description={description}
       className={styles.projectsSection}
     >
-      <List
+      <List<Project>
         items={projects}
         renderItem={renderProject}
         className={styles.projectsList}
