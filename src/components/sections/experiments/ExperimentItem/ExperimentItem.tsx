@@ -1,6 +1,6 @@
 'use client'
 
-import { Project } from '@/types/project.types'
+import { Experiment } from '@/types/experiment.types'
 
 import { i18n } from '@/constants/texts'
 
@@ -16,30 +16,29 @@ import {
   TextType,
 } from '@/components/UI'
 
-import styles from './ProjectItem.module.scss'
+import styles from './ExperimentItem.module.scss'
 
-const { projectsSection: projectsSectionI18n } = i18n
-const { buttons: buttonsI18n } = projectsSectionI18n
+const { experimentsSection: experimentsSectionI18n } = i18n
 
 type LinkClickEvent = React.MouseEvent<
   HTMLElement | HTMLButtonElement,
   MouseEvent
 >
 
-interface ProjectItemProps {
-  project: Project
+interface ExperimentItemProps {
+  experiment: Experiment
 }
 
-const ProjectItem = ({ project }: ProjectItemProps) => {
-  const { title, description, metadata } = project
-  const { technologies, links } = metadata
+const ExperimentItem = ({ experiment }: ExperimentItemProps) => {
+  const { title, description, metadata } = experiment
+  const { technologies, repositoryLink } = metadata
 
   const handleLinkClick = (event: LinkClickEvent, url: string) => {
     event.stopPropagation()
     window.open(url, '_blank', 'noopener,noreferrer')
   }
 
-  const ProjectHeader = () => {
+  const ExperimentHeader = () => {
     return (
       <header className={styles.header}>
         <Heading
@@ -60,7 +59,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
     )
   }
 
-  const ProjectTechnologies = () => {
+  const ExperimentTechnologies = () => {
     return (
       <ul className={styles.technologies}>
         {technologies.map(tech => (
@@ -77,28 +76,14 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
     )
   }
 
-  const ProjectLinks = () => {
+  const ExperimentLinks = () => {
     return (
       <div className={styles.links}>
         <Button
           type={ButtonType.Primary}
-          handleClick={e => handleLinkClick(e, links.liveVersion)}
+          handleClick={e => handleLinkClick(e, repositoryLink)}
         >
-          {buttonsI18n.viewProject}
-        </Button>
-
-        <Button
-          type={ButtonType.Secondary}
-          handleClick={e => handleLinkClick(e, links.frontend)}
-        >
-          {buttonsI18n.frontend}
-        </Button>
-
-        <Button
-          type={ButtonType.Secondary}
-          handleClick={e => handleLinkClick(e, links.backend)}
-        >
-          {buttonsI18n.backend}
+          {experimentsSectionI18n.repositoryLink}
         </Button>
       </div>
     )
@@ -106,14 +91,14 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
 
   return (
     <Card
-      className={styles.projectItem}
-      handleClick={e => handleLinkClick(e, links.liveVersion)}
+      className={styles.experimentItem}
+      handleClick={e => handleLinkClick(e, repositoryLink)}
     >
-      <ProjectHeader />
-      <ProjectTechnologies />
-      <ProjectLinks />
+      <ExperimentHeader />
+      <ExperimentTechnologies />
+      <ExperimentLinks />
     </Card>
   )
 }
 
-export default ProjectItem
+export default ExperimentItem

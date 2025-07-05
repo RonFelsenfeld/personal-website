@@ -1,4 +1,5 @@
 import { ProjectName } from '@/types/project.types'
+import { ExperimentName } from '@/types/experiment.types'
 
 const aboutMeSection = {
   name: 'Ron Felsenfeld',
@@ -10,6 +11,8 @@ const aboutMeSection = {
 
 const projectsSection = {
   title: 'Projects',
+  description:
+    'A collection of my most impactful projects that have shaped my development journey. Each one represents a unique challenge solved with modern technologies and thoughtful design. These works demonstrate my passion for creating meaningful software and commitment to delivering exceptional user experiences.',
   projectsTexts: {
     [ProjectName.SketchMate]: {
       title: 'SketchMate',
@@ -34,7 +37,32 @@ const projectsSection = {
   },
 }
 
+const experimentsSection = {
+  title: 'Experiments',
+  description:
+    'Hands-on explorations of new technologies, frameworks, and programming languages. These smaller but meaningful experiments help me stay current with emerging tools and expand my technical toolkit through practical coding experience.',
+  experimentsTexts: {
+    [ExperimentName.MisterToy]: {
+      title: 'Mister Toy',
+      description:
+        'An online toy store web application built with TypeScript and React. Features toy browsing with filtering, user authentication, admin management, and bilingual support for English and Hebrew.',
+    },
+    [ExperimentName.MCPServer]: {
+      title: 'MCP Playground',
+      description:
+        'An experimental microservices project demonstrating Model Context Provider (MCP) with stdio transport, featuring News and Weather services. Serves as a practical implementation and testing ground for MCP-based service communication.',
+    },
+    [ExperimentName.GoProxy]: {
+      title: 'Go Proxy',
+      description:
+        'A lightweight HTTP/HTTPS proxy server written in Go that forwards requests while modifying request bodies. Features request/response transformation capabilities for debugging and testing scenarios.',
+    },
+  },
+  repositoryLink: 'View Repository',
+}
+
 export const i18n = {
   aboutMeSection,
   projectsSection,
+  experimentsSection,
 }

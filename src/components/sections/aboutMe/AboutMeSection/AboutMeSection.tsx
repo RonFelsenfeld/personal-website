@@ -6,6 +6,7 @@ import {
   HeadingType,
   Text,
   TextTag,
+  TextType,
 } from '@/components/UI'
 
 import styles from './AboutMeSection.module.scss'
@@ -24,6 +25,7 @@ const AboutMe = () => {
         </header>
 
         <Text
+          type={TextType.Secondary}
           htmlTag={TextTag.Span}
           className={styles.company}
         >

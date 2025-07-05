@@ -1,9 +1,9 @@
 @use '../../../../styles/mixins';
 
-.projectsSection {
+.experimentsSection {
   @include mixins.section;
 
-  .projectsList {
+  .experimentsList {
     @include mixins.cards-grid();
   }
 }

@@ -3,10 +3,10 @@
 @use '../../../../styles/fonts';
 @use '../../../../styles/mixins';
 
-.projectItem {
+.experimentItem {
   .header {
     @include mixins.flex-column;
-    
+
     flex-grow: 1;
     margin-block-end: spacing.$spacing-lg;
 

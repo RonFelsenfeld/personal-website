@@ -13,5 +13,13 @@
 }
 
 @mixin section {
-  height: 100dvh;
+  min-height: 100dvh;
+}
+
+@mixin cards-grid($card-min-width: 320px, $gap: spacing.$spacing-2xl) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($card-min-width, 1fr));
+  gap: $gap;
+
+  align-self: center;
 }

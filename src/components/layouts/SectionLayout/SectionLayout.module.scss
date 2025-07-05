@@ -1,28 +1,48 @@
 @use '../../../styles/fonts';
 @use '../../../styles/colors';
+@use '../../../styles/mixins';
+@use '../../../styles/spacing';
 
 .sectionLayout {
   $row-gap: 30px;
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 30px 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
-    'title'
+    'header'
     'content';
   row-gap: $row-gap;
 
   padding-block: $row-gap;
 
-  & > .title {
-    grid-area: title;
-    justify-self: center;
+  .header {
+    @include mixins.flex-column;
+    align-items: center;
+    gap: spacing.$spacing-2xl;
 
-    color: colors.$primary;
-    letter-spacing: fonts.$letter-spacing-loose;
+    grid-area: header;
+    justify-self: center;
+    align-self: center;
+
+    .title {
+      grid-area: title;
+      justify-self: center;
+
+      color: colors.$primary;
+      letter-spacing: fonts.$letter-spacing-loose;
+    }
+
+    .description {
+      width: 60%;
+      grid-area: description;
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+    }
   }
 
-  & > *:not(.title) {
+  & > *:not(.header) {
     grid-area: content;
   }
 }

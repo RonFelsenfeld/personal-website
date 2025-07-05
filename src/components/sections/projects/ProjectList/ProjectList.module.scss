@@ -1,9 +1,0 @@
-@use '../../../../styles/spacing';
-
-.projectList {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: spacing.$spacing-2xl;
-
-  align-self: center;
-}

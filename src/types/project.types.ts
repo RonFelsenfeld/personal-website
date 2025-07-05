@@ -16,10 +16,22 @@ export interface ProjectMetadata {
   links: ProjectLinks
 }
 
+export type ProjectsTexts = Record<
+  ProjectName,
+  Pick<Project, 'title' | 'description'>
+>
+
+/*
+  Notes:
+
+  - Because the List component is generic and requires a T with id, the id field needs to be at the top-level of the Project type.
+  
+  - The initial separation of the texts and the metadata is done to later support i18n.
+*/
+
 export interface Project {
+  id: string
   title: string
   description: string
-  metadata: ProjectMetadata
+  metadata: Omit<ProjectMetadata, 'id'>
 }
-
-export type ProjectsTexts = Record<ProjectName, Omit<Project, 'metadata'>>
