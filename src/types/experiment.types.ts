@@ -1,6 +1,6 @@
 export enum ExperimentName {
-  MCPPlayground = 'MCPPlayground',
-  GoProxy = 'GoProxy',
+  MCPServer = 'mcp-server',
+  GoProxy = 'go-proxy',
 }
 
 export interface ExperimentMetadata {

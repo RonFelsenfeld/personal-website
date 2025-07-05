@@ -42,17 +42,18 @@ const experimentsSection = {
   description:
     'Hands-on explorations of new technologies, frameworks, and programming languages. These smaller but meaningful experiments help me stay current with emerging tools and expand my technical toolkit through practical coding experience.',
   experimentsTexts: {
-    [ExperimentName.MCPPlayground]: {
-      title: 'MCP Playground',
+    [ExperimentName.MCPServer]: {
+      title: 'Weather and News MCP Servers',
       description:
-        'MCP Playground is a web application that allows you to play with the MCP (Model Context Protocol) library. It is a playground for the MCP library.',
+        'An experimental microservices project demonstrating Model Context Provider (MCP) with stdio transport, featuring News and Weather services. Serves as a practical implementation and testing ground for MCP-based service communication.',
     },
     [ExperimentName.GoProxy]: {
       title: 'Go Proxy',
       description:
-        'Go Proxy is a web application that allows you to proxy requests to the MCP library.',
+        'A lightweight HTTP/HTTPS proxy server written in Go that forwards requests while modifying request bodies. Features request/response transformation capabilities for debugging and testing scenarios.',
     },
   },
+  repositoryLink: 'View Repository',
 }
 
 export const i18n = {
