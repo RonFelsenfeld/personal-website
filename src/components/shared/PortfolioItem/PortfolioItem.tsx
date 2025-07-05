@@ -46,7 +46,7 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
   }
 
   const ItemTechnologies = () => {
-    const { technologies } = item.metadata
+    const { technologies } = item
 
     return (
       <ul className={styles.technologies}>
@@ -70,7 +70,7 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
       window.open(url, '_blank', 'noopener,noreferrer')
     }
 
-    const { linksConfigurations } = item.metadata
+    const { linksConfigurations } = item
 
     return (
       <div className={styles.links}>

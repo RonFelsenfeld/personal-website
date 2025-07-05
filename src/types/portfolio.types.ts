@@ -1,22 +1,17 @@
 import { ButtonProps } from '@/components/UI'
 
-interface LinkConfiguration {
+export interface LinkConfiguration {
   id: string
   link: string
   buttonProps: Omit<ButtonProps, 'handleClick'>
-}
-
-interface PortfolioItemMetadata {
-  id: string
-  technologies: string[]
-  linksConfigurations: LinkConfiguration[]
 }
 
 export interface PortfolioItemData {
   id: string
   title: string
   description: string
-  metadata: Omit<PortfolioItemMetadata, 'id'>
+  technologies: string[]
+  linksConfigurations: LinkConfiguration[]
 }
 
 /*
