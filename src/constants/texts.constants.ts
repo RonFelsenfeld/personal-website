@@ -65,4 +65,4 @@ export const i18n = {
   aboutMeSection,
   projectsSection,
   experimentsSection,
-}
+} as const

@@ -1,9 +1,7 @@
 import { Project } from '@/types/project.types'
 
-import { mergeProjectsTextsAndMetadata } from '@/utils/projects.utils'
-
-import { projectsMetadata } from '@/constants/projects'
-import { i18n } from '@/constants/texts'
+import { portfolio } from '@/constants/portfolio.constants'
+import { i18n } from '@/constants/texts.constants'
 
 import { SectionLayout } from '@/components/layouts'
 import { List } from '@/components/UI'
@@ -12,23 +10,21 @@ import ProjectItem from '../ProjectItem/ProjectItem'
 
 import styles from './ProjectsSection.module.scss'
 
-const { projectsSection } = i18n
-const { title, description, projectsTexts } = projectsSection
+const { projectsSection: projectsSectionI18n } = i18n
+
+const { projectsData } = portfolio
 
 const ProjectsSection = () => {
-  const projects = mergeProjectsTextsAndMetadata(
-    projectsTexts,
-    projectsMetadata
-  )
-
   const renderProject = (project: Project) => {
     return <ProjectItem project={project} />
   }
 
+  const projects = Object.values(projectsData)
+
   return (
     <SectionLayout
-      title={title}
-      description={description}
+      title={projectsSectionI18n.title}
+      description={projectsSectionI18n.description}
       className={styles.projectsSection}
     >
       <List<Project>

@@ -10,16 +10,18 @@ interface ProjectLinks {
   backend: string
 }
 
-export interface ProjectMetadata {
+interface ProjectMetadata {
   id: string
   technologies: string[]
   links: ProjectLinks
 }
 
-export type ProjectsTexts = Record<
-  ProjectName,
-  Pick<Project, 'title' | 'description'>
->
+export interface Project {
+  id: string
+  title: string
+  description: string
+  metadata: Omit<ProjectMetadata, 'id'>
+}
 
 /*
   Notes:
@@ -28,10 +30,3 @@ export type ProjectsTexts = Record<
   
   - The initial separation of the texts and the metadata is done to later support i18n.
 */
-
-export interface Project {
-  id: string
-  title: string
-  description: string
-  metadata: Omit<ProjectMetadata, 'id'>
-}

@@ -1,19 +1,21 @@
 export enum ExperimentName {
-  MisterToy = 'mister-toy',
-  MCPServer = 'mcp-server',
-  GoProxy = 'go-proxy',
+  MisterToy = 'misterToy',
+  MCPServer = 'mcpServer',
+  GoProxy = 'goProxy',
 }
 
-export interface ExperimentMetadata {
+interface ExperimentMetadata {
   id: string
   technologies: string[]
   repositoryLink: string
 }
 
-export type ExperimentsTexts = Record<
-  ExperimentName,
-  Pick<Experiment, 'title' | 'description'>
->
+export interface Experiment {
+  id: string
+  title: string
+  description: string
+  metadata: Omit<ExperimentMetadata, 'id'>
+}
 
 /*
   Notes:
@@ -22,10 +24,3 @@ export type ExperimentsTexts = Record<
   
   - The initial separation of the texts and the metadata is done to later support i18n.
 */
-
-export interface Experiment {
-  id: string
-  title: string
-  description: string
-  metadata: Omit<ExperimentMetadata, 'id'>
-}
