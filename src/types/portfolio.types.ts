@@ -1,4 +1,4 @@
-import { ButtonProps } from '@/components/UI'
+import { ButtonProps } from '@/types/button.types'
 
 export interface LinkConfiguration {
   id: string

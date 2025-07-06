@@ -1,9 +1,9 @@
 import { Project } from '@/types/project.types'
 import { LinkConfiguration, PortfolioItemData } from '@/types/portfolio.types'
+import { ButtonType } from '@/types/button.types'
 
 import { i18n } from '@/constants/texts.constants'
 
-import { ButtonType } from '@/components/UI'
 import { PortfolioItem } from '@/components/shared'
 
 const { projectsSection: projectsSectionI18n } = i18n
