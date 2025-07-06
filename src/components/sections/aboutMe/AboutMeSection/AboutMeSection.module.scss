@@ -6,24 +6,24 @@
 .aboutMeSection {
   @include mixins.section;
   @include mixins.flex-center;
-}
 
-.content {
-  text-align: center;
+  .content {
+    text-align: center;
 
-  .header {
-    @include mixins.flex-column;
-    gap: spacing.$spacing-lg;
-    margin-block-end: spacing.$spacing-md;
-  }
+    .header {
+      @include mixins.flex-column;
+      gap: spacing.$spacing-lg;
+      margin-block-end: spacing.$spacing-md;
+    }
 
-  .company {
-    display: inline-block;
-    margin-block-end: spacing.$spacing-xl;
-    font-weight: fonts.$font-weight-medium;
-  }
+    .company {
+      display: inline-block;
+      margin-block-end: spacing.$spacing-xl;
+      font-weight: fonts.$font-weight-medium;
+    }
 
-  .description {
-    max-width: 600px;
+    .description {
+      max-width: 600px;
+    }
   }
 }
