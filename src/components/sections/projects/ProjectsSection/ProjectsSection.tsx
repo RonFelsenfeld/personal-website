@@ -1,6 +1,6 @@
 import { Project } from '@/types/project.types'
 
-import { portfolio } from '@/constants/portfolio.constants'
+import { projectsData } from '@/constants/projects.constants'
 import { i18n } from '@/constants/texts.constants'
 
 import { SectionLayout } from '@/components/layouts'
@@ -12,7 +12,6 @@ import styles from './ProjectsSection.module.scss'
 
 const { projectsSection: projectsSectionI18n } = i18n
 
-const { projectsData } = portfolio
 
 const ProjectsSection = () => {
   const renderProject = (project: Project) => {
