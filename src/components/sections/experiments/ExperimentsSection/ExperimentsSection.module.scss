@@ -1,8 +1,6 @@
 @use '../../../../styles/mixins';
 
 .experimentsSection {
-  @include mixins.section;
-
   .experimentsList {
     @include mixins.cards-grid();
   }

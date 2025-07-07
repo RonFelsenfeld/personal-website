@@ -61,8 +61,15 @@ const experimentsSection = {
   repositoryLink: 'View Repository',
 }
 
+const educationSection = {
+  title: 'Education',
+  description:
+    "I'm always looking to grow and learn new skills. These courses and certifications represent my ongoing journey to stay current with technology and expand my capabilities as a developer. There's something exciting about discovering new ways to solve problems and build better things.",
+}
+
 export const i18n = {
   aboutMeSection,
   projectsSection,
   experimentsSection,
+  educationSection,
 } as const

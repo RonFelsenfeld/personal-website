@@ -4,6 +4,8 @@
 @use '../../../styles/spacing';
 
 .sectionLayout {
+  @include mixins.section;
+
   $row-gap: 30px;
 
   display: grid;
