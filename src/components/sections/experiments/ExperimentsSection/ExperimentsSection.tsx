@@ -1,6 +1,6 @@
 import { Experiment } from '@/types/experiment.types'
 
-import { portfolio } from '@/constants/portfolio.constants'
+import { experimentsData } from '@/constants/experiments.constants'
 import { i18n } from '@/constants/texts.constants'
 
 import { SectionLayout } from '@/components/layouts'
@@ -11,7 +11,6 @@ import ExperimentItem from '../ExperimentItem/ExperimentItem'
 import styles from './ExperimentsSection.module.scss'
 
 const { experimentsSection: experimentsSectionI18n } = i18n
-const { experimentsData } = portfolio
 
 const ExperimentsSection = () => {
   const renderExperiment = (experiment: Experiment) => {
