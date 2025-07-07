@@ -1,5 +1,6 @@
 import { ProjectName } from '@/types/project.types'
 import { ExperimentName } from '@/types/experiment.types'
+import { EducationItemName } from '@/types/education.types'
 
 const aboutMeSection = {
   name: 'Ron Felsenfeld',
@@ -65,6 +66,12 @@ const educationSection = {
   title: 'Education',
   description:
     "I'm always looking to grow and learn new skills. These courses and certifications represent my ongoing journey to stay current with technology and expand my capabilities as a developer. There's something exciting about discovering new ways to solve problems and build better things.",
+  educationTexts: {
+    [EducationItemName.TypeScript]: {
+      title: 'TypeScript',
+      description: 'TypeScript course',
+    },
+  },
 }
 
 export const i18n = {

@@ -7,8 +7,9 @@ const { projectsSection: projectsSectionI18n } = i18n
 export const projectsData: Record<ProjectName, Project> = {
   [ProjectName.SketchMate]: {
     id: 'sketchMate-project',
-    title: projectsSectionI18n.projectsTexts.sketchMate.title,
-    description: projectsSectionI18n.projectsTexts.sketchMate.description,
+    title: projectsSectionI18n.projectsTexts[ProjectName.SketchMate].title,
+    description:
+      projectsSectionI18n.projectsTexts[ProjectName.SketchMate].description,
     metadata: {
       technologies: ['ReactJS', 'HTML5 Canvas', 'SASS'],
       links: {
@@ -20,8 +21,9 @@ export const projectsData: Record<ProjectName, Project> = {
   },
   [ProjectName.Xpenser]: {
     id: 'xpenser-project',
-    title: projectsSectionI18n.projectsTexts.xpenser.title,
-    description: projectsSectionI18n.projectsTexts.xpenser.description,
+    title: projectsSectionI18n.projectsTexts[ProjectName.Xpenser].title,
+    description:
+      projectsSectionI18n.projectsTexts[ProjectName.Xpenser].description,
     metadata: {
       technologies: ['ReactJS', 'NodeJS', 'SASS', 'MongoDB'],
       links: {
@@ -33,8 +35,9 @@ export const projectsData: Record<ProjectName, Project> = {
   },
   [ProjectName.Anyday]: {
     id: 'anyday-project',
-    title: projectsSectionI18n.projectsTexts.anyday.title,
-    description: projectsSectionI18n.projectsTexts.anyday.description,
+    title: projectsSectionI18n.projectsTexts[ProjectName.Anyday].title,
+    description:
+      projectsSectionI18n.projectsTexts[ProjectName.Anyday].description,
     metadata: {
       technologies: ['ReactJS', 'NodeJS', 'MongoDB', 'ReduxJS', 'SASS'],
       links: {
