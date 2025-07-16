@@ -1,0 +1,86 @@
+@use '../../../../styles/colors';
+@use '../../../../styles/fonts';
+@use '../../../../styles/spacing';
+@use '../../../../styles/mixins';
+@use '../../../../styles/borders';
+
+.educationItem {
+  @include mixins.flex-column;
+
+  height: 300px;
+  position: relative;
+  border-radius: borders.$border-radius-md;
+
+  background: linear-gradient(
+    120deg,
+    colors.$surface 80%,
+    colors.$primary 120%
+  );
+
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(47, 129, 247, 0.13);
+    transform: translateY(-2px);
+  }
+
+  .header {
+    @include mixins.flex-column;
+
+    gap: spacing.$spacing-md;
+    padding: spacing.$spacing-xl spacing.$spacing-2xl;
+  }
+
+  .detailsContainer {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      'institution'
+      'skills'
+      'completedAt';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    gap: spacing.$spacing-md;
+
+    padding: spacing.$spacing-xl spacing.$spacing-2xl;
+    border-radius: 0 0 borders.$border-radius-md borders.$border-radius-md;
+
+    background: colors.$primary;
+    transform: translateY(100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 32px rgba(47, 129, 247, 0.1);
+
+    .institution {
+      grid-area: institution;
+      color: white;
+    }
+
+    .skills {
+      grid-area: skills;
+      align-self: center;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: spacing.$spacing-sm;
+
+      .skill {
+        @include mixins.tag-label(white);
+      }
+    }
+
+    .completedAt {
+      grid-area: completedAt;
+      font-size: fonts.$font-size-sm;
+    }
+  }
+
+  &:hover .detailsContainer {
+    transform: translateY(0);
+  }
+}

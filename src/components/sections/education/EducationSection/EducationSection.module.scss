@@ -1,7 +1,7 @@
 @use '../../../../styles/mixins';
 
-.projectsSection {
-  .projectsList {
+.educationSection {
+  .educationList {
     @include mixins.cards-grid();
   }
 }

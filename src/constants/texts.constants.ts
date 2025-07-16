@@ -1,5 +1,6 @@
 import { ProjectName } from '@/types/project.types'
 import { ExperimentName } from '@/types/experiment.types'
+import { EducationItemName } from '@/types/education.types'
 
 const aboutMeSection = {
   name: 'Ron Felsenfeld',
@@ -61,8 +62,47 @@ const experimentsSection = {
   repositoryLink: 'View Repository',
 }
 
+const educationSection = {
+  title: 'Education',
+  description:
+    "I'm always looking to grow and learn new skills. These courses and certifications represent my ongoing journey to stay current with technology and expand my capabilities as a developer. There's something exciting about discovering new ways to solve problems and build better things.",
+  educationTexts: {
+    [EducationItemName.AIForDevelopers]: {
+      title: 'AI For Developers',
+      description:
+        'An AI for developers training, covering generative AI, prompt engineering, LLMs, and Model Context Protocol (MCP). Included hands-on work with LangChain and agentic AI to build real-world, autonomous AI applications',
+    },
+    [EducationItemName.MySQL]: {
+      title: 'MySQL',
+      description:
+        'An SQL course, covering essential and advanced SQL concepts, including relational database design, querying, data manipulation, and structured data management.',
+    },
+    [EducationItemName.TypeScript]: {
+      title: 'TypeScript',
+      description:
+        'A comprehensive TypeScript course, covering type safety, advanced type features, object-oriented programming, and integration with modern JavaScript frameworks.',
+    },
+    [EducationItemName.FullStack]: {
+      title: 'Full Stack',
+      description:
+        'An intensive Full Stack bootcamp focused on modern web development, covering core technologies and principles, best practices, and real-world application development.',
+    },
+    [EducationItemName.CleanCode]: {
+      title: 'Clean Code',
+      description:
+        'A practical course on writing clean, efficient, and maintainable code, emphasizing readability, naming conventions, refactoring techniques, and industry best practices.',
+    },
+    [EducationItemName.HTMLCSS]: {
+      title: 'HTML & CSS',
+      description:
+        'An advanced course covering modern HTML5 and CSS, focusing on semantic markup, responsive layouts, and best practices for writing clean, accessible, and maintainable HTML and CSS code.',
+    },
+  },
+}
+
 export const i18n = {
   aboutMeSection,
   projectsSection,
   experimentsSection,
+  educationSection,
 } as const

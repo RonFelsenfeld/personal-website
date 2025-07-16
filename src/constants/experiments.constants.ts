@@ -7,8 +7,11 @@ const { experimentsSection: experimentsSectionI18n } = i18n
 export const experimentsData: Record<ExperimentName, Experiment> = {
   [ExperimentName.MisterToy]: {
     id: 'mister-toy-experiment',
-    title: experimentsSectionI18n.experimentsTexts.misterToy.title,
-    description: experimentsSectionI18n.experimentsTexts.misterToy.description,
+    title:
+      experimentsSectionI18n.experimentsTexts[ExperimentName.MisterToy].title,
+    description:
+      experimentsSectionI18n.experimentsTexts[ExperimentName.MisterToy]
+        .description,
     metadata: {
       technologies: [
         'TypeScript',
@@ -23,8 +26,11 @@ export const experimentsData: Record<ExperimentName, Experiment> = {
   },
   [ExperimentName.MCPServer]: {
     id: 'mcp-server-experiment',
-    title: experimentsSectionI18n.experimentsTexts.mcpServer.title,
-    description: experimentsSectionI18n.experimentsTexts.mcpServer.description,
+    title:
+      experimentsSectionI18n.experimentsTexts[ExperimentName.MCPServer].title,
+    description:
+      experimentsSectionI18n.experimentsTexts[ExperimentName.MCPServer]
+        .description,
     metadata: {
       technologies: ['Python', 'MCP'],
       repositoryLink: 'https://github.com/RonFelsenfeld/mcp-playground',
@@ -32,8 +38,11 @@ export const experimentsData: Record<ExperimentName, Experiment> = {
   },
   [ExperimentName.GoProxy]: {
     id: 'go-proxy-experiment',
-    title: experimentsSectionI18n.experimentsTexts.goProxy.title,
-    description: experimentsSectionI18n.experimentsTexts.goProxy.description,
+    title:
+      experimentsSectionI18n.experimentsTexts[ExperimentName.GoProxy].title,
+    description:
+      experimentsSectionI18n.experimentsTexts[ExperimentName.GoProxy]
+        .description,
     metadata: {
       technologies: ['Go'],
       repositoryLink: 'https://github.com/RonFelsenfeld/go-proxy',

@@ -3,6 +3,7 @@ import {
   AboutMeSection,
   ProjectsSection,
   ExperimentsSection,
+  EducationSection,
 } from '@/components/sections'
 
 const IndexPage = () => {
@@ -10,6 +11,7 @@ const IndexPage = () => {
     <MainLayout>
       <AboutMeSection />
       <ProjectsSection />
+      <EducationSection />
       <ExperimentsSection />
     </MainLayout>
   )
