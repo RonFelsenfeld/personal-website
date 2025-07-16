@@ -20,4 +20,5 @@ export interface EducationItemData {
   institution: InstitutionName
   skills: string[]
   completedAt: Date
+  isFavorite: boolean
 }

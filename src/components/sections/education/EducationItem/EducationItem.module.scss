@@ -26,6 +26,24 @@
     transform: translateY(-2px);
   }
 
+  .favoriteLabel {
+    $margin: 10px;
+    $size: 30px;
+
+    @include mixins.flex-center;
+
+    position: absolute;
+    top: $margin;
+    right: $margin;
+
+    width: $size;
+    height: $size;
+
+    border-radius: 50%;
+
+    background: colors.$favorite;
+  }
+
   .header {
     @include mixins.flex-column;
 
