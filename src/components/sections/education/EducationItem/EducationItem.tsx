@@ -40,7 +40,7 @@ const EducationItem = ({ educationItem }: EducationItemProps) => {
 
     return (
       <div className={styles.detailsContainer}>
-        <Text>{institution}</Text>
+        <Text className={styles.institution}>{institution}</Text>
 
         <ul className={styles.skills}>
           {skills.map(skill => (
@@ -48,6 +48,7 @@ const EducationItem = ({ educationItem }: EducationItemProps) => {
               <Text
                 htmlTag={TextTag.Span}
                 type={TextType.Secondary}
+                className={styles.skill}
               >
                 {skill}
               </Text>
@@ -55,7 +56,7 @@ const EducationItem = ({ educationItem }: EducationItemProps) => {
           ))}
         </ul>
 
-        <Text type={TextType.Secondary}>{formattedCompletedAt}</Text>
+        <Text className={styles.completedAt}>{formattedCompletedAt}</Text>
       </div>
     )
   }

@@ -45,7 +45,7 @@ export const educationData: Record<EducationItemName, EducationItemData> = {
       educationSectionI18n.educationTexts[EducationItemName.TypeScript]
         .description,
     institution: InstitutionName.Udemy,
-    skills: ['TypeScript', 'OOP'],
+    skills: ['TypeScript', 'OOP', 'Interfaces', 'Generics', 'Enums'],
     completedAt: new Date('2024-08-01'),
   },
   [EducationItemName.FullStack]: {

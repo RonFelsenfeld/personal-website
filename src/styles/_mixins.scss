@@ -26,20 +26,20 @@
   align-self: center;
 }
 
-@mixin tag-label {
+@mixin tag-label($color: colors.$primary) {
   padding: spacing.$spacing-xs spacing.$spacing-sm;
-  border: 1px solid rgba(colors.$primary, 0.2);
+  border: 1px solid rgba($color, 0.2);
   border-radius: borders.$border-radius-sm;
 
   font-size: fonts.$font-size-xs;
   font-weight: fonts.$font-weight-medium;
-  color: colors.$primary;
+  color: $color;
 
-  background: rgba(colors.$primary, 0.1);
+  background: rgba($color, 0.1);
   transition: all 0.2s ease;
 
   &:hover {
-    background: rgba(colors.$primary, 0.15);
-    border-color: rgba(colors.$primary, 0.3);
+    background: rgba($color, 0.15);
+    border-color: rgba($color, 0.3);
   }
 }
