@@ -1,9 +1,15 @@
 export enum EducationItemName {
-  TypeScript = 'TypeScript',
+  AIForDevelopers = 'AIForDevelopers',
   MySQL = 'MySQL',
+  TypeScript = 'TypeScript',
+  FullStack = 'FullStack',
+  CleanCode = 'CleanCode',
+  HTMLCSS = 'HTMLCSS',
 }
 
 export enum InstitutionName {
+  CodingAcademy = 'Coding Academy',
+  YanivArad = 'Yaniv Arad',
   Udemy = 'Udemy',
 }
 

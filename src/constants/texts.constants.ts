@@ -67,13 +67,29 @@ const educationSection = {
   description:
     "I'm always looking to grow and learn new skills. These courses and certifications represent my ongoing journey to stay current with technology and expand my capabilities as a developer. There's something exciting about discovering new ways to solve problems and build better things.",
   educationTexts: {
-    [EducationItemName.TypeScript]: {
-      title: 'TypeScript',
-      description: 'TypeScript course',
+    [EducationItemName.AIForDevelopers]: {
+      title: 'AI For Developers',
+      description: 'AI For Developers course',
     },
     [EducationItemName.MySQL]: {
       title: 'MySQL',
       description: 'MySQL course',
+    },
+    [EducationItemName.TypeScript]: {
+      title: 'TypeScript',
+      description: 'TypeScript course',
+    },
+    [EducationItemName.FullStack]: {
+      title: 'Full Stack',
+      description: 'Full Stack course',
+    },
+    [EducationItemName.CleanCode]: {
+      title: 'Clean Code',
+      description: 'Clean Code course',
+    },
+    [EducationItemName.HTMLCSS]: {
+      title: 'HTML & CSS',
+      description: 'HTML & CSS course',
     },
   },
 }
