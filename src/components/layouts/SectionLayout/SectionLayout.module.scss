@@ -16,7 +16,7 @@
     'content';
   row-gap: $row-gap;
 
-  padding-block: $row-gap;
+  padding-block: spacing.$spacing-2xl * 2;
 
   .header {
     @include mixins.flex-column;

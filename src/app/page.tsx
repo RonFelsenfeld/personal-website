@@ -11,8 +11,8 @@ const IndexPage = () => {
     <MainLayout>
       <AboutMeSection />
       <ProjectsSection />
-      <ExperimentsSection />
       <EducationSection />
+      <ExperimentsSection />
     </MainLayout>
   )
 }
