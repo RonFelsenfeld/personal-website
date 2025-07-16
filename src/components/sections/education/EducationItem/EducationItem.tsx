@@ -18,7 +18,8 @@ interface EducationItemProps {
 }
 
 const EducationItem = ({ educationItem }: EducationItemProps) => {
-  const { title, description, institution, skills, completedAt } = educationItem
+  const { title, description, institution, skills, completedAt, isFavorite } =
+    educationItem
 
   const ItemHeader = () => {
     return (
@@ -41,6 +42,7 @@ const EducationItem = ({ educationItem }: EducationItemProps) => {
     return (
       <div className={styles.detailsContainer}>
         <Text className={styles.institution}>{institution}</Text>
+        <Text className={styles.completedAt}>{formattedCompletedAt}</Text>
 
         <ul className={styles.skills}>
           {skills.map(skill => (
@@ -55,14 +57,21 @@ const EducationItem = ({ educationItem }: EducationItemProps) => {
             </li>
           ))}
         </ul>
+      </div>
+    )
+  }
 
-        <Text className={styles.completedAt}>{formattedCompletedAt}</Text>
+  const FavoriteLabel = () => {
+    return (
+      <div className={styles.favoriteLabel}>
+        <Text type={TextType.Secondary}>⭐️</Text>
       </div>
     )
   }
 
   return (
     <article className={styles.educationItem}>
+      {isFavorite && <FavoriteLabel />}
       <ItemHeader />
       <ItemDetails />
     </article>

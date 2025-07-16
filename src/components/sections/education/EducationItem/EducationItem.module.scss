@@ -5,9 +5,12 @@
 @use '../../../../styles/borders';
 
 .educationItem {
+  $item-height: 300px;
+  $hover-box-shadow: 0 8px 32px rgba(47, 129, 247, 0.13);
+
   @include mixins.flex-column;
 
-  height: 300px;
+  height: $item-height;
   position: relative;
   border-radius: borders.$border-radius-md;
 
@@ -16,14 +19,31 @@
     colors.$surface 80%,
     colors.$primary 120%
   );
-
   overflow: hidden;
   transition: all 0.3s;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0 8px 32px rgba(47, 129, 247, 0.13);
+    box-shadow: $hover-box-shadow;
     transform: translateY(-2px);
+  }
+
+  .favoriteLabel {
+    $margin: 10px;
+    $size: 30px;
+
+    @include mixins.flex-center;
+
+    position: absolute;
+    top: $margin;
+    right: $margin;
+
+    width: $size;
+    height: $size;
+
+    border-radius: 50%;
+
+    background: colors.$favorite;
   }
 
   .header {
@@ -35,35 +55,39 @@
 
   .detailsContainer {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto 1fr;
     grid-template-areas:
       'institution'
-      'skills'
-      'completedAt';
+      'completedAt'
+      'skills';
 
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 70%;
-    gap: spacing.$spacing-md;
 
     padding: spacing.$spacing-xl spacing.$spacing-2xl;
-    border-radius: 0 0 borders.$border-radius-md borders.$border-radius-md;
 
     background: colors.$primary;
     transform: translateY(100%);
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 32px rgba(47, 129, 247, 0.1);
+    box-shadow: $hover-box-shadow;
 
     .institution {
       grid-area: institution;
+      font-weight: fonts.$font-weight-medium;
       color: white;
+    }
+
+    .completedAt {
+      grid-area: completedAt;
+      font-size: fonts.$font-size-sm;
     }
 
     .skills {
       grid-area: skills;
-      align-self: center;
+      align-self: flex-end;
 
       display: flex;
       flex-wrap: wrap;
@@ -72,11 +96,6 @@
       .skill {
         @include mixins.tag-label(white);
       }
-    }
-
-    .completedAt {
-      grid-area: completedAt;
-      font-size: fonts.$font-size-sm;
     }
   }
 

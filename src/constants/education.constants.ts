@@ -27,6 +27,7 @@ export const educationData: Record<EducationItemName, EducationItemData> = {
       'LangChain',
     ],
     completedAt: new Date('2025-07-01'),
+    isFavorite: true,
   },
   [EducationItemName.MySQL]: {
     id: 'mysql-course',
@@ -36,6 +37,7 @@ export const educationData: Record<EducationItemName, EducationItemData> = {
     institution: InstitutionName.Udemy,
     skills: ['MySQL', 'Relational Database', 'Data Modeling', 'RDBMS'],
     completedAt: new Date('2025-03-01'),
+    isFavorite: false,
   },
   [EducationItemName.TypeScript]: {
     id: 'typescript-course',
@@ -47,6 +49,7 @@ export const educationData: Record<EducationItemName, EducationItemData> = {
     institution: InstitutionName.Udemy,
     skills: ['TypeScript', 'OOP', 'Interfaces', 'Generics', 'Enums'],
     completedAt: new Date('2024-08-01'),
+    isFavorite: false,
   },
   [EducationItemName.FullStack]: {
     id: 'full-stack-course',
@@ -65,6 +68,7 @@ export const educationData: Record<EducationItemName, EducationItemData> = {
       'MongoDB',
     ],
     completedAt: new Date('2024-05-01'),
+    isFavorite: true,
   },
   [EducationItemName.CleanCode]: {
     id: 'clean-code-course',
@@ -82,6 +86,7 @@ export const educationData: Record<EducationItemName, EducationItemData> = {
       'Code Quality',
     ],
     completedAt: new Date('2023-08-01'),
+    isFavorite: false,
   },
   [EducationItemName.HTMLCSS]: {
     id: 'html-css-course',
@@ -98,5 +103,6 @@ export const educationData: Record<EducationItemName, EducationItemData> = {
       'UI/UX Principles',
     ],
     completedAt: new Date('2023-03-01'),
+    isFavorite: false,
   },
 }

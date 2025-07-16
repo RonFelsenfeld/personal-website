@@ -9,7 +9,7 @@ export enum EducationItemName {
 
 export enum InstitutionName {
   CodingAcademy = 'Coding Academy',
-  YanivArad = 'Yaniv Arad',
+  YanivArad = 'Yaniv Arad Training Labs',
   Udemy = 'Udemy',
 }
 
@@ -20,4 +20,5 @@ export interface EducationItemData {
   institution: InstitutionName
   skills: string[]
   completedAt: Date
+  isFavorite: boolean
 }
