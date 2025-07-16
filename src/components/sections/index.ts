@@ -2,3 +2,4 @@ export { default as AboutMeSection } from './aboutMe/AboutMeSection/AboutMeSecti
 export { default as ProjectsSection } from './projects/ProjectsSection/ProjectsSection'
 export { default as ExperimentsSection } from './experiments/ExperimentsSection/ExperimentsSection'
 export { default as EducationSection } from './education/EducationSection/EducationSection'
+export { default as ContactSection } from './contact/ContactSection/ContactSection'

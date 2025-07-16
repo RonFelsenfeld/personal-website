@@ -4,6 +4,7 @@ import {
   ProjectsSection,
   ExperimentsSection,
   EducationSection,
+  ContactSection,
 } from '@/components/sections'
 
 const IndexPage = () => {
@@ -13,6 +14,7 @@ const IndexPage = () => {
       <ProjectsSection />
       <EducationSection />
       <ExperimentsSection />
+      <ContactSection />
     </MainLayout>
   )
 }

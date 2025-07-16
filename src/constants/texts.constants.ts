@@ -100,9 +100,14 @@ const educationSection = {
   },
 }
 
+const contactSection = {
+  title: 'Contact',
+}
+
 export const i18n = {
   aboutMeSection,
   projectsSection,
   experimentsSection,
   educationSection,
+  contactSection,
 } as const
