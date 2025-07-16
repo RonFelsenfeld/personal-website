@@ -41,6 +41,7 @@ const EducationItem = ({ educationItem }: EducationItemProps) => {
     return (
       <div className={styles.detailsContainer}>
         <Text className={styles.institution}>{institution}</Text>
+        <Text className={styles.completedAt}>{formattedCompletedAt}</Text>
 
         <ul className={styles.skills}>
           {skills.map(skill => (
@@ -55,8 +56,6 @@ const EducationItem = ({ educationItem }: EducationItemProps) => {
             </li>
           ))}
         </ul>
-
-        <Text className={styles.completedAt}>{formattedCompletedAt}</Text>
       </div>
     )
   }

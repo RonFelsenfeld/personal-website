@@ -35,18 +35,17 @@
 
   .detailsContainer {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto 1fr;
     grid-template-areas:
       'institution'
-      'skills'
-      'completedAt';
+      'completedAt'
+      'skills';
 
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 70%;
-    gap: spacing.$spacing-md;
 
     padding: spacing.$spacing-xl spacing.$spacing-2xl;
     border-radius: 0 0 borders.$border-radius-md borders.$border-radius-md;
@@ -59,11 +58,17 @@
     .institution {
       grid-area: institution;
       color: white;
+      font-weight: fonts.$font-weight-medium;
+    }
+
+    .completedAt {
+      grid-area: completedAt;
+      font-size: fonts.$font-size-sm;
     }
 
     .skills {
       grid-area: skills;
-      align-self: center;
+      align-self: flex-end;
 
       display: flex;
       flex-wrap: wrap;
@@ -72,11 +77,6 @@
       .skill {
         @include mixins.tag-label(white);
       }
-    }
-
-    .completedAt {
-      grid-area: completedAt;
-      font-size: fonts.$font-size-sm;
     }
   }
 
