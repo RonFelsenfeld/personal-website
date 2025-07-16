@@ -2,6 +2,7 @@
 @use '../../../styles/spacing';
 @use '../../../styles/fonts';
 @use '../../../styles/mixins';
+@use '../../../styles/borders';
 
 .portfolioItem {
   @include mixins.flex-column;
@@ -11,7 +12,7 @@
 
   padding: spacing.$spacing-xl;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  border-radius: borders.$border-radius-md;
 
   background: colors.$surface;
   overflow: hidden;
@@ -48,8 +49,6 @@
 
     .title {
       margin-block-end: spacing.$spacing-sm;
-      font-size: fonts.$font-size-xl;
-      color: colors.$text-primary;
     }
 
     .description {

@@ -2,7 +2,7 @@
 @use '../../../styles/fonts';
 
 .heading {
-  font-size: fonts.$font-size-2xl;
+  font-size: fonts.$font-size-xl;
   font-weight: fonts.$font-weight-bold;
   line-height: fonts.$line-height-tight;
   letter-spacing: fonts.$letter-spacing-tight;
@@ -12,5 +12,4 @@
   font-size: fonts.$font-size-lg;
   font-weight: fonts.$font-weight-semibold;
   line-height: fonts.$line-height-normal;
-  color: colors.$primary;
 }

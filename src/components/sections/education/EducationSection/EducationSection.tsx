@@ -22,11 +22,12 @@ const EducationSection = () => {
     <SectionLayout
       title={educationSectionI18n.title}
       description={educationSectionI18n.description}
-      className={styles.projectsSection}
+      className={styles.educationSection}
     >
       <List<EducationItemData>
         items={educationItems}
         renderItem={renderEducationItem}
+        className={styles.educationList}
       />
     </SectionLayout>
   )

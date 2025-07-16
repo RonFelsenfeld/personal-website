@@ -71,6 +71,10 @@ const educationSection = {
       title: 'TypeScript',
       description: 'TypeScript course',
     },
+    [EducationItemName.MySQL]: {
+      title: 'MySQL',
+      description: 'MySQL course',
+    },
   },
 }
 

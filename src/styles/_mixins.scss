@@ -1,6 +1,7 @@
 @use './spacing';
 @use './colors';
 @use './fonts';
+@use './borders';
 
 @mixin flex-center {
   display: flex;
@@ -28,7 +29,7 @@
 @mixin tag-label {
   padding: spacing.$spacing-xs spacing.$spacing-sm;
   border: 1px solid rgba(colors.$primary, 0.2);
-  border-radius: 6px;
+  border-radius: borders.$border-radius-sm;
 
   font-size: fonts.$font-size-xs;
   font-weight: fonts.$font-weight-medium;

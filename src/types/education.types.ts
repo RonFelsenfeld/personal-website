@@ -1,5 +1,6 @@
 export enum EducationItemName {
   TypeScript = 'TypeScript',
+  MySQL = 'MySQL',
 }
 
 export enum InstitutionName {
@@ -13,5 +14,4 @@ export interface EducationItemData {
   institution: InstitutionName
   skills: string[]
   completedAt: Date
-  isFavorite: boolean
 }

@@ -1,3 +1,7 @@
+@use '../../../../styles/mixins';
+
 .educationSection {
-  border: none;
+  .educationList {
+    @include mixins.cards-grid();
+  }
 }
