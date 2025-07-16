@@ -18,7 +18,14 @@ export const educationData: Record<EducationItemName, EducationItemData> = {
       educationSectionI18n.educationTexts[EducationItemName.AIForDevelopers]
         .description,
     institution: InstitutionName.YanivArad,
-    skills: ['AI', 'Development'],
+    skills: [
+      'AI Agents',
+      'MCP',
+      'GenAI',
+      'Prompt Engineering',
+      'LLMs',
+      'LangChain',
+    ],
     completedAt: new Date('2025-07-01'),
   },
   [EducationItemName.MySQL]: {
@@ -27,7 +34,7 @@ export const educationData: Record<EducationItemName, EducationItemData> = {
     description:
       educationSectionI18n.educationTexts[EducationItemName.MySQL].description,
     institution: InstitutionName.Udemy,
-    skills: ['MySQL'],
+    skills: ['MySQL', 'Relational Database', 'Data Modeling', 'RDBMS'],
     completedAt: new Date('2025-03-01'),
   },
   [EducationItemName.TypeScript]: {
@@ -38,7 +45,7 @@ export const educationData: Record<EducationItemName, EducationItemData> = {
       educationSectionI18n.educationTexts[EducationItemName.TypeScript]
         .description,
     institution: InstitutionName.Udemy,
-    skills: ['TypeScript'],
+    skills: ['TypeScript', 'OOP'],
     completedAt: new Date('2024-08-01'),
   },
   [EducationItemName.FullStack]: {
@@ -49,7 +56,14 @@ export const educationData: Record<EducationItemName, EducationItemData> = {
       educationSectionI18n.educationTexts[EducationItemName.FullStack]
         .description,
     institution: InstitutionName.CodingAcademy,
-    skills: ['Full Stack'],
+    skills: [
+      'Full Stack Development',
+      'JavaScript',
+      'ReactJS',
+      'NodeJS',
+      'ExpressJS',
+      'MongoDB',
+    ],
     completedAt: new Date('2024-05-01'),
   },
   [EducationItemName.CleanCode]: {
@@ -60,7 +74,13 @@ export const educationData: Record<EducationItemName, EducationItemData> = {
       educationSectionI18n.educationTexts[EducationItemName.CleanCode]
         .description,
     institution: InstitutionName.Udemy,
-    skills: ['Clean Code'],
+    skills: [
+      'Clean Code',
+      'Refactoring',
+      'SOLID Principles',
+      'Design Patterns',
+      'Code Quality',
+    ],
     completedAt: new Date('2023-08-01'),
   },
   [EducationItemName.HTMLCSS]: {
@@ -70,7 +90,13 @@ export const educationData: Record<EducationItemName, EducationItemData> = {
       educationSectionI18n.educationTexts[EducationItemName.HTMLCSS]
         .description,
     institution: InstitutionName.Udemy,
-    skills: ['HTML', 'CSS'],
+    skills: [
+      'HTML',
+      'CSS',
+      'Responsive Design',
+      'Semantic Markup',
+      'UI/UX Principles',
+    ],
     completedAt: new Date('2023-03-01'),
   },
 }
