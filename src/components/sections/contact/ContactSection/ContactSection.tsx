@@ -1,3 +1,5 @@
+'use client'
+
 import { contactService } from '@/services/contact.service'
 
 import { SectionId } from '@/types/section.types'

@@ -24,13 +24,14 @@ const ContactForm = ({ formConfiguration }: ContactFormProps) => {
 
   return (
     <form className={styles.contactForm}>
-      {formConfiguration.map(({ id, name, placeholder }) => (
+      {formConfiguration.map(({ id, name, placeholder, Icon }) => (
         <Input
           key={id}
           name={name}
           placeholder={placeholder}
           value={fields[id]}
           onChange={handleChange}
+          prefix={<Icon />}
         />
       ))}
     </form>
