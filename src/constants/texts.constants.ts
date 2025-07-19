@@ -113,6 +113,15 @@ const educationSection = {
 
 const contactSection = {
   title: 'Contact',
+  description:
+    "Have questions about one of my projects or interested in discussing technology and development? I enjoy connecting with fellow developers and exploring innovative ideas. Feel free to reach out - I'd be happy to connect and share insights.",
+  form: {
+    nameLabel: 'Full Name',
+    emailLabel: 'Email',
+    subjectLabel: 'Subject',
+    messageLabel: 'Message',
+    sendButton: 'Send',
+  },
 }
 
 export const i18n = {

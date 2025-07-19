@@ -13,6 +13,7 @@ const ContactSection = () => {
     <SectionLayout
       id={SectionId.Contact}
       title={contactSectionI18n.title}
+      description={contactSectionI18n.description}
       className={styles.contactSection}
     >
       <p>hello from contact section</p>
