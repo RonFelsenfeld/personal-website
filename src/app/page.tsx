@@ -1,4 +1,5 @@
-import { MainLayout } from '@/components/layouts'
+import { AppHeader, MainLayout } from '@/components/layout'
+
 import {
   AboutMeSection,
   ProjectsSection,
@@ -8,13 +9,22 @@ import {
 } from '@/components/sections'
 
 const IndexPage = () => {
+  const AppContent = () => {
+    return (
+      <>
+        <AboutMeSection />
+        <ProjectsSection />
+        <EducationSection />
+        <ExperimentsSection />
+        <ContactSection />
+      </>
+    )
+  }
+
   return (
     <MainLayout>
-      <AboutMeSection />
-      <ProjectsSection />
-      <EducationSection />
-      <ExperimentsSection />
-      <ContactSection />
+      <AppHeader />
+      <AppContent />
     </MainLayout>
   )
 }

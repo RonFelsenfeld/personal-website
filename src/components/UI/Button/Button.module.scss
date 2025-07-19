@@ -1,11 +1,11 @@
 @use '../../../styles/colors';
 @use '../../../styles/spacing';
 @use '../../../styles/fonts';
-@use '../../../styles/borders';
+@use '../../../styles/layout';
 
 .button {
   padding: spacing.$spacing-sm spacing.$spacing-md;
-  border-radius: borders.$border-radius-sm;
+  border-radius: layout.$border-radius-sm;
 
   font-size: fonts.$font-size-sm;
   font-weight: fonts.$font-weight-medium;
