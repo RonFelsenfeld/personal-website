@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import classNames from 'classnames'
 
 import { SectionId } from '@/types/section.types'
 import { NavigationLink } from './navigation.types'
 
 import { i18n } from '@/constants/texts.constants'
 
-import List from '@/components/UI/List/List'
+import { List, Text, TextTag } from '@/components/UI'
 
 import styles from './AppHeader.module.scss'
 
@@ -40,12 +41,17 @@ const AppHeader = () => {
       href={link.href}
       className={styles.navigationLink}
     >
-      {link.label}
+      <Text
+        htmlTag={TextTag.Span}
+        className={styles.navigationLabel}
+      >
+        {link.label}
+      </Text>
     </Link>
   )
 
   return (
-    <header className={styles.appHeader}>
+    <header className={classNames(styles.appHeader, 'fullRow')}>
       <nav className={styles.navigation}>
         <List
           items={navigationLinks}

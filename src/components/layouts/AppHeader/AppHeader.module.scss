@@ -14,26 +14,47 @@
 
   .navigation {
     padding: spacing.$spacing-lg spacing.$spacing-2xl;
-  }
 
-  .navigationList {
-    @include mixins.flex-center;
-    flex-direction: row;
-    gap: spacing.$spacing-2xl;
-  }
+    .navigationList {
+      @include mixins.flex-center;
+      flex-direction: row;
+      gap: spacing.$spacing-2xl;
 
-  .navigationLink {
-    color: colors.$text-primary;
-    text-decoration: none;
-    font-size: fonts.$font-size-md;
-    font-weight: fonts.$font-weight-medium;
-    padding: spacing.$spacing-sm spacing.$spacing-lg;
-    border-radius: borders.$border-radius-sm;
-    transition: all 0.2s ease;
+      .navigationLink {
+        $transition-duration: 0.3s;
 
-    &:hover {
-      color: colors.$primary;
-      background: rgba(colors.$primary, 0.1);
+        position: relative;
+        padding: spacing.$spacing-sm spacing.$spacing-lg;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+
+          width: 0;
+          height: 1px;
+
+          background: colors.$primary;
+          transform: translateX(-50%);
+          transition: width $transition-duration ease;
+        }
+
+        &:hover {
+          .navigationLabel {
+            color: colors.$primary;
+          }
+
+          &::after {
+            width: 80%;
+          }
+        }
+
+        .navigationLabel {
+          font-weight: fonts.$font-weight-medium;
+          transition: color $transition-duration ease;
+        }
+      }
     }
   }
 }

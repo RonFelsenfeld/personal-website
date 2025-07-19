@@ -21,7 +21,7 @@ const IndexPage = () => {
 
   return (
     <MainLayout>
-      <AppHeader className="fullRow" />
+      <AppHeader />
       <AppContent />
     </MainLayout>
   )
