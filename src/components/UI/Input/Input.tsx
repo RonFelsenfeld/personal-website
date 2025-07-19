@@ -10,7 +10,7 @@ interface InputProps extends AntdInputProps {
 const Input = ({ className, ...props }: InputProps) => {
   return (
     <AntdInput
-      className={classNames(styles.input, className)}
+      className={classNames(styles.inputContainer, className)}
       {...props}
     />
   )

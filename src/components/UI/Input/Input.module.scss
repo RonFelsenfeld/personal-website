@@ -1,7 +1,8 @@
 @use '../../../styles/colors';
 @use '../../../styles/fonts';
+@use '../../../styles/spacing';
 
-.input {
+.inputContainer {
   $border-color-1: #30363d;
   $border-color-2: #21262d;
   $border-hover-1: #40464d;
@@ -34,7 +35,12 @@
     box-shadow: none;
   }
 
-  &::placeholder {
-    color: rgba(colors.$text-secondary, 0.5);
+  input::placeholder {
+    color: rgba(colors.$text-secondary, 0.6);
+  }
+
+  svg {
+    color: colors.$text-primary;
+    margin-inline-end: spacing.$spacing-sm;
   }
 }
