@@ -1,0 +1,25 @@
+@use '../../../styles/colors';
+@use '../../../styles/fonts';
+
+.input {
+  width: 100%;
+  border: none;
+
+  color: colors.$text-primary;
+  font-size: fonts.$font-size-md;
+  font-weight: fonts.$font-weight-regular;
+
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+
+  &:hover {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  &:focus {
+    background: transparent;
+    box-shadow: none;
+  }
+}
