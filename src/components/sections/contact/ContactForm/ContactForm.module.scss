@@ -1,0 +1,7 @@
+@use '../../../../styles/mixins';
+@use '../../../../styles/spacing';
+
+.contactForm {
+  @include mixins.flex-column;
+  gap: spacing.$spacing-xl;
+}

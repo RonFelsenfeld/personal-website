@@ -1,21 +1,15 @@
 import { useState, ChangeEvent, Dispatch, SetStateAction } from 'react'
 
 type InputChangeEvent = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-type InputValue = string | number | boolean | undefined
+type InputValue = string | number | boolean
 
-interface FormField {
-  [key: string]: InputValue
-}
-
-type UseFromResult<T extends FormField> = [
+type UseFromResult<T> = [
   T,
   (event: InputChangeEvent) => void,
   Dispatch<SetStateAction<T>>
 ]
 
-export const useForm = <T extends FormField>(
-  initialState: T
-): UseFromResult<T> => {
+export const useForm = <T>(initialState: T): UseFromResult<T> => {
   const [fields, setFields] = useState<T>(initialState)
 
   function handleChange({ target }: InputChangeEvent) {

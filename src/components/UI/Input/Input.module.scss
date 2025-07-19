@@ -2,24 +2,39 @@
 @use '../../../styles/fonts';
 
 .input {
+  $border-color-1: #30363d;
+  $border-color-2: #21262d;
+  $border-hover-1: #40464d;
+  $border-hover-2: #30363d;
+
   width: 100%;
-  border: none;
+  border: 1px solid transparent;
+  background: linear-gradient(colors.$surface, colors.$surface) padding-box,
+    linear-gradient(135deg, $border-color-1, $border-color-2, $border-color-1)
+      border-box;
 
   color: colors.$text-primary;
   font-size: fonts.$font-size-md;
   font-weight: fonts.$font-weight-regular;
 
-  background: transparent;
   outline: none;
   box-shadow: none;
 
   &:hover {
-    background: transparent;
+    background: linear-gradient(colors.$surface, colors.$surface) padding-box,
+      linear-gradient(135deg, $border-hover-1, $border-hover-2, $border-hover-1)
+        border-box;
     box-shadow: none;
   }
 
   &:focus {
-    background: transparent;
+    background: linear-gradient(colors.$surface, colors.$surface) padding-box,
+      linear-gradient(135deg, colors.$primary, $border-hover-2, colors.$primary)
+        border-box;
     box-shadow: none;
+  }
+
+  &::placeholder {
+    color: rgba(colors.$text-secondary, 0.5);
   }
 }
