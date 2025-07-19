@@ -3,6 +3,7 @@
 @use '../../../styles/spacing';
 @use '../../../styles/fonts';
 @use '../../../styles/layout';
+@use '../../../styles/functions';
 
 .appHeader {
   @include mixins.flex-center;
@@ -13,7 +14,7 @@
   border-block-end: 1px solid colors.$header-border;
 
   background: colors.$surface;
-  z-index: 9999;
+  z-index: functions.layer('medium');
 
   .navigation {
     .navigationList {

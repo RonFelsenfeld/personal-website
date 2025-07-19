@@ -1,0 +1,16 @@
+@use 'sass:map';
+
+// z-index system
+@function layer($name) {
+  $layers: (
+    'base': 1,
+    'medium': 1000,
+    'top': 9999,
+  );
+
+  @if map.has-key($layers, $name) {
+    @return map.get($layers, $name);
+  } @else {
+    @error "Layer `#{$name}` not found in $layers map.";
+  }
+}
