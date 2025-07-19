@@ -1,6 +1,16 @@
 import { ProjectName } from '@/types/project.types'
 import { ExperimentName } from '@/types/experiment.types'
 import { EducationItemName } from '@/types/education.types'
+import { SectionId } from '@/types/section.types'
+
+const appHeader = {
+  links: {
+    [SectionId.About]: 'About Me',
+    [SectionId.Projects]: 'Projects',
+    [SectionId.Education]: 'Education',
+    [SectionId.Experiments]: 'Experiments',
+  },
+}
 
 const aboutMeSection = {
   name: 'Ron Felsenfeld',
@@ -101,6 +111,7 @@ const educationSection = {
 }
 
 export const i18n = {
+  appHeader,
   aboutMeSection,
   projectsSection,
   experimentsSection,

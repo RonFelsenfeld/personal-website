@@ -1,3 +1,5 @@
+import { SectionId } from '@/types/section.types'
+
 import { i18n } from '@/constants/texts.constants'
 
 import {
@@ -15,7 +17,10 @@ const { aboutMeSection: aboutMeSectionI18n } = i18n
 
 const AboutMe = () => {
   return (
-    <section className={styles.aboutMeSection}>
+    <section
+      id={SectionId.About}
+      className={styles.aboutMeSection}
+    >
       <div className={styles.content}>
         <header className={styles.header}>
           <Heading htmlTag={HeadingTag.H1}>{aboutMeSectionI18n.name}</Heading>

@@ -1,4 +1,5 @@
 import { EducationItemData } from '@/types/education.types'
+import { SectionId } from '@/types/section.types'
 
 import { educationData } from '@/constants/education.constants'
 import { i18n } from '@/constants/texts.constants'
@@ -20,6 +21,7 @@ const EducationSection = () => {
   const educationItems = Object.values(educationData)
   return (
     <SectionLayout
+      id={SectionId.Education}
       title={educationSectionI18n.title}
       description={educationSectionI18n.description}
       className={styles.educationSection}
