@@ -1,5 +1,6 @@
 @use './colors';
 @use './fonts';
+@use './layout';
 
 *,
 *::before,
@@ -12,6 +13,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: layout.$app-header-height; // Offset for sticky header on scroll-to-target links
 }
 
 body {

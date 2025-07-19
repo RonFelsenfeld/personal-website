@@ -2,9 +2,12 @@
 @use '../../../styles/colors';
 @use '../../../styles/spacing';
 @use '../../../styles/fonts';
-@use '../../../styles/borders';
+@use '../../../styles/layout';
 
 .appHeader {
+  @include mixins.flex-center;
+  height: layout.$app-header-height;
+
   position: sticky;
   top: 0;
   border-block-end: 1px solid colors.$header-border;
@@ -13,8 +16,6 @@
   z-index: 9999;
 
   .navigation {
-    padding-block: spacing.$spacing-lg;
-
     .navigationList {
       @include mixins.flex-center;
       flex-direction: row;
@@ -24,12 +25,12 @@
         $transition-duration: 0.3s;
 
         position: relative;
-        padding: spacing.$spacing-sm spacing.$spacing-lg;
+        padding-inline: spacing.$spacing-lg;
 
         &::after {
           content: '';
           position: absolute;
-          bottom: 0;
+          bottom: -4px;
           left: 50%;
 
           width: 0;

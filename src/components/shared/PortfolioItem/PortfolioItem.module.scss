@@ -2,7 +2,7 @@
 @use '../../../styles/spacing';
 @use '../../../styles/fonts';
 @use '../../../styles/mixins';
-@use '../../../styles/borders';
+@use '../../../styles/layout';
 
 .portfolioItem {
   @include mixins.flex-column;
@@ -12,7 +12,7 @@
 
   padding: spacing.$spacing-xl;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: borders.$border-radius-md;
+  border-radius: layout.$border-radius-md;
 
   background: colors.$surface;
   overflow: hidden;
