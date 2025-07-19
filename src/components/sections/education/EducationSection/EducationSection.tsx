@@ -4,7 +4,7 @@ import { SectionId } from '@/types/section.types'
 import { educationData } from '@/constants/education.constants'
 import { i18n } from '@/constants/texts.constants'
 
-import { SectionLayout } from '@/components/layouts'
+import { SectionLayout } from '@/components/layout'
 import { List } from '@/components/UI'
 
 import EducationItem from '../EducationItem/EducationItem'

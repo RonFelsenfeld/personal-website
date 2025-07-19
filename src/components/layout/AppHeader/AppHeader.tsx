@@ -2,7 +2,7 @@ import Link from 'next/link'
 import classNames from 'classnames'
 
 import { SectionId } from '@/types/section.types'
-import { NavigationLink } from './navigation.types'
+import { NavigationLink } from '../../../types/navigation.types'
 
 import { i18n } from '@/constants/texts.constants'
 

@@ -1,4 +1,4 @@
-import { AppHeader, MainLayout } from '@/components/layouts'
+import { AppHeader, MainLayout } from '@/components/layout'
 
 import {
   AboutMeSection,
