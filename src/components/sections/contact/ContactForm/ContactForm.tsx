@@ -31,7 +31,7 @@ const ContactForm = ({ formConfiguration }: ContactFormProps) => {
           placeholder={placeholder}
           value={fields[id]}
           onChange={handleChange}
-          prefix={<Icon />}
+          iconStart={<Icon />}
         />
       ))}
     </form>
