@@ -1,9 +1,10 @@
 import { Experiment } from '@/types/experiment.types'
+import { SectionId } from '@/types/section.types'
 
 import { experimentsData } from '@/constants/experiments.constants'
 import { i18n } from '@/constants/texts.constants'
 
-import { SectionLayout } from '@/components/layouts'
+import { SectionLayout } from '@/components/layout'
 import { List } from '@/components/UI'
 
 import ExperimentItem from '../ExperimentItem/ExperimentItem'
@@ -21,6 +22,7 @@ const ExperimentsSection = () => {
 
   return (
     <SectionLayout
+      id={SectionId.Experiments}
       title={experimentsSectionI18n.title}
       description={experimentsSectionI18n.description}
       className={styles.experimentsSection}

@@ -1,9 +1,10 @@
 import { Project } from '@/types/project.types'
+import { SectionId } from '@/types/section.types'
 
 import { projectsData } from '@/constants/projects.constants'
 import { i18n } from '@/constants/texts.constants'
 
-import { SectionLayout } from '@/components/layouts'
+import { SectionLayout } from '@/components/layout'
 import { List } from '@/components/UI'
 
 import ProjectItem from '../ProjectItem/ProjectItem'
@@ -21,6 +22,7 @@ const ProjectsSection = () => {
 
   return (
     <SectionLayout
+      id={SectionId.Projects}
       title={projectsSectionI18n.title}
       description={projectsSectionI18n.description}
       className={styles.projectsSection}

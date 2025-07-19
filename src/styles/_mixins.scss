@@ -1,7 +1,7 @@
 @use './spacing';
 @use './colors';
 @use './fonts';
-@use './borders';
+@use './layout';
 
 @mixin flex-center {
   display: flex;
@@ -15,7 +15,7 @@
 }
 
 @mixin section {
-  min-height: 100dvh;
+  min-height: calc(100dvh - layout.$app-header-height);
 }
 
 @mixin cards-grid($card-min-width: 320px, $gap: spacing.$spacing-2xl) {
@@ -29,7 +29,7 @@
 @mixin tag-label($color: colors.$primary) {
   padding: spacing.$spacing-xs spacing.$spacing-sm;
   border: 1px solid rgba($color, 0.2);
-  border-radius: borders.$border-radius-sm;
+  border-radius: layout.$border-radius-sm;
 
   font-size: fonts.$font-size-xs;
   font-weight: fonts.$font-weight-medium;

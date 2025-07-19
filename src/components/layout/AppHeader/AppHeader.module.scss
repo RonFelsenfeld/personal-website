@@ -1,0 +1,62 @@
+@use '../../../styles/mixins';
+@use '../../../styles/colors';
+@use '../../../styles/spacing';
+@use '../../../styles/fonts';
+@use '../../../styles/layout';
+@use '../../../styles/functions';
+
+.appHeader {
+  @include mixins.flex-center;
+  height: layout.$app-header-height;
+
+  position: sticky;
+  top: 0;
+  border-block-end: 1px solid colors.$header-border;
+
+  background: colors.$surface;
+  z-index: functions.layer('medium');
+
+  .navigation {
+    .navigationList {
+      @include mixins.flex-center;
+      flex-direction: row;
+      gap: spacing.$spacing-2xl;
+
+      .navigationLink {
+        $transition-duration: 0.3s;
+
+        position: relative;
+        padding-inline: spacing.$spacing-lg;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 50%;
+
+          width: 0;
+          height: 1px;
+
+          background: colors.$primary;
+          transform: translateX(-50%);
+          transition: width $transition-duration ease;
+        }
+
+        &:hover {
+          .navigationLabel {
+            color: colors.$primary;
+          }
+
+          &::after {
+            width: 80%;
+          }
+        }
+
+        .navigationLabel {
+          font-weight: fonts.$font-weight-medium;
+          transition: color $transition-duration ease;
+        }
+      }
+    }
+  }
+}
