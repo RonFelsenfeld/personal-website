@@ -12,17 +12,15 @@ export const experimentsData: Record<ExperimentName, Experiment> = {
     description:
       experimentsSectionI18n.experimentsTexts[ExperimentName.MisterToy]
         .description,
-    metadata: {
-      technologies: [
-        'TypeScript',
-        'ReactJS',
-        'Redux Toolkit',
-        'SASS',
-        'GraphQL',
-        'MongoDB',
-      ],
-      repositoryLink: 'https://github.com/RonFelsenfeld/MisterToy-TS-Frontend',
-    },
+    technologies: [
+      'TypeScript',
+      'ReactJS',
+      'Redux Toolkit',
+      'SASS',
+      'GraphQL',
+      'MongoDB',
+    ],
+    repositoryLink: 'https://github.com/RonFelsenfeld/MisterToy-TS-Frontend',
   },
   [ExperimentName.MCPServer]: {
     id: 'mcp-server-experiment',
@@ -31,10 +29,8 @@ export const experimentsData: Record<ExperimentName, Experiment> = {
     description:
       experimentsSectionI18n.experimentsTexts[ExperimentName.MCPServer]
         .description,
-    metadata: {
-      technologies: ['Python', 'MCP'],
-      repositoryLink: 'https://github.com/RonFelsenfeld/mcp-playground',
-    },
+    technologies: ['Python', 'MCP'],
+    repositoryLink: 'https://github.com/RonFelsenfeld/mcp-playground',
   },
   [ExperimentName.GoProxy]: {
     id: 'go-proxy-experiment',
@@ -43,9 +39,7 @@ export const experimentsData: Record<ExperimentName, Experiment> = {
     description:
       experimentsSectionI18n.experimentsTexts[ExperimentName.GoProxy]
         .description,
-    metadata: {
-      technologies: ['Go'],
-      repositoryLink: 'https://github.com/RonFelsenfeld/go-proxy',
-    },
+    technologies: ['Go'],
+    repositoryLink: 'https://github.com/RonFelsenfeld/go-proxy',
   },
 }

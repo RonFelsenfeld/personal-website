@@ -14,7 +14,7 @@ const ExperimentItem = ({ experiment }: ExperimentItemProps) => {
   const linksConfigurations: LinkConfiguration[] = [
     {
       id: 'repository',
-      link: experiment.metadata.repositoryLink,
+      link: experiment.repositoryLink,
       buttonProps: {
         children: experimentsSectionI18n.repositoryLink,
       },
@@ -25,7 +25,7 @@ const ExperimentItem = ({ experiment }: ExperimentItemProps) => {
     id: experiment.id,
     title: experiment.title,
     description: experiment.description,
-    technologies: experiment.metadata.technologies,
+    technologies: experiment.technologies,
     linksConfigurations,
   }
 
