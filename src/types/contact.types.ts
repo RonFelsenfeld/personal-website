@@ -9,6 +9,5 @@ export interface ContactInputConfiguration {
   id: keyof ContactDetails
   name: keyof ContactDetails
   placeholder: string
-  isRequired: boolean
   Icon: React.ComponentType
 }
