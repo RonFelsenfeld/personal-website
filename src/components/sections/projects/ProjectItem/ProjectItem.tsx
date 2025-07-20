@@ -1,6 +1,6 @@
 import { Project } from '@/types/project.types'
 import { LinkConfiguration, PortfolioItemData } from '@/types/portfolio.types'
-import { ButtonType } from '@/types/button.types'
+import { ButtonVariant } from '@/types/button.types'
 
 import { i18n } from '@/constants/texts.constants'
 
@@ -21,7 +21,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
       id: 'live-version',
       link: links.liveVersion,
       buttonProps: {
-        type: ButtonType.Primary,
+        variant: ButtonVariant.Primary,
         children: buttonsI18n.viewProject,
       },
     },
@@ -29,7 +29,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
       id: 'frontend',
       link: links.frontend,
       buttonProps: {
-        type: ButtonType.Secondary,
+        variant: ButtonVariant.Secondary,
         children: buttonsI18n.frontend,
       },
     },
@@ -37,7 +37,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
       id: 'backend',
       link: links.backend,
       buttonProps: {
-        type: ButtonType.Secondary,
+        variant: ButtonVariant.Secondary,
         children: buttonsI18n.backend,
       },
     },

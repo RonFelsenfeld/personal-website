@@ -2,24 +2,24 @@
 
 import classNames from 'classnames'
 
-import { ButtonProps, ButtonType } from '@/types/button.types'
+import { ButtonProps, ButtonVariant } from '@/types/button.types'
 
 import styles from './Button.module.scss'
 
-const buttonClasses: Record<ButtonType, string> = {
-  [ButtonType.Primary]: styles.primary,
-  [ButtonType.Secondary]: styles.secondary,
+const buttonClasses: Record<ButtonVariant, string> = {
+  [ButtonVariant.Primary]: styles.primary,
+  [ButtonVariant.Secondary]: styles.secondary,
 }
 
 const Button = ({
   children,
   handleClick,
-  type = ButtonType.Primary,
+  variant = ButtonVariant.Primary,
   className,
 }: ButtonProps) => {
   return (
     <button
-      className={classNames(styles.button, buttonClasses[type], className)}
+      className={classNames(styles.button, buttonClasses[variant], className)}
       onClick={handleClick}
     >
       {children}
