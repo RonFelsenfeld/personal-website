@@ -1,13 +1,9 @@
-import { useState, ChangeEvent, Dispatch, SetStateAction } from 'react'
+import { useState, ChangeEvent } from 'react'
 
 type InputChangeEvent = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 type InputValue = string | number | boolean
 
-type UseFromResult<T> = [
-  T,
-  (event: InputChangeEvent) => void,
-  Dispatch<SetStateAction<T>>
-]
+type UseFromResult<T> = [T, (event: InputChangeEvent) => void, () => void]
 
 export const useForm = <T>(initialState: T): UseFromResult<T> => {
   const [fields, setFields] = useState<T>(initialState)
@@ -36,5 +32,7 @@ export const useForm = <T>(initialState: T): UseFromResult<T> => {
     }))
   }
 
-  return [fields, handleChange, setFields]
+  const onClearForm = () => setFields(initialState)
+
+  return [fields, handleChange, onClearForm]
 }

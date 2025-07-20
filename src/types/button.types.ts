@@ -10,8 +10,9 @@ type NativeButtonProps = Omit<
   'handleClick'
 >
 
+// Note: handleClick is optional because it's not always needed (e.g. in the case of a submit button)
 export interface ButtonProps extends NativeButtonProps {
-  handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void
+  handleClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
   className?: string
   variant?: ButtonVariant
 }

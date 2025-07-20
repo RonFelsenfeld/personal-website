@@ -22,7 +22,7 @@ const getDefaultContactDetails = (): ContactDetails => ({
   subject: '',
 })
 
-const getContactFormConfiguration = (): ContactInputConfiguration[] => [
+const getContactFormInputsConfigurations = (): ContactInputConfiguration[] => [
   {
     id: 'fullName',
     name: 'fullName',
@@ -51,5 +51,5 @@ const getContactFormConfiguration = (): ContactInputConfiguration[] => [
 
 export const contactService = {
   getDefaultContactDetails,
-  getContactFormConfiguration,
+  getContactFormInputsConfigurations,
 }

@@ -4,4 +4,14 @@
 .contactForm {
   @include mixins.flex-column;
   gap: spacing.$spacing-xl;
+
+  .buttonsContainer {
+    display: flex;
+    gap: spacing.$spacing-xl;
+
+    .formButton {
+      flex-grow: 1;
+      padding-block: spacing.$spacing-md;
+    }
+  }
 }

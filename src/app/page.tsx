@@ -9,22 +9,14 @@ import {
 } from '@/components/sections'
 
 const IndexPage = () => {
-  const AppContent = () => {
-    return (
-      <>
-        <AboutMeSection />
-        <ProjectsSection />
-        <EducationSection />
-        <ExperimentsSection />
-        <ContactSection />
-      </>
-    )
-  }
-
   return (
     <MainLayout>
       <AppHeader />
-      <AppContent />
+      <AboutMeSection />
+      <ProjectsSection />
+      <EducationSection />
+      <ExperimentsSection />
+      <ContactSection />
     </MainLayout>
   )
 }

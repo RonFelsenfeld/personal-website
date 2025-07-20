@@ -121,6 +121,7 @@ const contactSection = {
     subjectLabel: 'Subject',
     messageLabel: 'Message',
     sendButton: 'Send',
+    clearButton: 'Clear Form',
   },
 }
 

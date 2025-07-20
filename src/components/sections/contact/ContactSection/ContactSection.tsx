@@ -14,7 +14,8 @@ import styles from './ContactSection.module.scss'
 const { contactSection: contactSectionI18n } = i18n
 
 const ContactSection = () => {
-  const formConfiguration = contactService.getContactFormConfiguration()
+  const inputsConfigurations =
+    contactService.getContactFormInputsConfigurations()
 
   return (
     <SectionLayout
@@ -23,7 +24,7 @@ const ContactSection = () => {
       description={contactSectionI18n.description}
       className={styles.contactSection}
     >
-      <ContactForm formConfiguration={formConfiguration} />
+      <ContactForm inputsConfigurations={inputsConfigurations} />
     </SectionLayout>
   )
 }
