@@ -1,5 +1,17 @@
 @use '../../../../styles/mixins';
+@use '../../../../styles/spacing';
 
 .contactSection {
   @include mixins.section;
+
+  .sectionContainer {
+    display: flex;
+    gap: spacing.$spacing-xl;
+
+    .contactImage {
+      width: 50%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 }
