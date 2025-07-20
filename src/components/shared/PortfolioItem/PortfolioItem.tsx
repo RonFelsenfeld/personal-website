@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 import { PortfolioItemData } from '@/types/portfolio.types'
 
 import {
@@ -13,11 +15,6 @@ import {
 } from '@/components/UI'
 
 import styles from './PortfolioItem.module.scss'
-
-type LinkClickEvent = React.MouseEvent<
-  HTMLElement | HTMLButtonElement,
-  MouseEvent
->
 
 interface PortfolioItemProps {
   item: PortfolioItemData
@@ -65,23 +62,20 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
   }
 
   const ItemLinks = () => {
-    const handleLinkClick = (event: LinkClickEvent, url: string) => {
-      event.stopPropagation()
-      window.open(url, '_blank', 'noopener,noreferrer')
-    }
-
     const { linksConfigurations } = item
 
     return (
       <div className={styles.links}>
         {linksConfigurations.map(linkConfiguration => (
-          <Button
+          <Link
             key={linkConfiguration.id}
-            variant={linkConfiguration.buttonProps.variant}
-            handleClick={e => handleLinkClick(e, linkConfiguration.link)}
+            href={linkConfiguration.link}
+            target="_blank"
           >
-            {linkConfiguration.buttonProps.children}
-          </Button>
+            <Button variant={linkConfiguration.buttonProps.variant}>
+              {linkConfiguration.buttonProps.children}
+            </Button>
+          </Link>
         ))}
       </div>
     )
