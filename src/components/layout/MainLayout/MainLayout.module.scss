@@ -1,8 +1,8 @@
-.mainLayout {
-  $side-margins-width: 150px;
+@use '../../../styles/layout';
 
+.mainLayout {
   display: grid;
-  grid-template-columns: $side-margins-width 1fr $side-margins-width;
+  grid-template-columns: layout.$main-layout-side-margins-width 1fr layout.$main-layout-side-margins-width;
 
   // This is a workaround to allow the fullRow class to be used in the AppHeader component, which is not a child of the MainLayout component (used in page.tsx)
   > *:not(:global(.fullRow)) {
