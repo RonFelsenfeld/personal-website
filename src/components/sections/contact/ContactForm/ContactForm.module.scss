@@ -4,9 +4,9 @@
 .contactForm {
   @include mixins.flex-column;
 
-  width: 50%;
   justify-content: center;
   gap: spacing.$spacing-xl;
+  width: 70%;
 
   .buttonsContainer {
     display: flex;

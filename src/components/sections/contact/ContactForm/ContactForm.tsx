@@ -38,19 +38,19 @@ const ContactForm = ({ inputsConfigurations }: ContactFormProps) => {
     return (
       <div className={styles.buttonsContainer}>
         <Button
-          className={styles.formButton}
-          type="submit"
-        >
-          {form.sendButton}
-        </Button>
-
-        <Button
           handleClick={onClearForm}
           variant={ButtonVariant.Secondary}
           className={styles.formButton}
           type="button"
         >
           {form.clearButton}
+        </Button>
+
+        <Button
+          className={styles.formButton}
+          type="submit"
+        >
+          {form.sendButton}
         </Button>
       </div>
     )
