@@ -4,6 +4,8 @@ import classNames from 'classnames'
 import { SectionId } from '@/types/section.types'
 import { NavigationLink } from '../../../types/navigation.types'
 
+import { getSectionLink } from '@/utils/navigation.utils'
+
 import { i18n } from '@/constants/texts.constants'
 
 import { List, Text, TextTag } from '@/components/UI'
@@ -16,34 +18,29 @@ const navigationLinks: NavigationLink[] = [
   {
     id: SectionId.About,
     label: appHeaderI18n.links[SectionId.About],
-    href: `#${SectionId.About}`,
   },
   {
     id: SectionId.Projects,
     label: appHeaderI18n.links[SectionId.Projects],
-    href: `#${SectionId.Projects}`,
   },
   {
     id: SectionId.Education,
     label: appHeaderI18n.links[SectionId.Education],
-    href: `#${SectionId.Education}`,
   },
   {
     id: SectionId.Experiments,
     label: appHeaderI18n.links[SectionId.Experiments],
-    href: `#${SectionId.Experiments}`,
   },
   {
     id: SectionId.Contact,
     label: appHeaderI18n.links[SectionId.Contact],
-    href: `#${SectionId.Contact}`,
   },
 ]
 
 const AppHeader = () => {
   const renderNavigationLink = (link: NavigationLink) => (
     <Link
-      href={link.href}
+      href={getSectionLink(link.id)}
       className={styles.navigationLink}
     >
       <Text
