@@ -3,6 +3,7 @@
 export enum ButtonVariant {
   Primary = 'primary',
   Secondary = 'secondary',
+  Link = 'link',
 }
 
 type NativeButtonProps = Omit<

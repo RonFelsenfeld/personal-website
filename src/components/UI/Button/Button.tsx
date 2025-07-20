@@ -9,6 +9,7 @@ import styles from './Button.module.scss'
 const buttonClasses: Record<ButtonVariant, string> = {
   [ButtonVariant.Primary]: styles.primary,
   [ButtonVariant.Secondary]: styles.secondary,
+  [ButtonVariant.Link]: styles.link,
 }
 
 const Button = ({

@@ -8,9 +8,10 @@ import { getSectionLink } from '@/utils/navigation.utils'
 
 import { i18n } from '@/constants/texts.constants'
 
-import { List, Text, TextTag } from '@/components/UI'
+import { Button, List } from '@/components/UI'
 
 import styles from './AppHeader.module.scss'
+import { ButtonVariant } from '@/types/button.types'
 
 const { appHeader: appHeaderI18n } = i18n
 
@@ -39,16 +40,8 @@ const navigationLinks: NavigationLink[] = [
 
 const AppHeader = () => {
   const renderNavigationLink = (link: NavigationLink) => (
-    <Link
-      href={getSectionLink(link.id)}
-      className={styles.navigationLink}
-    >
-      <Text
-        htmlTag={TextTag.Span}
-        className={styles.navigationLabel}
-      >
-        {link.label}
-      </Text>
+    <Link href={getSectionLink(link.id)}>
+      <Button variant={ButtonVariant.Link}>{link.label}</Button>
     </Link>
   )
 
