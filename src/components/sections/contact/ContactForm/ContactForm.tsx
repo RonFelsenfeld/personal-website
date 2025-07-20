@@ -34,21 +34,6 @@ const ContactForm = ({ inputsConfigurations }: ContactFormProps) => {
     console.log('Submitting form...')
   }
 
-  console.log(contactDetails)
-
-  const InputFields = () => {
-    return inputsConfigurations.map(({ id, name, placeholder, Icon }) => (
-      <Input
-        key={id}
-        name={name}
-        placeholder={placeholder}
-        value={contactDetails[id]}
-        onChange={handleChange}
-        iconStart={<Icon />}
-      />
-    ))
-  }
-
   const FormButtons = () => {
     return (
       <div className={styles.buttonsContainer}>
@@ -76,7 +61,18 @@ const ContactForm = ({ inputsConfigurations }: ContactFormProps) => {
       className={styles.contactForm}
       onSubmit={onSubmit}
     >
-      <InputFields />
+      {inputsConfigurations.map(({ id, name, placeholder, type, Icon }) => (
+        <Input
+          key={id}
+          name={name}
+          type={type}
+          placeholder={placeholder}
+          value={contactDetails[id]}
+          onChange={handleChange}
+          iconStart={<Icon />}
+        />
+      ))}
+
       <FormButtons />
     </form>
   )

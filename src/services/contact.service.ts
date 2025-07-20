@@ -27,24 +27,28 @@ const getContactFormInputsConfigurations = (): ContactInputConfiguration[] => [
     id: 'fullName',
     name: 'fullName',
     placeholder: contactFormI18n.nameLabel,
+    type: 'text',
     Icon: UserOutlined,
   },
   {
     id: 'email',
     name: 'email',
     placeholder: contactFormI18n.emailLabel,
+    type: 'email',
     Icon: MailOutlined,
   },
   {
     id: 'subject',
     name: 'subject',
     placeholder: contactFormI18n.subjectLabel,
+    type: 'text',
     Icon: EditOutlined,
   },
   {
     id: 'message',
     name: 'message',
     placeholder: contactFormI18n.messageLabel,
+    type: 'text',
     Icon: MessageOutlined,
   },
 ]
