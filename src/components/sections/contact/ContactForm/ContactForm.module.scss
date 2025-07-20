@@ -1,0 +1,20 @@
+@use '../../../../styles/mixins';
+@use '../../../../styles/spacing';
+
+.contactForm {
+  @include mixins.flex-column;
+
+  justify-content: center;
+  gap: spacing.$spacing-xl;
+  width: 70%;
+
+  .buttonsContainer {
+    display: flex;
+    gap: spacing.$spacing-xl;
+
+    .formButton {
+      flex-grow: 1;
+      padding-block: spacing.$spacing-md;
+    }
+  }
+}

@@ -5,24 +5,18 @@ import {
   ProjectsSection,
   ExperimentsSection,
   EducationSection,
+  ContactSection,
 } from '@/components/sections'
 
 const IndexPage = () => {
-  const AppContent = () => {
-    return (
-      <>
-        <AboutMeSection />
-        <ProjectsSection />
-        <EducationSection />
-        <ExperimentsSection />
-      </>
-    )
-  }
-
   return (
     <MainLayout>
       <AppHeader />
-      <AppContent />
+      <AboutMeSection />
+      <ProjectsSection />
+      <EducationSection />
+      <ExperimentsSection />
+      <ContactSection />
     </MainLayout>
   )
 }

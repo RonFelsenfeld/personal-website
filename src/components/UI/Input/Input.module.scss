@@ -1,0 +1,46 @@
+@use '../../../styles/colors';
+@use '../../../styles/fonts';
+@use '../../../styles/spacing';
+
+.inputContainer {
+  $border-color-1: #30363d;
+  $border-color-2: #21262d;
+  $border-hover-1: #40464d;
+  $border-hover-2: #30363d;
+
+  width: 100%;
+  border: 1px solid transparent;
+  background: linear-gradient(colors.$surface, colors.$surface) padding-box,
+    linear-gradient(135deg, $border-color-1, $border-color-2, $border-color-1)
+      border-box;
+
+  color: colors.$text-primary;
+  font-size: fonts.$font-size-md;
+  font-weight: fonts.$font-weight-regular;
+
+  outline: none;
+  box-shadow: none;
+
+  &:hover {
+    background: linear-gradient(colors.$surface, colors.$surface) padding-box,
+      linear-gradient(135deg, $border-hover-1, $border-hover-2, $border-hover-1)
+        border-box;
+    box-shadow: none;
+  }
+
+  &:focus {
+    background: linear-gradient(colors.$surface, colors.$surface) padding-box,
+      linear-gradient(135deg, colors.$primary, $border-hover-2, colors.$primary)
+        border-box;
+    box-shadow: none;
+  }
+
+  input::placeholder {
+    color: rgba(colors.$text-secondary, 0.6);
+  }
+
+  svg {
+    color: colors.$text-primary;
+    margin-inline-end: spacing.$spacing-sm;
+  }
+}

@@ -6,7 +6,7 @@
 .sectionLayout {
   @include mixins.section;
 
-  $row-gap: 30px;
+  $row-gap: spacing.$spacing-2xl;
 
   display: grid;
   grid-template-columns: 1fr;

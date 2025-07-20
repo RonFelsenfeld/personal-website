@@ -77,7 +77,7 @@ const PortfolioItem = ({ item }: PortfolioItemProps) => {
         {linksConfigurations.map(linkConfiguration => (
           <Button
             key={linkConfiguration.id}
-            type={linkConfiguration.buttonProps.type}
+            variant={linkConfiguration.buttonProps.variant}
             handleClick={e => handleLinkClick(e, linkConfiguration.link)}
           >
             {linkConfiguration.buttonProps.children}

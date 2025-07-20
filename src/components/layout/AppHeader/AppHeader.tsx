@@ -33,6 +33,11 @@ const navigationLinks: NavigationLink[] = [
     label: appHeaderI18n.links[SectionId.Experiments],
     href: `#${SectionId.Experiments}`,
   },
+  {
+    id: SectionId.Contact,
+    label: appHeaderI18n.links[SectionId.Contact],
+    href: `#${SectionId.Contact}`,
+  },
 ]
 
 const AppHeader = () => {
