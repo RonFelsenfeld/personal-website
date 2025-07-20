@@ -14,7 +14,7 @@ interface ProjectItemProps {
 }
 
 const ProjectItem = ({ project }: ProjectItemProps) => {
-  const { links } = project.metadata
+  const { links } = project
 
   const linksConfigurations: LinkConfiguration[] = [
     {
@@ -47,7 +47,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
     id: project.id,
     title: project.title,
     description: project.description,
-    technologies: project.metadata.technologies,
+    technologies: project.technologies,
     linksConfigurations,
   }
 

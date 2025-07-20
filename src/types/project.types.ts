@@ -10,17 +10,12 @@ interface ProjectLinks {
   backend: string
 }
 
-interface ProjectMetadata {
-  id: string
-  technologies: string[]
-  links: ProjectLinks
-}
-
 export interface Project {
   id: string
   title: string
   description: string
-  metadata: Omit<ProjectMetadata, 'id'>
+  technologies: string[]
+  links: ProjectLinks
 }
 
 /*

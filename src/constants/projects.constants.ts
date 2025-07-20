@@ -10,13 +10,11 @@ export const projectsData: Record<ProjectName, Project> = {
     title: projectsSectionI18n.projectsTexts[ProjectName.SketchMate].title,
     description:
       projectsSectionI18n.projectsTexts[ProjectName.SketchMate].description,
-    metadata: {
-      technologies: ['ReactJS', 'HTML5 Canvas', 'SASS'],
-      links: {
-        liveVersion: 'https://sketchmate-mnu9.onrender.com/',
-        frontend: 'https://github.com/RonFelsenfeld/sketchmate-frontend',
-        backend: 'https://github.com/RonFelsenfeld/sketchmate-backend',
-      },
+    technologies: ['ReactJS', 'HTML5 Canvas', 'SASS'],
+    links: {
+      liveVersion: 'https://sketchmate-mnu9.onrender.com/',
+      frontend: 'https://github.com/RonFelsenfeld/sketchmate-frontend',
+      backend: 'https://github.com/RonFelsenfeld/sketchmate-backend',
     },
   },
   [ProjectName.Xpenser]: {
@@ -24,13 +22,11 @@ export const projectsData: Record<ProjectName, Project> = {
     title: projectsSectionI18n.projectsTexts[ProjectName.Xpenser].title,
     description:
       projectsSectionI18n.projectsTexts[ProjectName.Xpenser].description,
-    metadata: {
-      technologies: ['ReactJS', 'NodeJS', 'SASS', 'MongoDB'],
-      links: {
-        liveVersion: 'https://xpenser-mpg1.onrender.com/',
-        frontend: 'https://github.com/RonFelsenfeld/Xpenser-Frontend',
-        backend: 'https://github.com/RonFelsenfeld/Xpenser-backend',
-      },
+    technologies: ['ReactJS', 'NodeJS', 'SASS', 'MongoDB'],
+    links: {
+      liveVersion: 'https://xpenser-mpg1.onrender.com/',
+      frontend: 'https://github.com/RonFelsenfeld/Xpenser-Frontend',
+      backend: 'https://github.com/RonFelsenfeld/Xpenser-backend',
     },
   },
   [ProjectName.Anyday]: {
@@ -38,13 +34,11 @@ export const projectsData: Record<ProjectName, Project> = {
     title: projectsSectionI18n.projectsTexts[ProjectName.Anyday].title,
     description:
       projectsSectionI18n.projectsTexts[ProjectName.Anyday].description,
-    metadata: {
-      technologies: ['ReactJS', 'NodeJS', 'MongoDB', 'ReduxJS', 'SASS'],
-      links: {
-        liveVersion: 'https://anyday-lodf.onrender.com/',
-        frontend: 'https://github.com/RonFelsenfeld/anyday-frontend',
-        backend: 'https://github.com/AtarMor/Anyday',
-      },
+    technologies: ['ReactJS', 'NodeJS', 'MongoDB', 'ReduxJS', 'SASS'],
+    links: {
+      liveVersion: 'https://anyday-lodf.onrender.com/',
+      frontend: 'https://github.com/RonFelsenfeld/anyday-frontend',
+      backend: 'https://github.com/AtarMor/Anyday',
     },
   },
 }
