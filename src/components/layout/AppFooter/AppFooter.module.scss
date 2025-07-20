@@ -1,0 +1,6 @@
+@use '../../../styles/colors';
+
+.appFooter {
+  border-block-start: 1px solid colors.$separator;
+  background: colors.$surface;
+}
