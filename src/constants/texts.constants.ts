@@ -3,6 +3,8 @@ import { ExperimentName } from '@/types/experiment.types'
 import { EducationItemName } from '@/types/education.types'
 import { SectionId } from '@/types/sitemap.types'
 
+import { COPYRIGHT_YEAR_PLACEHOLDER } from '@/utils/sitemap.utils'
+
 const sitemap = {
   title: 'Site Map',
   links: {
@@ -126,6 +128,10 @@ const contactSection = {
   },
 }
 
+const appFooter = {
+  copyrights: `Copyright © Ron Felsenfeld ${COPYRIGHT_YEAR_PLACEHOLDER}. All rights reserved.`,
+}
+
 export const i18n = {
   sitemap,
   aboutMeSection,
@@ -133,4 +139,5 @@ export const i18n = {
   experimentsSection,
   educationSection,
   contactSection,
+  appFooter,
 } as const

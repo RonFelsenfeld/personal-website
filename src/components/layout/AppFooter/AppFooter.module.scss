@@ -1,11 +1,23 @@
 @use '../../../styles/colors';
 @use '../../../styles/spacing';
 @use '../../../styles/mixins';
+@use '../../../styles/fonts';
 
 .appFooter {
   @include mixins.main-layout;
 
-  padding-block: spacing.$spacing-2xl;
   border-block-start: 1px solid colors.$separator;
   background: colors.$surface;
+
+  .footerContent {
+    padding-block: spacing.$spacing-2xl;
+  }
+
+  .copyrights {
+    padding-block: spacing.$spacing-xs;
+    text-align: center;
+    font-weight: fonts.$font-weight-semibold;
+    letter-spacing: fonts.$letter-spacing-tight;
+    background: colors.$primary;
+  }
 }

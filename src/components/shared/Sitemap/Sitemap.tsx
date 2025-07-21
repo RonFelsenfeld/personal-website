@@ -6,7 +6,7 @@ import { sitemapService } from '@/services/sitemap.service'
 import { ButtonVariant } from '@/types/button.types'
 import { SitemapItem } from '@/types/sitemap.types'
 
-import { getSectionLink } from '@/utils/navigation.utils'
+import { getSectionLink } from '@/utils/sitemap.utils'
 
 import { i18n } from '@/constants/texts.constants'
 
