@@ -13,3 +13,9 @@ export interface PortfolioItemData {
   technologies: string[]
   linksConfigurations: LinkConfiguration[]
 }
+
+export interface SocialLink {
+  title: string
+  href: string
+  Icon: React.ElementType
+}

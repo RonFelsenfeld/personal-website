@@ -1,6 +1,11 @@
 'use client'
 
 import classNames from 'classnames'
+import Link from 'next/link'
+
+import { portfolioService } from '@/services/portfolio.service'
+
+import { ButtonVariant } from '@/types/button.types'
 
 import { getCopyrightText } from '@/utils/sitemap.utils'
 
@@ -10,7 +15,6 @@ import { Button, Text } from '@/components/UI'
 import { Sitemap, SitemapDirection } from '@/components/shared'
 
 import styles from './AppFooter.module.scss'
-import { ButtonVariant } from '@/types/button.types'
 
 const { appFooter: appFooterI18n } = i18n
 
@@ -19,10 +23,31 @@ const AppFooter = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const socialLinks = portfolioService.getSocialLinks()
+
+  const SocialLinks = () => {
+    return (
+      <div className={styles.socialsContainer}>
+        {socialLinks.map(({ title, href, Icon }) => (
+          <Link
+            key={href}
+            href={href}
+            title={title}
+            target="_blank"
+          >
+            <Icon className={styles.icon} />
+          </Link>
+        ))}
+      </div>
+    )
+  }
+
   return (
     <footer className={classNames(styles.appFooter, 'fullRow')}>
       <div className={styles.footerContent}>
         <div className={styles.actionsContainer}>
+          <SocialLinks />
+
           <Button
             variant={ButtonVariant.Secondary}
             handleClick={scrollToTop}
