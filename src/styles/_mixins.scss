@@ -18,6 +18,20 @@
   min-height: calc(100dvh - layout.$app-header-height);
 }
 
+@mixin main-layout {
+  display: grid;
+  grid-template-columns: layout.$main-layout-side-margins-width 1fr layout.$main-layout-side-margins-width;
+
+  // This is a workaround to allow the fullRow class to be used in the AppHeader component, which is not a child of the MainLayout component (used in page.tsx)
+  > *:not(:global(.fullRow)) {
+    grid-column: 2;
+  }
+
+  > :global(.fullRow) {
+    grid-column: 1 / -1;
+  }
+}
+
 @mixin cards-grid($card-min-width: 320px, $gap: spacing.$spacing-2xl) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($card-min-width, 1fr));

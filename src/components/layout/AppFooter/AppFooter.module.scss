@@ -1,10 +1,12 @@
 @use '../../../styles/colors';
 @use '../../../styles/spacing';
-@use '../../../styles/layout';
+@use '../../../styles/mixins';
 
 .appFooter {
-  padding: spacing.$spacing-2xl layout.$main-layout-side-margins-width
-    spacing.$spacing-2xl;
+  @include mixins.main-layout;
+
+  padding-block: spacing.$spacing-2xl;
   border-block-start: 1px solid colors.$separator;
+
   background: colors.$surface;
 }
