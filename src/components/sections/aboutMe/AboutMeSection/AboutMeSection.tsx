@@ -1,4 +1,4 @@
-import { SectionId } from '@/types/section.types'
+import { SectionId } from '@/types/sitemap.types'
 
 import { i18n } from '@/constants/texts.constants'
 

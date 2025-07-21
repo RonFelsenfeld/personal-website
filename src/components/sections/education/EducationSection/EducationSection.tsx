@@ -1,5 +1,5 @@
 import { EducationItemData } from '@/types/education.types'
-import { SectionId } from '@/types/section.types'
+import { SectionId } from '@/types/sitemap.types'
 
 import { educationData } from '@/constants/education.constants'
 import { i18n } from '@/constants/texts.constants'

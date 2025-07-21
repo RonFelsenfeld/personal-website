@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 
-import { SectionId } from '@/types/section.types'
+import { SectionId } from '@/types/sitemap.types'
 
 import { Heading, HeadingType, Text } from '@/components/UI'
 

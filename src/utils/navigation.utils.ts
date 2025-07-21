@@ -1,4 +1,4 @@
-import { SectionId } from '@/types/section.types'
+import { SectionId } from '@/types/sitemap.types'
 
 export const getSectionLink = (sectionId: SectionId): string => {
   return `#${sectionId}`

@@ -1,7 +1,7 @@
 import { ProjectName } from '@/types/project.types'
 import { ExperimentName } from '@/types/experiment.types'
 import { EducationItemName } from '@/types/education.types'
-import { SectionId } from '@/types/section.types'
+import { SectionId } from '@/types/sitemap.types'
 
 const appHeader = {
   links: {

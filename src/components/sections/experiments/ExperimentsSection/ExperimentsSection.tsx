@@ -1,5 +1,5 @@
 import { Experiment } from '@/types/experiment.types'
-import { SectionId } from '@/types/section.types'
+import { SectionId } from '@/types/sitemap.types'
 
 import { experimentsData } from '@/constants/experiments.constants'
 import { i18n } from '@/constants/texts.constants'

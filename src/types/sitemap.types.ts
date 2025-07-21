@@ -5,3 +5,8 @@ export enum SectionId {
   Experiments = 'experiments',
   Contact = 'contact',
 }
+
+export interface SitemapItem {
+  id: SectionId
+  label: string
+}
