@@ -129,6 +129,10 @@ const contactSection = {
 }
 
 const appFooter = {
+  quote: {
+    text: "I have not failed. I've just found 10,000 ways that won't work.",
+    author: 'Thomas Edison',
+  },
   backToTopButton: 'Back to Top',
   copyrights: `Copyright © Ron Felsenfeld ${COPYRIGHT_YEAR_PLACEHOLDER}. All rights reserved.`,
 }

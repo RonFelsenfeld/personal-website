@@ -8,10 +8,11 @@ import { portfolioService } from '@/services/portfolio.service'
 import { ButtonVariant } from '@/types/button.types'
 
 import { getCopyrightText } from '@/utils/sitemap.utils'
+import { formatQuote } from '@/utils/general.utils'
 
 import { i18n } from '@/constants/texts.constants'
 
-import { Button, Text } from '@/components/UI'
+import { Button, Text, TextTag } from '@/components/UI'
 import { Sitemap, SitemapDirection } from '@/components/shared'
 
 import styles from './AppFooter.module.scss'
@@ -42,10 +43,21 @@ const AppFooter = () => {
     )
   }
 
+  const Quote = () => {
+    return (
+      <div className={styles.quote}>
+        <Text>{formatQuote(appFooterI18n.quote.text)}</Text>
+        <Text htmlTag={TextTag.Span}>{appFooterI18n.quote.author}</Text>
+      </div>
+    )
+  }
+
   return (
     <footer className={classNames(styles.appFooter, 'fullRow')}>
       <div className={styles.footerContent}>
         <div className={styles.actionsContainer}>
+          <Quote />
+
           <SocialLinks />
 
           <Button
