@@ -22,7 +22,7 @@
   display: grid;
   grid-template-columns: layout.$main-layout-side-margins-width 1fr layout.$main-layout-side-margins-width;
 
-  // This is a workaround to allow the fullRow class to be used in the AppHeader component, which is not a child of the MainLayout component (used in page.tsx)
+  // The global selector is to allow the fullRow class to be used in the children of the MainLayout component which are not a direct children of the MainLayout component (used in page.tsx, e.g. the AppHeader component)
   > *:not(:global(.fullRow)) {
     grid-column: 2;
   }
@@ -32,7 +32,10 @@
   }
 }
 
-@mixin cards-grid($card-min-width: 320px, $gap: spacing.$spacing-2xl) {
+@mixin cards-grid(
+  $card-min-width: layout.$card-min-width,
+  $gap: spacing.$spacing-2xl
+) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($card-min-width, 1fr));
   gap: $gap;
