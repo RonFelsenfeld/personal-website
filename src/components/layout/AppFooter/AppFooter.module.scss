@@ -17,7 +17,7 @@
     .actionsContainer {
       @include mixins.flex-column;
       align-items: flex-start;
-      justify-content: space-between;
+      gap: spacing.$spacing-2xl;
       width: 70%;
 
       .quote {
