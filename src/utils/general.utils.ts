@@ -4,3 +4,7 @@ export const formatDate = (date: Date, locale: string = 'en-US') => {
     month: 'long',
   })
 }
+
+export const formatQuote = (quote: string) => {
+  return `“${quote}”`
+}

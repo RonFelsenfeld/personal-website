@@ -1,0 +1,60 @@
+@use '../../../styles/colors';
+@use '../../../styles/spacing';
+@use '../../../styles/mixins';
+@use '../../../styles/fonts';
+
+.appFooter {
+  @include mixins.main-layout;
+
+  border-block-start: 1px solid colors.$separator;
+  background: colors.$surface;
+  box-shadow: 0 0 10px 0 rgba(colors.$primary, 0.15);
+
+  .footerContent {
+    display: flex;
+    padding-block: spacing.$spacing-2xl;
+
+    .actionsContainer {
+      @include mixins.flex-column;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 70%;
+
+      .quote {
+        font-style: italic;
+        letter-spacing: fonts.$letter-spacing-tight;
+        color: colors.$text-secondary;
+
+        p {
+          font-weight: fonts.$font-weight-semibold;
+        }
+      }
+
+      .socialsContainer {
+        display: flex;
+        gap: spacing.$spacing-md;
+
+        .icon {
+          font-size: fonts.$font-size-lg;
+          color: colors.$text-secondary;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: colors.$text-primary;
+          }
+        }
+      }
+    }
+  }
+
+  .copyrights {
+    padding-block: spacing.$spacing-xs;
+
+    color: white;
+    text-align: center;
+    font-weight: fonts.$font-weight-semibold;
+    letter-spacing: fonts.$letter-spacing-tight;
+
+    background: colors.$primary;
+  }
+}

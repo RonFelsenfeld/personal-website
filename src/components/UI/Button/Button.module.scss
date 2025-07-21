@@ -43,4 +43,36 @@
       background: colors.$primary;
     }
   }
+
+  &.link {
+    $transition-duration: 0.3s;
+
+    position: relative;
+    color: colors.$text-primary;
+    font-weight: fonts.$font-weight-medium;
+    transition: color $transition-duration ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+
+      width: 0;
+      height: 1px;
+
+      background: colors.$primary;
+      transform: translateX(-50%);
+      transition: width $transition-duration ease;
+    }
+
+    &:hover {
+      color: colors.$primary;
+      transform: translateY(0px);
+
+      &::after {
+        width: 80%;
+      }
+    }
+  }
 }

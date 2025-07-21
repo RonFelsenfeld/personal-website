@@ -1,9 +1,12 @@
 import { ProjectName } from '@/types/project.types'
 import { ExperimentName } from '@/types/experiment.types'
 import { EducationItemName } from '@/types/education.types'
-import { SectionId } from '@/types/section.types'
+import { SectionId } from '@/types/sitemap.types'
 
-const appHeader = {
+import { COPYRIGHT_YEAR_PLACEHOLDER } from '@/utils/sitemap.utils'
+
+const sitemap = {
+  title: 'Site Map',
   links: {
     [SectionId.About]: 'About Me',
     [SectionId.Projects]: 'Projects',
@@ -125,11 +128,21 @@ const contactSection = {
   },
 }
 
+const appFooter = {
+  quote: {
+    text: "I have not failed. I've just found 10,000 ways that won't work.",
+    author: 'Thomas Edison',
+  },
+  backToTopButton: 'Back to Top',
+  copyrights: `Copyright © Ron Felsenfeld ${COPYRIGHT_YEAR_PLACEHOLDER}. All rights reserved.`,
+}
+
 export const i18n = {
-  appHeader,
+  sitemap,
   aboutMeSection,
   projectsSection,
   experimentsSection,
   educationSection,
   contactSection,
+  appFooter,
 } as const

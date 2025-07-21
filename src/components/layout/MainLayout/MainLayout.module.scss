@@ -1,15 +1,5 @@
+@use '../../../styles/mixins';
+
 .mainLayout {
-  $side-margins-width: 150px;
-
-  display: grid;
-  grid-template-columns: $side-margins-width 1fr $side-margins-width;
-
-  // This is a workaround to allow the fullRow class to be used in the AppHeader component, which is not a child of the MainLayout component (used in page.tsx)
-  > *:not(:global(.fullRow)) {
-    grid-column: 2;
-  }
-
-  > :global(.fullRow) {
-    grid-column: 1 / -1;
-  }
+  @include mixins.main-layout;
 }
