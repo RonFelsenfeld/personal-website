@@ -13,7 +13,7 @@ import { formatQuote } from '@/utils/general.utils'
 import { i18n } from '@/constants/texts.constants'
 
 import { Button, Text, TextTag } from '@/components/UI'
-import { Logo, Sitemap, SitemapDirection } from '@/components/shared'
+import { WebsiteLogo, Sitemap, SitemapDirection } from '@/components/shared'
 
 import styles from './AppFooter.module.scss'
 
@@ -56,7 +56,7 @@ const AppFooter = () => {
     <footer className={classNames(styles.appFooter, 'fullRow')}>
       <div className={styles.footerContent}>
         <div className={styles.actionsContainer}>
-          <Logo />
+          <WebsiteLogo />
           <Quote />
 
           <SocialLinks />

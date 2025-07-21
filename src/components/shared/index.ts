@@ -1,4 +1,4 @@
-export { default as Logo } from './Logo/Logo'
+export { default as WebsiteLogo } from './WebsiteLogo/WebsiteLogo'
 
 export { default as PortfolioItem } from './PortfolioItem/PortfolioItem'
 

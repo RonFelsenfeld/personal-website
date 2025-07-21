@@ -3,13 +3,13 @@ import classNames from 'classnames'
 
 import { images } from '@/constants/images.constants'
 
-import styles from './Logo.module.scss'
+import styles from './WebsiteLogo.module.scss'
 
-interface LogoProps {
+interface WebsiteLogoProps {
   className?: string
 }
 
-const Logo = ({ className }: LogoProps) => {
+const WebsiteLogo = ({ className }: WebsiteLogoProps) => {
   return (
     <Image
       src={images.shared.logo}
@@ -19,4 +19,4 @@ const Logo = ({ className }: LogoProps) => {
   )
 }
 
-export default Logo
+export default WebsiteLogo
