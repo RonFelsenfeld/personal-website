@@ -1,0 +1,6 @@
+@use '../../../styles/layout';
+
+.logo {
+  width: layout.$logo-width;
+  object-fit: contain;
+}
