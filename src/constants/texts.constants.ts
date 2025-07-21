@@ -4,6 +4,7 @@ import { EducationItemName } from '@/types/education.types'
 import { SectionId } from '@/types/sitemap.types'
 
 const sitemap = {
+  title: 'Site Map',
   links: {
     [SectionId.About]: 'About Me',
     [SectionId.Projects]: 'Projects',
@@ -125,10 +126,6 @@ const contactSection = {
   },
 }
 
-const appFooter = {
-  sitemapTitle: 'Site Map',
-}
-
 export const i18n = {
   sitemap,
   aboutMeSection,
@@ -136,5 +133,4 @@ export const i18n = {
   experimentsSection,
   educationSection,
   contactSection,
-  appFooter,
 } as const

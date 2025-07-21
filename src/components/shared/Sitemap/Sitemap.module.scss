@@ -1,0 +1,32 @@
+@use '../../../styles/mixins';
+@use '../../../styles/spacing';
+
+.sitemap {
+  .sitemapList {
+    @include mixins.flex-center;
+    flex-direction: row;
+    gap: spacing.$spacing-xl;
+  }
+
+  &.vertical {
+    $padding-inline: spacing.$spacing-md;
+
+    @include mixins.flex-column;
+    align-items: flex-start;
+    gap: spacing.$spacing-md;
+
+    .title {
+      padding-inline: $padding-inline;
+    }
+
+    .sitemapList {
+      flex-direction: column;
+      gap: spacing.$spacing-sm;
+      align-items: flex-start;
+
+      .sitemapItem {
+        padding-inline: $padding-inline;
+      }
+    }
+  }
+}
