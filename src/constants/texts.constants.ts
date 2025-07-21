@@ -3,7 +3,7 @@ import { ExperimentName } from '@/types/experiment.types'
 import { EducationItemName } from '@/types/education.types'
 import { SectionId } from '@/types/sitemap.types'
 
-const appHeader = {
+const sitemap = {
   links: {
     [SectionId.About]: 'About Me',
     [SectionId.Projects]: 'Projects',
@@ -125,11 +125,16 @@ const contactSection = {
   },
 }
 
+const appFooter = {
+  sitemapTitle: 'Site Map',
+}
+
 export const i18n = {
-  appHeader,
+  sitemap,
   aboutMeSection,
   projectsSection,
   experimentsSection,
   educationSection,
   contactSection,
+  appFooter,
 } as const
