@@ -2,10 +2,13 @@
 @use '../../../styles/colors';
 @use '../../../styles/layout';
 @use '../../../styles/functions';
+@use '../../../styles/spacing';
 
 .appHeader {
   @include mixins.flex-center;
+  justify-content: space-between;
   height: layout.$app-header-height;
+  padding-inline: spacing.$spacing-2xl;
 
   position: sticky;
   top: 0;

@@ -1,3 +1,5 @@
+export { default as WebsiteLogo } from './WebsiteLogo/WebsiteLogo'
+
 export { default as PortfolioItem } from './PortfolioItem/PortfolioItem'
 
 export { default as Sitemap } from './Sitemap/Sitemap'
