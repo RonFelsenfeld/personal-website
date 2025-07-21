@@ -1,7 +1,12 @@
 @use '../../../styles/layout';
+@use '../../../styles/mixins';
 
-.logo {
-  width: layout.$logo-width;
-  height: auto;
-  object-fit: contain;
+.logoContainer {
+  @include mixins.flex-center;
+
+  .logo {
+    width: layout.$logo-width;
+    height: auto;
+    object-fit: contain;
+  }
 }
