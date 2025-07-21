@@ -129,6 +129,7 @@ const contactSection = {
 }
 
 const appFooter = {
+  backToTopButton: 'Back to Top',
   copyrights: `Copyright © Ron Felsenfeld ${COPYRIGHT_YEAR_PLACEHOLDER}. All rights reserved.`,
 }
 

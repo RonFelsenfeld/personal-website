@@ -10,7 +10,12 @@
   background: colors.$surface;
 
   .footerContent {
+    display: flex;
     padding-block: spacing.$spacing-2xl;
+
+    .actionsContainer {
+      width: 70%;
+    }
   }
 
   .copyrights {
