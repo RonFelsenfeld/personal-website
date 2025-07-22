@@ -132,7 +132,7 @@ const contactSection = {
 const ideologySection = {
   title: 'Ideology',
   description:
-    'My ideology is to be a full stack developer who is passionate about building modern web applications and exploring the latest technologies.',
+    "Being a developer is about more than code—it's about curiosity, empathy, and making a positive impact. I’m guided by integrity, creativity, and a genuine desire to help others. My goal is to build technology that not only works well, but also makes life better for people.",
 }
 
 const appFooter = {
