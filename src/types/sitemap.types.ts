@@ -4,6 +4,7 @@ export enum SectionId {
   Education = 'education',
   Experiments = 'experiments',
   Contact = 'contact',
+  Ideology = 'ideology',
 }
 
 export interface SitemapItem {

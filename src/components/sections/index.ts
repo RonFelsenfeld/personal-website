@@ -3,3 +3,4 @@ export { default as ProjectsSection } from './projects/ProjectsSection/ProjectsS
 export { default as ExperimentsSection } from './experiments/ExperimentsSection/ExperimentsSection'
 export { default as EducationSection } from './education/EducationSection/EducationSection'
 export { default as ContactSection } from './contact/ContactSection/ContactSection'
+export { default as IdeologySection } from './ideology/IdeologySection/IdeologySection'

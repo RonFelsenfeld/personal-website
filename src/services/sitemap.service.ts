@@ -25,6 +25,10 @@ const getSitemapLinks = (): SitemapItem[] => {
       id: SectionId.Contact,
       label: sitemapI18n.links[SectionId.Contact],
     },
+    {
+      id: SectionId.Ideology,
+      label: sitemapI18n.links[SectionId.Ideology],
+    },
   ]
 
   return sitemap

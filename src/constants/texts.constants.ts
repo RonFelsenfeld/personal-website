@@ -13,6 +13,7 @@ const sitemap = {
     [SectionId.Education]: 'Education',
     [SectionId.Experiments]: 'Experiments',
     [SectionId.Contact]: 'Contact',
+    [SectionId.Ideology]: 'Ideology',
   },
 }
 
@@ -128,6 +129,12 @@ const contactSection = {
   },
 }
 
+const ideologySection = {
+  title: 'Ideology',
+  description:
+    'My ideology is to be a full stack developer who is passionate about building modern web applications and exploring the latest technologies.',
+}
+
 const appFooter = {
   quote: {
     text: "I have not failed. I've just found 10,000 ways that won't work.",
@@ -144,5 +151,6 @@ export const i18n = {
   experimentsSection,
   educationSection,
   contactSection,
+  ideologySection,
   appFooter,
 } as const
