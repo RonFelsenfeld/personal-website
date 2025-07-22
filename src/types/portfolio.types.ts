@@ -17,5 +17,13 @@ export interface PortfolioItemData {
 export interface SocialLink {
   title: string
   href: string
-  Icon: React.ElementType
+  Icon: React.ComponentType<{ className?: string }>
+}
+
+export interface IdeologyItem {
+  id: string
+  title: string
+  description: string
+  traits: string[]
+  Icon: React.ComponentType<{ className?: string }>
 }

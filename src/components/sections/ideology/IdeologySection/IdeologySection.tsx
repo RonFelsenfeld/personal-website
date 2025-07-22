@@ -1,3 +1,5 @@
+import { portfolioService } from '@/services/portfolio.service'
+
 import { SectionId } from '@/types/sitemap.types'
 
 import { i18n } from '@/constants/texts.constants'
@@ -9,6 +11,9 @@ import styles from './IdeologySection.module.scss'
 const { ideologySection: ideologySectionI18n } = i18n
 
 const IdeologySection = () => {
+  const ideologyItems = portfolioService.getIdeologyItems()
+  console.log(ideologyItems)
+
   return (
     <SectionLayout
       id={SectionId.Ideology}

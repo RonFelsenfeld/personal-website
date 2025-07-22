@@ -1,6 +1,17 @@
-import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons'
+import {
+  AimOutlined,
+  BuildOutlined,
+  GithubOutlined,
+  LinkedinOutlined,
+  SearchOutlined,
+  WechatOutlined,
+} from '@ant-design/icons'
 
-import { SocialLink } from '@/types/portfolio.types'
+import { IdeologyItem, SocialLink } from '@/types/portfolio.types'
+
+import { i18n } from '@/constants/texts.constants'
+
+const { ideologySection: ideologySectionI18n } = i18n
 
 const getSocialLinks = (): SocialLink[] => {
   const socialLinks = [
@@ -19,6 +30,40 @@ const getSocialLinks = (): SocialLink[] => {
   return socialLinks
 }
 
+const getIdeologyItems = (): IdeologyItem[] => {
+  return [
+    {
+      id: 'collaboration',
+      title: ideologySectionI18n.items.collaboration.title,
+      description: ideologySectionI18n.items.collaboration.description,
+      traits: ideologySectionI18n.items.collaboration.traits,
+      Icon: WechatOutlined,
+    },
+    {
+      id: 'professionalism',
+      title: ideologySectionI18n.items.professionalism.title,
+      description: ideologySectionI18n.items.professionalism.description,
+      traits: ideologySectionI18n.items.professionalism.traits,
+      Icon: AimOutlined,
+    },
+    {
+      id: 'curiosity',
+      title: ideologySectionI18n.items.curiosity.title,
+      description: ideologySectionI18n.items.curiosity.description,
+      traits: ideologySectionI18n.items.curiosity.traits,
+      Icon: SearchOutlined,
+    },
+    {
+      id: 'craftsmanship',
+      title: ideologySectionI18n.items.craftsmanship.title,
+      description: ideologySectionI18n.items.craftsmanship.description,
+      traits: ideologySectionI18n.items.craftsmanship.traits,
+      Icon: BuildOutlined,
+    },
+  ]
+}
+
 export const portfolioService = {
   getSocialLinks,
+  getIdeologyItems,
 }
