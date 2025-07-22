@@ -1,14 +1,14 @@
 import { portfolioService } from '@/services/portfolio.service'
 
+import { IdeologyItemData } from '@/types/portfolio.types'
 import { SectionId } from '@/types/sitemap.types'
 
 import { i18n } from '@/constants/texts.constants'
 
 import { SectionLayout } from '@/components/layout'
+import IdeologyItem from './IdeologyItem/IdeologyItem'
 
 import styles from './IdeologySection.module.scss'
-import { IdeologyItemData } from '@/types/portfolio.types'
-import IdeologyItem from './IdeologyItem/IdeologyItem'
 
 const { ideologySection: ideologySectionI18n } = i18n
 
