@@ -3,6 +3,7 @@
 import classNames from 'classnames'
 import Link from 'next/link'
 
+import { sitemapService } from '@/services/sitemap.service'
 import { portfolioService } from '@/services/portfolio.service'
 
 import { ButtonVariant } from '@/types/button.types'
@@ -70,6 +71,7 @@ const AppFooter = () => {
         </div>
 
         <Sitemap
+          sitemapLinks={sitemapService.getSitemapLinks()}
           direction={SitemapDirection.Vertical}
           withTitle
         />

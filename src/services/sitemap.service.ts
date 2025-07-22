@@ -3,7 +3,7 @@ import { i18n } from '@/constants/texts.constants'
 
 const { sitemap: sitemapI18n } = i18n
 
-const getSitemap = (): SitemapItem[] => {
+const getSitemapLinks = (): SitemapItem[] => {
   const sitemap: SitemapItem[] = [
     {
       id: SectionId.About,
@@ -31,5 +31,5 @@ const getSitemap = (): SitemapItem[] => {
 }
 
 export const sitemapService = {
-  getSitemap,
+  getSitemapLinks,
 }

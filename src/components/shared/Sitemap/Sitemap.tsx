@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import classNames from 'classnames'
 
-import { sitemapService } from '@/services/sitemap.service'
-
 import { ButtonVariant } from '@/types/button.types'
 import { SitemapItem } from '@/types/sitemap.types'
 
@@ -22,11 +20,13 @@ export enum SitemapDirection {
 }
 
 interface SitemapProps {
+  sitemapLinks: SitemapItem[]
   direction?: SitemapDirection
   withTitle?: boolean
 }
 
 const Sitemap = ({
+  sitemapLinks,
   direction = SitemapDirection.Horizontal,
   withTitle,
 }: SitemapProps) => {
@@ -56,7 +56,7 @@ const Sitemap = ({
       )}
 
       <List
-        items={sitemapService.getSitemap()}
+        items={sitemapLinks}
         renderItem={renderSitemapItem}
         className={styles.sitemapList}
       />

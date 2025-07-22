@@ -1,5 +1,7 @@
 import classNames from 'classnames'
 
+import { sitemapService } from '@/services/sitemap.service'
+
 import { WebsiteLogo, Sitemap } from '@/components/shared'
 
 import styles from './AppHeader.module.scss'
@@ -10,7 +12,7 @@ const AppHeader = () => {
       <WebsiteLogo />
 
       <nav>
-        <Sitemap />
+        <Sitemap sitemapLinks={sitemapService.getSitemapLinks()} />
       </nav>
     </header>
   )
