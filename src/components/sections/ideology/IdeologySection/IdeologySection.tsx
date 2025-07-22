@@ -7,12 +7,22 @@ import { i18n } from '@/constants/texts.constants'
 import { SectionLayout } from '@/components/layout'
 
 import styles from './IdeologySection.module.scss'
+import { IdeologyItemData } from '@/types/portfolio.types'
+import IdeologyItem from './IdeologyItem/IdeologyItem'
 
 const { ideologySection: ideologySectionI18n } = i18n
 
 const IdeologySection = () => {
   const ideologyItems = portfolioService.getIdeologyItems()
-  console.log(ideologyItems)
+
+  const renderIdeologyItem = (item: IdeologyItemData) => {
+    return (
+      <IdeologyItem
+        key={item.id}
+        item={item}
+      />
+    )
+  }
 
   return (
     <SectionLayout
@@ -21,7 +31,7 @@ const IdeologySection = () => {
       description={ideologySectionI18n.description}
       className={styles.ideologySection}
     >
-      <p>Ideology</p>
+      {ideologyItems.map(renderIdeologyItem)}
     </SectionLayout>
   )
 }

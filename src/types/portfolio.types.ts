@@ -20,7 +20,7 @@ export interface SocialLink {
   Icon: React.ComponentType<{ className?: string }>
 }
 
-export interface IdeologyItem {
+export interface IdeologyItemData {
   id: string
   title: string
   description: string

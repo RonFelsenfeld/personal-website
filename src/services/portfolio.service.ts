@@ -4,10 +4,10 @@ import {
   GithubOutlined,
   LinkedinOutlined,
   SearchOutlined,
-  WechatOutlined,
+  UsergroupAddOutlined,
 } from '@ant-design/icons'
 
-import { IdeologyItem, SocialLink } from '@/types/portfolio.types'
+import { IdeologyItemData, SocialLink } from '@/types/portfolio.types'
 
 import { i18n } from '@/constants/texts.constants'
 
@@ -30,14 +30,14 @@ const getSocialLinks = (): SocialLink[] => {
   return socialLinks
 }
 
-const getIdeologyItems = (): IdeologyItem[] => {
+const getIdeologyItems = (): IdeologyItemData[] => {
   return [
     {
       id: 'collaboration',
       title: ideologySectionI18n.items.collaboration.title,
       description: ideologySectionI18n.items.collaboration.description,
       traits: ideologySectionI18n.items.collaboration.traits,
-      Icon: WechatOutlined,
+      Icon: UsergroupAddOutlined,
     },
     {
       id: 'professionalism',
