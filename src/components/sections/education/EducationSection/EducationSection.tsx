@@ -1,7 +1,8 @@
+import { portfolioService } from '@/services/portfolio.service'
+
 import { EducationItemData } from '@/types/portfolio.types'
 import { SectionId } from '@/types/sitemap.types'
 
-import { educationData } from '@/constants/education.constants'
 import { i18n } from '@/constants/texts.constants'
 
 import { SectionLayout } from '@/components/layout'
@@ -14,11 +15,12 @@ import styles from './EducationSection.module.scss'
 const { educationSection: educationSectionI18n } = i18n
 
 const EducationSection = () => {
+  const educationData = portfolioService.getEducation()
+
   const renderEducationItem = (educationItem: EducationItemData) => {
     return <EducationItem educationItem={educationItem} />
   }
 
-  const educationItems = Object.values(educationData)
   return (
     <SectionLayout
       id={SectionId.Education}
@@ -27,7 +29,7 @@ const EducationSection = () => {
       className={styles.educationSection}
     >
       <List<EducationItemData>
-        items={educationItems}
+        items={Object.values(educationData)}
         renderItem={renderEducationItem}
         className={styles.educationList}
       />
