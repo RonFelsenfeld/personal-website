@@ -1,4 +1,4 @@
-import { Project, ProjectName } from '@/types/project.types'
+import { Project, ProjectName } from '@/types/portfolio.types'
 
 import { i18n } from './texts.constants'
 

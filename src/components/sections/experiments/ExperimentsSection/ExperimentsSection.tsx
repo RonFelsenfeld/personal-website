@@ -1,4 +1,4 @@
-import { Experiment } from '@/types/experiment.types'
+import { Experiment } from '@/types/portfolio.types'
 import { SectionId } from '@/types/sitemap.types'
 
 import { experimentsData } from '@/constants/experiments.constants'

@@ -1,4 +1,4 @@
-import { EducationItemData } from '@/types/education.types'
+import { EducationItemData } from '@/types/portfolio.types'
 import { SectionId } from '@/types/sitemap.types'
 
 import { educationData } from '@/constants/education.constants'

@@ -1,4 +1,4 @@
-import { Project } from '@/types/project.types'
+import { Project } from '@/types/portfolio.types'
 import { SectionId } from '@/types/sitemap.types'
 
 import { projectsData } from '@/constants/projects.constants'

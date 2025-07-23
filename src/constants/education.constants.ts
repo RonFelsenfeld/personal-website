@@ -2,7 +2,7 @@ import {
   EducationItemData,
   EducationItemName,
   InstitutionName,
-} from '@/types/education.types'
+} from '@/types/portfolio.types'
 
 import { i18n } from './texts.constants'
 

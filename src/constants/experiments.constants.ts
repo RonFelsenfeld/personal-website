@@ -1,4 +1,4 @@
-import { Experiment, ExperimentName } from '@/types/experiment.types'
+import { Experiment, ExperimentName } from '@/types/portfolio.types'
 
 import { i18n } from './texts.constants'
 

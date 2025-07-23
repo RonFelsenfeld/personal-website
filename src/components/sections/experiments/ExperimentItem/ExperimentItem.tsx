@@ -1,5 +1,8 @@
-import { Experiment } from '@/types/experiment.types'
-import { LinkConfiguration, PortfolioItemData } from '@/types/portfolio.types'
+import { Experiment } from '@/types/portfolio.types'
+import {
+  PortfolioLinkConfiguration,
+  PortfolioItemData,
+} from '@/types/portfolio.types'
 
 import { i18n } from '@/constants/texts.constants'
 
@@ -11,7 +14,7 @@ interface ExperimentItemProps {
 }
 
 const ExperimentItem = ({ experiment }: ExperimentItemProps) => {
-  const linksConfigurations: LinkConfiguration[] = [
+  const linksConfigurations: PortfolioLinkConfiguration[] = [
     {
       id: 'repository',
       link: experiment.repositoryLink,

@@ -1,5 +1,8 @@
-import { Project } from '@/types/project.types'
-import { LinkConfiguration, PortfolioItemData } from '@/types/portfolio.types'
+import { Project } from '@/types/portfolio.types'
+import {
+  PortfolioLinkConfiguration,
+  PortfolioItemData,
+} from '@/types/portfolio.types'
 import { ButtonVariant } from '@/types/button.types'
 
 import { i18n } from '@/constants/texts.constants'
@@ -16,7 +19,7 @@ interface ProjectItemProps {
 const ProjectItem = ({ project }: ProjectItemProps) => {
   const { links } = project
 
-  const linksConfigurations: LinkConfiguration[] = [
+  const linksConfigurations: PortfolioLinkConfiguration[] = [
     {
       id: 'live-version',
       link: links.liveVersion,

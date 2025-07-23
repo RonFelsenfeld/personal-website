@@ -1,6 +1,8 @@
-import { ProjectName } from '@/types/project.types'
-import { ExperimentName } from '@/types/experiment.types'
-import { EducationItemName } from '@/types/education.types'
+import {
+  ProjectName,
+  ExperimentName,
+  EducationItemName,
+} from '@/types/portfolio.types'
 import { SectionId } from '@/types/sitemap.types'
 
 import { COPYRIGHT_YEAR_PLACEHOLDER } from '@/utils/sitemap.utils'
