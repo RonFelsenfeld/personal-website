@@ -15,11 +15,11 @@ import styles from './ProjectsSection.module.scss'
 const { projectsSection: projectsSectionI18n } = i18n
 
 const ProjectsSection = () => {
+  const projectsData = portfolioService.getProjects()
+
   const renderProject = (project: Project) => {
     return <ProjectItem project={project} />
   }
-
-  const projectsData = portfolioService.getProjects()
 
   return (
     <SectionLayout
