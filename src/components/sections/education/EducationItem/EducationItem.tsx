@@ -1,4 +1,4 @@
-import { EducationItemData } from '@/types/education.types'
+import { EducationItemData } from '@/types/portfolio.types'
 
 import { formatDate } from '@/utils/general.utils'
 

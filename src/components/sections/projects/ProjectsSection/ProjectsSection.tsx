@@ -1,7 +1,8 @@
-import { Project } from '@/types/project.types'
+import { portfolioService } from '@/services/portfolio.service'
+
+import { Project } from '@/types/portfolio.types'
 import { SectionId } from '@/types/sitemap.types'
 
-import { projectsData } from '@/constants/projects.constants'
 import { i18n } from '@/constants/texts.constants'
 
 import { SectionLayout } from '@/components/layout'
@@ -14,11 +15,11 @@ import styles from './ProjectsSection.module.scss'
 const { projectsSection: projectsSectionI18n } = i18n
 
 const ProjectsSection = () => {
+  const projectsData = portfolioService.getProjects()
+
   const renderProject = (project: Project) => {
     return <ProjectItem project={project} />
   }
-
-  const projects = Object.values(projectsData)
 
   return (
     <SectionLayout
@@ -28,7 +29,7 @@ const ProjectsSection = () => {
       className={styles.projectsSection}
     >
       <List<Project>
-        items={projects}
+        items={Object.values(projectsData)}
         renderItem={renderProject}
         className={styles.projectsList}
       />

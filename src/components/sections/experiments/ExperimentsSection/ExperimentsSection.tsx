@@ -1,7 +1,8 @@
-import { Experiment } from '@/types/experiment.types'
+import { portfolioService } from '@/services/portfolio.service'
+
+import { Experiment } from '@/types/portfolio.types'
 import { SectionId } from '@/types/sitemap.types'
 
-import { experimentsData } from '@/constants/experiments.constants'
 import { i18n } from '@/constants/texts.constants'
 
 import { SectionLayout } from '@/components/layout'
@@ -14,11 +15,11 @@ import styles from './ExperimentsSection.module.scss'
 const { experimentsSection: experimentsSectionI18n } = i18n
 
 const ExperimentsSection = () => {
+  const experimentsData = portfolioService.getExperiments()
+
   const renderExperiment = (experiment: Experiment) => {
     return <ExperimentItem experiment={experiment} />
   }
-
-  const experiments = Object.values(experimentsData)
 
   return (
     <SectionLayout
@@ -28,7 +29,7 @@ const ExperimentsSection = () => {
       className={styles.experimentsSection}
     >
       <List<Experiment>
-        items={experiments}
+        items={Object.values(experimentsData)}
         renderItem={renderExperiment}
         className={styles.experimentsList}
       />
