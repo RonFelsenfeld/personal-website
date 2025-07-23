@@ -9,6 +9,8 @@ import {
 
 import { IdeologyItemData, SocialLink } from '@/types/portfolio.types'
 
+import { generateRandomId } from '@/utils/general.utils'
+
 import { i18n } from '@/constants/texts.constants'
 
 const { ideologySection: ideologySectionI18n } = i18n
@@ -31,33 +33,52 @@ const getSocialLinks = (): SocialLink[] => {
 }
 
 const getIdeologyItems = (): IdeologyItemData[] => {
+  const { items } = ideologySectionI18n
+  const { collaboration, professionalism, curiosity, craftsmanship } = items
+
   return [
     {
       id: 'collaboration',
-      title: ideologySectionI18n.items.collaboration.title,
-      description: ideologySectionI18n.items.collaboration.description,
-      traits: ideologySectionI18n.items.collaboration.traits,
+      title: collaboration.title,
+      phrase: collaboration.phrase,
+      description: collaboration.description,
+      traits: collaboration.traits.map(trait => ({
+        id: generateRandomId(),
+        title: trait,
+      })),
       Icon: UsergroupAddOutlined,
     },
     {
       id: 'professionalism',
-      title: ideologySectionI18n.items.professionalism.title,
-      description: ideologySectionI18n.items.professionalism.description,
-      traits: ideologySectionI18n.items.professionalism.traits,
+      title: professionalism.title,
+      phrase: professionalism.phrase,
+      description: professionalism.description,
+      traits: professionalism.traits.map(trait => ({
+        id: generateRandomId(),
+        title: trait,
+      })),
       Icon: AimOutlined,
     },
     {
       id: 'curiosity',
-      title: ideologySectionI18n.items.curiosity.title,
-      description: ideologySectionI18n.items.curiosity.description,
-      traits: ideologySectionI18n.items.curiosity.traits,
+      title: curiosity.title,
+      phrase: curiosity.phrase,
+      description: curiosity.description,
+      traits: curiosity.traits.map(trait => ({
+        id: generateRandomId(),
+        title: trait,
+      })),
       Icon: SearchOutlined,
     },
     {
       id: 'craftsmanship',
-      title: ideologySectionI18n.items.craftsmanship.title,
-      description: ideologySectionI18n.items.craftsmanship.description,
-      traits: ideologySectionI18n.items.craftsmanship.traits,
+      title: craftsmanship.title,
+      phrase: craftsmanship.phrase,
+      description: craftsmanship.description,
+      traits: craftsmanship.traits.map(trait => ({
+        id: generateRandomId(),
+        title: trait,
+      })),
       Icon: BuildOutlined,
     },
   ]

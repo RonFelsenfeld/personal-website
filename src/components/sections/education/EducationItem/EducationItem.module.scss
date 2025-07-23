@@ -6,7 +6,6 @@
 
 .educationItem {
   $item-height: 300px;
-  $hover-box-shadow: 0 8px 32px rgba(47, 129, 247, 0.13);
 
   @include mixins.flex-column;
 
@@ -24,7 +23,7 @@
   cursor: pointer;
 
   &:hover {
-    box-shadow: $hover-box-shadow;
+    @include mixins.card-shadow;
     transform: translateY(-2px);
   }
 
@@ -54,6 +53,8 @@
   }
 
   .detailsContainer {
+    @include mixins.card-shadow;
+
     display: grid;
     grid-template-rows: auto auto 1fr;
     grid-template-areas:
@@ -72,7 +73,6 @@
     background: colors.$primary;
     transform: translateY(100%);
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: $hover-box-shadow;
 
     .institution {
       grid-area: institution;

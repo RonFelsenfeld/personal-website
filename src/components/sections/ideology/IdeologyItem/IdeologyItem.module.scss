@@ -1,0 +1,60 @@
+@use '../../../../styles/spacing';
+@use '../../../../styles/fonts';
+@use '../../../../styles/mixins';
+@use '../../../../styles/colors';
+@use '../../../../styles/layout';
+
+.ideologyItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header header'
+    'content traits';
+  gap: spacing.$spacing-sm;
+
+  padding: spacing.$spacing-lg spacing.$spacing-xl;
+  border-radius: layout.$border-radius-md;
+
+  background: colors.$surface;
+  transition: all 0.3s ease;
+
+  &:hover {
+    @include mixins.card-shadow;
+  }
+
+  .header {
+    grid-area: header;
+    display: flex;
+    gap: spacing.$spacing-md;
+    color: colors.$primary;
+
+    .icon {
+      font-size: fonts.$font-size-lg;
+    }
+  }
+
+  .content {
+    @include mixins.flex-column;
+    grid-area: content;
+
+    .phrase {
+      font-weight: fonts.$font-weight-medium;
+    }
+  }
+
+  .traitsList {
+    grid-area: traits;
+    align-self: center;
+
+    .traitContainer {
+      display: flex;
+      align-items: center;
+      gap: spacing.$spacing-sm;
+
+      .traitIcon {
+        color: colors.$primary;
+      }
+    }
+  }
+}

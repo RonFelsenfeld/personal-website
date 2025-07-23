@@ -137,8 +137,9 @@ const ideologySection = {
   items: {
     collaboration: {
       title: 'Collaboration',
+      phrase: 'Tech is a team sport.',
       description:
-        'Tech is a team sport. I thrive in collaborative environments where ideas flow freely and every voice matters. I listen actively, communicate with clarity, and enjoy pair programming, code reviews, and product discussions. Working with others makes me better — and helps create better products.',
+        'I thrive in collaborative environments where ideas flow freely and every voice matters. I listen actively, communicate with clarity, and enjoy pair programming, code reviews, and product discussions.',
       traits: [
         "Writing code that's easy for others to understand",
         'Being open to feedback and eager to give it',
@@ -147,8 +148,9 @@ const ideologySection = {
     },
     professionalism: {
       title: 'Professionalism',
+      phrase: "Do it right, or don't ship it.",
       description:
-        "Do it right, or don't ship it. I approach every project — big or small — with a mindset of care and responsibility. From Git hygiene and commit messages to consistent naming and project structure, I'm intentional about how I build.",
+        "I approach every project — big or small — with a mindset of care and responsibility. From Git hygiene and commit messages to consistent naming and project structure, I'm intentional about how I build.",
       traits: [
         'Prioritizing maintainability, scalability, and clarity',
         'Respecting deadlines and communicating blockers early',
@@ -157,8 +159,9 @@ const ideologySection = {
     },
     curiosity: {
       title: 'Curiosity',
+      phrase: 'Learning is a mindset, not a phase.',
       description:
-        "Learning is a mindset, not a phase. I'm naturally driven to explore. Whether it's reading docs, debugging an unfamiliar stack, or learning a new language — I ask questions, test ideas, and constantly expand my understanding.",
+        "I'm naturally driven to explore. Whether it's reading docs, debugging an unfamiliar stack, or learning a new language — I ask questions, test ideas, and constantly expand my understanding.",
       traits: [
         'Breaking things down to understand how they really work',
         'Learning new tools and techniques on my own initiative',
@@ -167,8 +170,9 @@ const ideologySection = {
     },
     craftsmanship: {
       title: 'Craftsmanship',
+      phrase: 'Code should feel as good as it works.',
       description:
-        "Code should feel as good as it works. I see code as more than instructions — it's a form of expression. I strive for clarity, elegance, and intent in everything I write. A great user experience starts with thoughtful development.",
+        "I see code as more than instructions — it's a form of expression. I strive for clarity, elegance, and intent in everything I write. A great user experience starts with thoughtful development.",
       traits: [
         'Writing clean, modular, and self-documenting code',
         'Caring about performance, UX, and polish',

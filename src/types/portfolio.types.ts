@@ -20,10 +20,16 @@ export interface SocialLink {
   Icon: React.ComponentType<{ className?: string }>
 }
 
+export interface IdeologyTrait {
+  id: string
+  title: string
+}
+
 export interface IdeologyItemData {
   id: string
   title: string
+  phrase: string
   description: string
-  traits: string[]
+  traits: IdeologyTrait[]
   Icon: React.ComponentType<{ className?: string }>
 }

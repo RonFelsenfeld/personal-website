@@ -1,4 +1,5 @@
 import { Inter } from 'next/font/google'
+import { AntdRegistry } from '@ant-design/nextjs-registry'
 
 import '@/styles/main.scss'
 
@@ -19,7 +20,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       lang="en"
       className={inter.variable}
     >
-      <body>{children}</body>
+      <body>
+        <AntdRegistry>{children}</AntdRegistry>
+      </body>
     </html>
   )
 }

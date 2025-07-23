@@ -6,7 +6,7 @@ import { SectionId } from '@/types/sitemap.types'
 import { i18n } from '@/constants/texts.constants'
 
 import { SectionLayout } from '@/components/layout'
-import IdeologyItem from './IdeologyItem/IdeologyItem'
+import IdeologyItem from '../IdeologyItem/IdeologyItem'
 
 import styles from './IdeologySection.module.scss'
 
