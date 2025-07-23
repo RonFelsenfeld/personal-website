@@ -12,8 +12,8 @@ const sitemap = {
     [SectionId.Projects]: 'Projects',
     [SectionId.Education]: 'Education',
     [SectionId.Experiments]: 'Experiments',
-    [SectionId.Contact]: 'Contact',
     [SectionId.Ideology]: 'Ideology',
+    [SectionId.Contact]: 'Contact',
   },
 }
 
@@ -115,20 +115,6 @@ const educationSection = {
   },
 }
 
-const contactSection = {
-  title: 'Contact',
-  description:
-    "Have questions about one of my projects or interested in discussing technology and development? I enjoy connecting with fellow developers and exploring innovative ideas. Feel free to reach out - I'd be happy to connect and share insights.",
-  form: {
-    nameLabel: 'Full Name',
-    emailLabel: 'Email',
-    subjectLabel: 'Subject',
-    messageLabel: 'Message',
-    sendButton: 'Send',
-    clearButton: 'Clear',
-  },
-}
-
 const ideologySection = {
   title: 'Ideology',
   description:
@@ -182,6 +168,20 @@ const ideologySection = {
   },
 }
 
+const contactSection = {
+  title: 'Contact',
+  description:
+    "Have questions about one of my projects or interested in discussing technology and development? I enjoy connecting with fellow developers and exploring innovative ideas. Feel free to reach out - I'd be happy to connect and share insights.",
+  form: {
+    nameLabel: 'Full Name',
+    emailLabel: 'Email',
+    subjectLabel: 'Subject',
+    messageLabel: 'Message',
+    sendButton: 'Send',
+    clearButton: 'Clear',
+  },
+}
+
 const appFooter = {
   quote: {
     text: "I have not failed. I've just found 10,000 ways that won't work.",
@@ -197,7 +197,7 @@ export const i18n = {
   projectsSection,
   experimentsSection,
   educationSection,
-  contactSection,
   ideologySection,
+  contactSection,
   appFooter,
 } as const
