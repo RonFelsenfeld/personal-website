@@ -12,6 +12,7 @@ const sitemap = {
     [SectionId.Projects]: 'Projects',
     [SectionId.Education]: 'Education',
     [SectionId.Experiments]: 'Experiments',
+    [SectionId.Ideology]: 'Ideology',
     [SectionId.Contact]: 'Contact',
   },
 }
@@ -114,6 +115,59 @@ const educationSection = {
   },
 }
 
+const ideologySection = {
+  title: 'Ideology',
+  description:
+    "Being a developer is about more than code—it's about curiosity, empathy, and making a positive impact. I’m guided by integrity, creativity, and a genuine desire to help others. My goal is to build technology that not only works well, but also makes life better for people.",
+
+  items: {
+    collaboration: {
+      title: 'Collaboration',
+      phrase: 'Tech is a team sport.',
+      description:
+        'I thrive in collaborative environments where ideas flow freely and every voice matters. I listen actively, communicate with clarity, and enjoy pair programming, code reviews, and product discussions.',
+      traits: [
+        "Writing code that's easy for others to understand",
+        'Being open to feedback and eager to give it',
+        'Helping teammates, even outside my direct responsibilities',
+      ],
+    },
+    professionalism: {
+      title: 'Professionalism',
+      phrase: "Do it right, or don't ship it.",
+      description:
+        "I approach every project — big or small — with a mindset of care and responsibility. From Git hygiene and commit messages to consistent naming and project structure, I'm intentional about how I build.",
+      traits: [
+        'Prioritizing maintainability, scalability, and clarity',
+        'Respecting deadlines and communicating blockers early',
+        'Following conventions while knowing when to challenge them',
+      ],
+    },
+    curiosity: {
+      title: 'Curiosity',
+      phrase: 'Learning is a mindset, not a phase.',
+      description:
+        "I'm naturally driven to explore. Whether it's reading docs, debugging an unfamiliar stack, or learning a new language — I ask questions, test ideas, and constantly expand my understanding.",
+      traits: [
+        'Breaking things down to understand how they really work',
+        'Learning new tools and techniques on my own initiative',
+        'Embracing challenges as opportunities for growth',
+      ],
+    },
+    craftsmanship: {
+      title: 'Craftsmanship',
+      phrase: 'Code should feel as good as it works.',
+      description:
+        "I see code as more than instructions — it's a form of expression. I strive for clarity, elegance, and intent in everything I write. A great user experience starts with thoughtful development.",
+      traits: [
+        'Writing clean, modular, and self-documenting code',
+        'Caring about performance, UX, and polish',
+        'Refining until it feels right — not just "done"',
+      ],
+    },
+  },
+}
+
 const contactSection = {
   title: 'Contact',
   description:
@@ -143,6 +197,7 @@ export const i18n = {
   projectsSection,
   experimentsSection,
   educationSection,
+  ideologySection,
   contactSection,
   appFooter,
 } as const

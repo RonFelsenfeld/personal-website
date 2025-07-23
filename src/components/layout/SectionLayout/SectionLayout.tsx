@@ -2,7 +2,7 @@ import classNames from 'classnames'
 
 import { SectionId } from '@/types/sitemap.types'
 
-import { Heading, HeadingType, Text } from '@/components/UI'
+import { Heading, Text } from '@/components/UI'
 
 import styles from './SectionLayout.module.scss'
 
@@ -27,12 +27,7 @@ const SectionLayout = ({
       className={classNames(styles.sectionLayout, className)}
     >
       <header className={styles.header}>
-        <Heading
-          type={HeadingType.Heading}
-          className={styles.title}
-        >
-          {title.toUpperCase()}
-        </Heading>
+        <Heading className={styles.title}>{title.toUpperCase()}</Heading>
 
         {description && (
           <Text className={styles.description}>{description}</Text>
