@@ -18,22 +18,24 @@ const Quote = ({ quote, author, className, isTransparent }: QuoteProps) => {
         [styles.transparent]: isTransparent,
       })}
     >
-      <blockquote>
-        <Text className={styles.quoteText}>{quote}</Text>
+      <div className={styles.quoteContent}>
+        <blockquote>
+          <Text className={styles.quoteText}>{quote}</Text>
 
-        {author && (
-          <footer>
-            <cite>
-              <Text
-                type={TextType.Secondary}
-                className={styles.quoteAuthor}
-              >
-                {author}
-              </Text>
-            </cite>
-          </footer>
-        )}
-      </blockquote>
+          {author && (
+            <footer>
+              <cite>
+                <Text
+                  type={TextType.Secondary}
+                  className={styles.quoteAuthor}
+                >
+                  {author}
+                </Text>
+              </cite>
+            </footer>
+          )}
+        </blockquote>
+      </div>
     </section>
   )
 }
