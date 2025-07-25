@@ -5,18 +5,19 @@
 
 .quote {
   @include mixins.flex-center;
+  position: relative;
+
   padding-block: spacing.$spacing-2xl * 2 spacing.$spacing-2xl * 1.5;
   background: linear-gradient(
     135deg,
     colors.$surface 0%,
-    rgba(colors.$surface, 0.95) 100%
+    rgba(colors.$surface, 0.8) 100%
   );
-  position: relative;
 
-  &::before {
+  &::before,
+  &::after {
     content: '';
     position: absolute;
-    top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 60px;
@@ -29,21 +30,12 @@
     );
   }
 
+  &::before {
+    top: 0;
+  }
+
   &::after {
-    content: '';
-    position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      colors.$primary 50%,
-      transparent 100%
-    );
-    border-radius: 2px;
   }
 
   &.transparent {
@@ -56,13 +48,15 @@
     gap: spacing.$spacing-xl;
 
     .quoteText {
+      $spacing-multiplier: 1.2;
+
+      position: relative;
+
       font-size: fonts.$font-size-xl;
       font-style: italic;
       font-weight: fonts.$font-weight-semibold;
       letter-spacing: fonts.$letter-spacing-tight;
-      position: relative;
-      text-align: center;
-      line-height: 1.6;
+
       color: colors.$text-primary;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
       filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
@@ -71,24 +65,25 @@
       &::after {
         content: '"';
         position: absolute;
+
         font-size: fonts.$font-size-2xl * 2.5;
-        color: colors.$primary;
         font-family: Georgia, serif;
+        color: colors.$primary;
         line-height: 1;
+
+        text-shadow: 0 2px 4px colors.$primary-glow;
+        filter: drop-shadow(0 2px 4px colors.$primary-glow);
         opacity: 0.2;
-        font-weight: bold;
-        text-shadow: 0 2px 4px rgba(colors.$primary, 0.3);
-        filter: drop-shadow(0 2px 4px rgba(colors.$primary, 0.2));
       }
 
       &::before {
-        top: -(spacing.$spacing-xl * 1.2);
-        left: -(spacing.$spacing-2xl * 1.2);
+        top: -(spacing.$spacing-xl * $spacing-multiplier);
+        left: -(spacing.$spacing-2xl * $spacing-multiplier);
       }
 
       &::after {
-        bottom: -(spacing.$spacing-xl * 1.2);
-        right: -(spacing.$spacing-2xl * 1.2);
+        bottom: -(spacing.$spacing-xl * $spacing-multiplier);
+        right: -(spacing.$spacing-2xl * $spacing-multiplier);
         transform: rotate(180deg);
       }
     }
