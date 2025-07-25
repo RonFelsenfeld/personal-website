@@ -1,0 +1,110 @@
+@use '../../../styles/colors';
+@use '../../../styles/fonts';
+@use '../../../styles/spacing';
+@use '../../../styles/mixins';
+
+.quote {
+  @include mixins.flex-center;
+  padding-block: spacing.$spacing-2xl * 2 spacing.$spacing-2xl * 1.5;
+  background: linear-gradient(
+    135deg,
+    colors.$surface 0%,
+    rgba(colors.$surface, 0.95) 100%
+  );
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      colors.$primary 50%,
+      transparent 100%
+    );
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      colors.$primary 50%,
+      transparent 100%
+    );
+    border-radius: 2px;
+  }
+
+  blockquote {
+    @include mixins.flex-column;
+    align-items: center;
+    gap: spacing.$spacing-xl;
+
+    .quoteText {
+      font-size: fonts.$font-size-xl;
+      font-style: italic;
+      font-weight: fonts.$font-weight-semibold;
+      letter-spacing: fonts.$letter-spacing-tight;
+      position: relative;
+      text-align: center;
+      line-height: 1.6;
+      color: colors.$text-primary;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+
+      &::before,
+      &::after {
+        content: '"';
+        position: absolute;
+        font-size: fonts.$font-size-2xl * 2.5;
+        color: colors.$primary;
+        font-family: Georgia, serif;
+        line-height: 1;
+        opacity: 0.2;
+        font-weight: bold;
+        text-shadow: 0 2px 4px rgba(colors.$primary, 0.3);
+        filter: drop-shadow(0 2px 4px rgba(colors.$primary, 0.2));
+      }
+
+      &::before {
+        top: -(spacing.$spacing-xl * 1.2);
+        left: -(spacing.$spacing-2xl * 1.2);
+      }
+
+      &::after {
+        bottom: -(spacing.$spacing-xl * 1.2);
+        right: -(spacing.$spacing-2xl * 1.2);
+        transform: rotate(180deg);
+      }
+    }
+
+    .quoteAuthor {
+      font-style: normal;
+      letter-spacing: fonts.$letter-spacing-loose;
+      text-transform: uppercase;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: spacing.$spacing-xl;
+        height: 1px;
+
+        margin-inline-end: spacing.$spacing-lg;
+        vertical-align: middle;
+
+        background: colors.$separator;
+      }
+    }
+  }
+}
