@@ -33,7 +33,7 @@
   }
 
   &.secondary {
-    border: 1px solid rgba(47, 129, 247, 0.3);
+    border: 1px solid colors.$primary-glow;
     color: colors.$primary;
     background: transparent;
 
