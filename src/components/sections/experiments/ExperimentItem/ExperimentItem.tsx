@@ -6,7 +6,7 @@ import {
 
 import { i18n } from '@/constants/texts.constants'
 
-import { PortfolioItem } from '@/components/shared'
+import { PortfolioItem } from '@/components/common'
 
 const { experimentsSection: experimentsSectionI18n } = i18n
 interface ExperimentItemProps {

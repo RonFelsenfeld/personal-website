@@ -19,6 +19,17 @@ const sitemap = {
   },
 }
 
+const quotes = {
+  firstQuote: {
+    text: 'I have no special talent. I am only passionately curious.',
+    author: 'Albert Einstein',
+  },
+  secondQuote: {
+    text: 'If you want to go fast, go alone. If you want to go far, go together.',
+    author: 'African Proverb',
+  },
+}
+
 const aboutMeSection = {
   name: 'Ron Felsenfeld',
   role: 'Full Stack Developer',
@@ -195,6 +206,7 @@ const appFooter = {
 
 export const i18n = {
   sitemap,
+  quotes,
   aboutMeSection,
   projectsSection,
   experimentsSection,

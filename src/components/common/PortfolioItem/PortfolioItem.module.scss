@@ -32,7 +32,7 @@
   }
 
   &:hover {
-    border-color: rgba(colors.$primary, 0.3);
+    border-color: colors.$primary-glow;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transform: translateY(-4px);
 

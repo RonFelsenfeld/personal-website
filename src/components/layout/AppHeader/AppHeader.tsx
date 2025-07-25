@@ -2,7 +2,7 @@ import classNames from 'classnames'
 
 import { sitemapService } from '@/services/sitemap.service'
 
-import { WebsiteLogo, Sitemap } from '@/components/shared'
+import { WebsiteLogo, Sitemap } from '@/components/common'
 
 import styles from './AppHeader.module.scss'
 
