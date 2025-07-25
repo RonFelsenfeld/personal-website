@@ -24,6 +24,7 @@ const IndexPage = () => {
       <Quote
         quote={quotesI18n.firstQuote.text}
         author={quotesI18n.firstQuote.author}
+        className="fullRow"
       />
 
       <ProjectsSection />
@@ -33,6 +34,7 @@ const IndexPage = () => {
       <Quote
         quote={quotesI18n.secondQuote.text}
         author={quotesI18n.secondQuote.author}
+        className="fullRow"
       />
 
       <IdeologySection />

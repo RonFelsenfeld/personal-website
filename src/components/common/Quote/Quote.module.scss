@@ -46,6 +46,10 @@
     border-radius: 2px;
   }
 
+  &.transparent {
+    background-color: transparent;
+  }
+
   blockquote {
     @include mixins.flex-column;
     align-items: center;

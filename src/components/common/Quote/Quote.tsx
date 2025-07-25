@@ -8,19 +8,14 @@ interface QuoteProps {
   quote: string
   author?: string
   className?: string
-  isFullWidth?: boolean
+  isTransparent?: boolean
 }
 
-const Quote = ({
-  quote,
-  author,
-  className,
-  isFullWidth = true,
-}: QuoteProps) => {
+const Quote = ({ quote, author, className, isTransparent }: QuoteProps) => {
   return (
     <section
       className={classNames(styles.quote, className, {
-        fullRow: isFullWidth,
+        [styles.transparent]: isTransparent,
       })}
     >
       <blockquote>
