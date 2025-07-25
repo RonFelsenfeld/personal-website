@@ -14,7 +14,7 @@ import { formatQuote } from '@/utils/general.utils'
 import { i18n } from '@/constants/texts.constants'
 
 import { Button, Text, TextTag } from '@/components/UI'
-import { WebsiteLogo, Sitemap, SitemapDirection } from '@/components/shared'
+import { WebsiteLogo, Sitemap, SitemapDirection } from '@/components/common'
 
 import styles from './AppFooter.module.scss'
 

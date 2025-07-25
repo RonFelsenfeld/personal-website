@@ -21,7 +21,7 @@ const WebsiteLogo = ({ className }: WebsiteLogoProps) => {
       className={styles.logoContainer}
     >
       <Image
-        src={images.shared.logo}
+        src={images.common.logo}
         alt="Website logo"
         className={classNames(styles.logo, className)}
       />

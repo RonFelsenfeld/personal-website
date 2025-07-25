@@ -7,7 +7,7 @@ import { ButtonVariant } from '@/types/button.types'
 
 import { i18n } from '@/constants/texts.constants'
 
-import { PortfolioItem } from '@/components/shared'
+import { PortfolioItem } from '@/components/common'
 
 const { projectsSection: projectsSectionI18n } = i18n
 const { buttons: buttonsI18n } = projectsSectionI18n
