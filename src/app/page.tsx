@@ -1,3 +1,5 @@
+import { i18n } from '@/constants/texts.constants'
+
 import { AppHeader, AppFooter, MainLayout } from '@/components/layout'
 
 import {
@@ -11,22 +13,28 @@ import {
 
 import { Quote } from '@/components/common'
 
+const { quotes: quotesI18n } = i18n
+
 const IndexPage = () => {
   return (
     <MainLayout>
       <AppHeader />
       <AboutMeSection />
-      <ProjectsSection />
+
       <Quote
-        quote="The only way to do great work is to love what you do."
-        author="Steve Jobs"
+        quote={quotesI18n.firstQuote.text}
+        author={quotesI18n.firstQuote.author}
       />
+
+      <ProjectsSection />
       <EducationSection />
       <ExperimentsSection />
+
       <Quote
-        quote="The only way to do great work is to love what you do."
-        author="Steve Jobs"
+        quote={quotesI18n.secondQuote.text}
+        author={quotesI18n.secondQuote.author}
       />
+
       <IdeologySection />
       <ContactSection />
       <AppFooter />
